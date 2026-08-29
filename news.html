@@ -17,6 +17,64 @@
     content="Latest news and official updates from the Office of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba."
 >
 
+<!-- ================= WHATSAPP / FACEBOOK PREVIEW ================= -->
+
+<meta
+    property="og:title"
+    content="News & Updates | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+>
+
+<meta
+    property="og:description"
+    content="Latest official news and updates from the Office of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba."
+>
+
+<meta
+    property="og:image"
+    content="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
+>
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    property="og:url"
+    content="https://www.timothyojomahspeak.org/news.html"
+>
+
+<meta
+    property="og:image:width"
+    content="1200"
+>
+
+<meta
+    property="og:image:height"
+    content="630"
+>
+
+<meta
+    name="twitter:card"
+    content="summary_large_image"
+>
+
+<meta
+    name="twitter:title"
+    content="News & Updates | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+>
+
+<meta
+    name="twitter:description"
+    content="Latest official news and updates from the Office."
+>
+
+<meta
+    name="twitter:image"
+    content="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
+>
+
+
 <style>
 
 * {
@@ -100,6 +158,7 @@ nav a.active {
     display: flex;
     align-items: center;
     color: white;
+
     background:
         linear-gradient(
             90deg,
@@ -193,6 +252,7 @@ nav a.active {
     width: 100%;
     height: 270px;
     object-fit: cover;
+    display: block;
 }
 
 .news-content {
@@ -684,6 +744,14 @@ const SUPABASE_KEY =
 
 
 /* =========================================================
+   SUPABASE PREVIEW FUNCTION
+========================================================= */
+
+const PREVIEW_FUNCTION =
+    "https://dcztvgjnxbbvriftnbuy.supabase.co/functions/v1/super-endpoint";
+
+
+/* =========================================================
    SUPABASE REQUEST
 ========================================================= */
 
@@ -812,14 +880,29 @@ function formatDate(date) {
 
 
 /* =========================================================
-   SHARE LINK
+   NORMAL NEWS PAGE LINK
 ========================================================= */
 
-function getShareLink(id) {
+function getNewsPageLink(id) {
 
     return (
         window.location.origin +
         window.location.pathname +
+        "?id=" +
+        encodeURIComponent(id)
+    );
+
+}
+
+
+/* =========================================================
+   WHATSAPP / FACEBOOK PREVIEW LINK
+========================================================= */
+
+function getPreviewLink(id) {
+
+    return (
+        PREVIEW_FUNCTION +
         "?id=" +
         encodeURIComponent(id)
     );
@@ -838,7 +921,7 @@ function shareWhatsApp(
 
     const text =
         title +
-        "\n\nRead more:\n" +
+        "\n\nRead this news:\n" +
         link;
 
 
@@ -880,7 +963,7 @@ async function copyLink(link) {
         );
 
         showStatus(
-            "News link copied."
+            "News sharing link copied."
         );
 
     } catch {
@@ -1028,8 +1111,26 @@ async function displayNews() {
                 "news-card";
 
 
-            const link =
-                getShareLink(item.id);
+            /*
+               This is the normal page.
+            */
+
+            const newsPageLink =
+                getNewsPageLink(
+                    item.id
+                );
+
+
+            /*
+               This is the special
+               WhatsApp/Facebook preview
+               link.
+            */
+
+            const previewLink =
+                getPreviewLink(
+                    item.id
+                );
 
 
             card.innerHTML = `
@@ -1111,6 +1212,8 @@ async function displayNews() {
             `;
 
 
+            /* ================= WHATSAPP ================= */
+
             card
                 .querySelector(".whatsapp")
                 .addEventListener(
@@ -1119,12 +1222,14 @@ async function displayNews() {
 
                         shareWhatsApp(
                             item.title,
-                            link
+                            previewLink
                         );
 
                     }
                 );
 
+
+            /* ================= FACEBOOK ================= */
 
             card
                 .querySelector(".facebook")
@@ -1133,12 +1238,14 @@ async function displayNews() {
                     function() {
 
                         shareFacebook(
-                            link
+                            previewLink
                         );
 
                     }
                 );
 
+
+            /* ================= COPY ================= */
 
             card
                 .querySelector(".copy")
@@ -1147,7 +1254,7 @@ async function displayNews() {
                     function() {
 
                         copyLink(
-                            link
+                            previewLink
                         );
 
                     }
