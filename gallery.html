@@ -4,17 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Media Gallery | Comfort Egwaba</title>
 
-<meta
-    name="description"
-    content="Official media gallery of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba."
->
+<meta name="description"
+content="Official media gallery of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.">
 
 <style>
+
+/* ================= GENERAL ================= */
 
 * {
     box-sizing: border-box;
@@ -68,13 +67,14 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     font-size: 13px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 nav a:hover,
@@ -416,13 +416,11 @@ footer {
 }
 
 
-/* ================= MOBILE MENU ================= */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
-@media (max-width: 900px) {
-
-    .nav-container {
-        position: relative;
-    }
+@media (max-width: 1100px) {
 
     .mobile-menu {
         display: flex;
@@ -435,6 +433,7 @@ footer {
         color: white;
         cursor: pointer;
         border-radius: 6px;
+        font-size: 27px;
     }
 
     .mobile-menu:hover {
@@ -445,28 +444,25 @@ footer {
         display: none;
 
         position: absolute;
-        top: 68px;
+        top: 100%;
         left: 0;
 
         width: 100%;
 
         background: #003d27;
 
-        padding: 12px 6% 18px;
+        padding: 12px 5% 20px;
 
         flex-direction: column;
         align-items: stretch;
 
-        gap: 3px;
+        gap: 4px;
 
-        box-shadow:
-            0 8px 20px rgba(0,0,0,.20);
+        box-shadow: 0 8px 20px rgba(0,0,0,.20);
 
-        border-top:
-            1px solid rgba(255,255,255,.12);
+        border-top: 1px solid rgba(255,255,255,.12);
 
-        max-height:
-            calc(100vh - 70px);
+        max-height: calc(100vh - 70px);
 
         overflow-y: auto;
     }
@@ -481,17 +477,16 @@ footer {
         display: flex;
         align-items: center;
 
-        min-height: 50px;
+        min-height: 52px;
 
-        padding: 14px;
+        padding: 14px 16px;
 
         color: white;
 
         font-size: 15px;
         font-weight: bold;
 
-        border-bottom:
-            1px solid rgba(255,255,255,.10);
+        border-bottom: 1px solid rgba(255,255,255,.10);
 
         border-radius: 5px;
     }
@@ -521,7 +516,6 @@ footer {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
@@ -544,12 +538,11 @@ footer {
     }
 
     nav {
-        top: 64px;
         padding: 10px 5% 16px;
     }
 
     nav a {
-        min-height: 50px;
+        min-height: 52px;
         padding: 14px 13px;
         font-size: 14px;
     }
@@ -582,7 +575,6 @@ footer {
     .share-buttons button {
         flex: 1 1 100%;
     }
-
 }
 
 
@@ -592,7 +584,7 @@ footer {
 
     nav a {
         font-size: 13px;
-        min-height: 48px;
+        min-height: 50px;
     }
 
     .hero h1 {
@@ -609,11 +601,14 @@ footer {
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =========================================================
+     HEADER / NAVIGATION
+========================================================= -->
 
 <header>
 
 <div class="nav-container">
+
 
 <a href="index.html" class="logo">
     KOGI STATE HOUSE<br>
@@ -623,37 +618,53 @@ footer {
 
 <nav id="navigation">
 
+
 <a href="index.html">
     Home
 </a>
 
+
+<!-- ABOUT -->
 <a href="about.html">
     About
 </a>
+
+
+<!-- BIOGRAPHY - SEPARATE FROM ABOUT -->
+<a href="biography.html">
+    Biography
+</a>
+
 
 <a href="office.html">
     Office
 </a>
 
+
 <a href="legislative.html">
     Legislative Activities
 </a>
+
 
 <a href="constituency.html">
     Constituency
 </a>
 
+
 <a href="news.html">
     News
 </a>
+
 
 <a href="gallery.html" class="active">
     Media Gallery
 </a>
 
+
 <a href="contact.html" class="contact-btn">
     Contact
 </a>
+
 
 </nav>
 
@@ -661,16 +672,20 @@ footer {
 <div
     class="mobile-menu"
     onclick="toggleMenu()"
+    aria-label="Open menu"
 >
     ☰
 </div>
+
 
 </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero">
 
@@ -700,7 +715,9 @@ footer {
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =========================================================
+     GALLERY
+========================================================= -->
 
 <section class="gallery-section">
 
@@ -767,20 +784,16 @@ footer {
 </div>
 
 
-<!-- ================= 8 PHOTOS ================= -->
+<!-- =========================================================
+     PHOTO 1
+========================================================= -->
 
-<div
-    class="gallery-grid"
-    id="galleryContainer"
->
+<div class="gallery-grid" id="galleryContainer">
 
-
-<!-- PHOTO 1 -->
 
 <article
     class="gallery-card"
     data-category="official"
-    data-gallery-id="photo-1"
 >
 
 <img
@@ -806,7 +819,8 @@ footer {
 </h3>
 
 <p>
-    Official photograph from the activities of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.
+    Official photograph from the activities of
+    Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.
 </p>
 
 <div class="share-title">
@@ -817,10 +831,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Official Engagement',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Official Engagement', window.location.href)"
 >
     WhatsApp
 </button>
@@ -846,12 +857,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 2 -->
+<!-- =========================================================
+     PHOTO 2
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="official"
-    data-gallery-id="photo-2"
 >
 
 <img
@@ -888,10 +900,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Official Meeting',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Official Meeting', window.location.href)"
 >
     WhatsApp
 </button>
@@ -917,12 +926,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 3 -->
+<!-- =========================================================
+     PHOTO 3
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="legislative"
-    data-gallery-id="photo-3"
 >
 
 <img
@@ -948,7 +958,8 @@ footer {
 </h3>
 
 <p>
-    Official photograph highlighting legislative and public service activities.
+    Official photograph highlighting legislative
+    and public service activities.
 </p>
 
 <div class="share-title">
@@ -959,10 +970,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Legislative Activity',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Legislative Activity', window.location.href)"
 >
     WhatsApp
 </button>
@@ -988,12 +996,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 4 -->
+<!-- =========================================================
+     PHOTO 4
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="constituency"
-    data-gallery-id="photo-4"
 >
 
 <img
@@ -1019,7 +1028,8 @@ footer {
 </h3>
 
 <p>
-    A photograph from constituency engagement and public service.
+    A photograph from constituency engagement
+    and public service.
 </p>
 
 <div class="share-title">
@@ -1030,10 +1040,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Constituency Engagement',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Constituency Engagement', window.location.href)"
 >
     WhatsApp
 </button>
@@ -1059,12 +1066,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 5 -->
+<!-- =========================================================
+     PHOTO 5
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="community"
-    data-gallery-id="photo-5"
 >
 
 <img
@@ -1101,10 +1109,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Community Engagement',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Community Engagement', window.location.href)"
 >
     WhatsApp
 </button>
@@ -1130,12 +1135,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 6 -->
+<!-- =========================================================
+     PHOTO 6
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="official"
-    data-gallery-id="photo-6"
 >
 
 <img
@@ -1172,10 +1178,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Official Activity',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Official Activity', window.location.href)"
 >
     WhatsApp
 </button>
@@ -1201,12 +1204,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 7 -->
+<!-- =========================================================
+     PHOTO 7
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="constituency"
-    data-gallery-id="photo-7"
 >
 
 <img
@@ -1243,10 +1247,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Public Service',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Public Service', window.location.href)"
 >
     WhatsApp
 </button>
@@ -1272,12 +1273,13 @@ footer {
 </article>
 
 
-<!-- PHOTO 8 -->
+<!-- =========================================================
+     PHOTO 8
+========================================================= -->
 
 <article
     class="gallery-card"
     data-category="community"
-    data-gallery-id="photo-8"
 >
 
 <img
@@ -1314,10 +1316,7 @@ footer {
 
 <button
     class="whatsapp"
-    onclick="shareWhatsApp(
-        'Community Moment',
-        window.location.href
-    )"
+    onclick="shareWhatsApp('Community Moment', window.location.href)"
 >
     WhatsApp
 </button>
@@ -1350,7 +1349,9 @@ footer {
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- =========================================================
+     CTA
+========================================================= -->
 
 <section class="cta">
 
@@ -1384,7 +1385,9 @@ footer {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -1420,6 +1423,10 @@ footer {
 
 <a href="about.html">
     About
+</a>
+
+<a href="biography.html">
+    Biography
 </a>
 
 <a href="office.html">
@@ -1472,7 +1479,9 @@ Ojomah Egwaba. All Rights Reserved.
 </footer>
 
 
-<!-- ================= LIGHTBOX ================= -->
+<!-- =========================================================
+     LIGHTBOX
+========================================================= -->
 
 <div
     class="lightbox"
@@ -1494,11 +1503,14 @@ Ojomah Egwaba. All Rights Reserved.
 </div>
 
 
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+
+/* ================= MOBILE MENU ================= */
 
 function toggleMenu() {
 
@@ -1512,7 +1524,7 @@ function toggleMenu() {
 /* Close menu after clicking a link */
 
 document
-    .querySelectorAll("nav a")
+    .querySelectorAll("#navigation a")
     .forEach(function(link) {
 
         link.addEventListener(
@@ -1536,14 +1548,10 @@ document.addEventListener(
     function(event) {
 
         const navigation =
-            document.getElementById(
-                "navigation"
-            );
+            document.getElementById("navigation");
 
         const menu =
-            document.querySelector(
-                ".mobile-menu"
-            );
+            document.querySelector(".mobile-menu");
 
         if (
             navigation.classList.contains("show") &&
@@ -1559,19 +1567,13 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   FILTERS
-========================================================= */
+/* ================= FILTERS ================= */
 
 const filterButtons =
-    document.querySelectorAll(
-        ".filter-btn"
-    );
+    document.querySelectorAll(".filter-btn");
 
 const galleryCards =
-    document.querySelectorAll(
-        ".gallery-card"
-    );
+    document.querySelectorAll(".gallery-card");
 
 
 filterButtons.forEach(
@@ -1584,17 +1586,13 @@ filterButtons.forEach(
                 filterButtons.forEach(
                     function(btn) {
 
-                        btn.classList.remove(
-                            "active"
-                        );
+                        btn.classList.remove("active");
 
                     }
                 );
 
 
-                button.classList.add(
-                    "active"
-                );
+                button.classList.add("active");
 
 
                 const filter =
@@ -1613,13 +1611,11 @@ filterButtons.forEach(
                             category === filter
                         ) {
 
-                            card.style.display =
-                                "";
+                            card.style.display = "";
 
                         } else {
 
-                            card.style.display =
-                                "none";
+                            card.style.display = "none";
 
                         }
 
@@ -1633,30 +1629,20 @@ filterButtons.forEach(
 );
 
 
-/* =========================================================
-   LIGHTBOX
-========================================================= */
+/* ================= LIGHTBOX ================= */
 
 function openLightbox(image) {
 
     const lightbox =
-        document.getElementById(
-            "lightbox"
-        );
+        document.getElementById("lightbox");
 
     const lightboxImage =
-        document.getElementById(
-            "lightboxImage"
-        );
+        document.getElementById("lightboxImage");
 
 
-    lightboxImage.src =
-        image;
+    lightboxImage.src = image;
 
-
-    lightbox.classList.add(
-        "show"
-    );
+    lightbox.classList.add("show");
 
 }
 
@@ -1664,12 +1650,8 @@ function openLightbox(image) {
 function closeLightbox() {
 
     document
-        .getElementById(
-            "lightbox"
-        )
-        .classList.remove(
-            "show"
-        );
+        .getElementById("lightbox")
+        .classList.remove("show");
 
 }
 
@@ -1680,9 +1662,7 @@ document.addEventListener(
     "keydown",
     function(event) {
 
-        if (
-            event.key === "Escape"
-        ) {
+        if (event.key === "Escape") {
 
             closeLightbox();
 
@@ -1692,14 +1672,9 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   WHATSAPP SHARE
-========================================================= */
+/* ================= WHATSAPP SHARE ================= */
 
-function shareWhatsApp(
-    title,
-    link
-) {
+function shareWhatsApp(title, link) {
 
     const message =
         title +
@@ -1709,26 +1684,20 @@ function shareWhatsApp(
 
     window.open(
         "https://wa.me/?text=" +
-        encodeURIComponent(
-            message
-        ),
+        encodeURIComponent(message),
         "_blank"
     );
 
 }
 
 
-/* =========================================================
-   FACEBOOK SHARE
-========================================================= */
+/* ================= FACEBOOK SHARE ================= */
 
 function shareFacebook(link) {
 
     window.open(
         "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(
-            link
-        ),
+        encodeURIComponent(link),
         "_blank",
         "width=700,height=500"
     );
@@ -1736,22 +1705,15 @@ function shareFacebook(link) {
 }
 
 
-/* =========================================================
-   COPY LINK
-========================================================= */
+/* ================= COPY LINK ================= */
 
 async function copyLink(link) {
 
     try {
 
-        await navigator.clipboard.writeText(
-            link
-        );
+        await navigator.clipboard.writeText(link);
 
-
-        alert(
-            "Gallery link copied."
-        );
+        alert("Gallery link copied.");
 
     } catch {
 
