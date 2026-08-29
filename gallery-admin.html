@@ -1,0 +1,971 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gallery Admin | Comfort Egwaba</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f5f8f5;
+    color:#173b2b;
+    line-height:1.6;
+}
+
+header{
+    background:#003d27;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    text-decoration:none;
+}
+
+.logo img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}
+
+.logo-text{
+    font-size:14px;
+    font-weight:700;
+    line-height:1.15;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover,
+nav a.active{
+    color:#f2bd24;
+}
+
+.contact-btn{
+    background:#f2bd24;
+    color:#102b20 !important;
+    padding:10px 16px;
+    border-radius:5px;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.hero{
+    background:#003d27;
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.hero span{
+    color:#f2bd24;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,6vw,60px);
+    margin:10px 0;
+}
+
+.hero p{
+    color:#d8e7df;
+    max-width:650px;
+    margin:auto;
+}
+
+.container{
+    max-width:1100px;
+    margin:45px auto;
+    padding:0 20px;
+}
+
+.box{
+    background:white;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+h2{
+    font-family:"Playfair Display",serif;
+    color:#003d27;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin:18px 0 7px;
+    font-weight:700;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccd6d0;
+    border-radius:6px;
+    font-family:inherit;
+    font-size:15px;
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#087c4e;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.publish-btn{
+    margin-top:25px;
+    padding:14px 22px;
+    border:none;
+    border-radius:6px;
+    background:#f2bd24;
+    color:#102b20;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.publish-btn:hover{
+    background:#003d27;
+    color:white;
+}
+
+.success{
+    display:none;
+    margin-top:20px;
+    padding:14px;
+    border-radius:6px;
+    background:#e5f6e9;
+    color:#176b2f;
+    font-weight:600;
+}
+
+.error{
+    display:none;
+    margin-top:20px;
+    padding:14px;
+    border-radius:6px;
+    background:#fdeaea;
+    color:#a51d1d;
+    font-weight:600;
+}
+
+.preview{
+    display:none;
+    margin-top:25px;
+}
+
+.preview img{
+    width:240px;
+    max-height:200px;
+    object-fit:cover;
+    border-radius:7px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.published{
+    margin-top:55px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.gallery-item{
+    background:white;
+    border-radius:9px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.gallery-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-info{
+    padding:18px;
+}
+
+.gallery-info h3{
+    color:#003d27;
+    margin-bottom:5px;
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+}
+
+.gallery-date{
+    color:#087c4e;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.gallery-info p{
+    color:#66766d;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.delete-btn{
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    background:#c62828;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#8e0000;
+}
+
+.empty{
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    color:#65756c;
+    text-align:center;
+}
+
+footer{
+    background:#002d20;
+    color:white;
+    padding:40px 6% 25px;
+    margin-top:70px;
+}
+
+.footer-content{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-brand h3{
+    font-family:"Playfair Display",serif;
+    margin-bottom:7px;
+}
+
+.footer-brand p{
+    color:#b9ccc2;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+    color:#f2bd24;
+}
+
+.copyright{
+    max-width:1100px;
+    margin:30px auto 0;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.15);
+    color:#a9bdb3;
+    font-size:13px;
+}
+
+@media(max-width:900px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        width:100%;
+        background:#003d27;
+        padding:15px 5% 25px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+    }
+
+    nav.open{
+        display:flex;
+    }
+
+    nav a{
+        width:100%;
+        padding:13px 0;
+        border-bottom:1px solid rgba(255,255,255,.12);
+    }
+
+    nav .contact-btn{
+        width:auto;
+        margin-top:12px;
+        border-bottom:none;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .logo-text{
+        font-size:12px;
+    }
+
+    .logo img{
+        width:42px;
+        height:42px;
+    }
+
+    .container{
+        padding:0 15px;
+    }
+
+    .box{
+        padding:22px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+}
+</style></head><body><header><a href="index.html" class="logo">
+
+    <img
+        src="images/kogi-logo.png"
+        alt="Kogi State House of Assembly"
+    >
+
+    <div class="logo-text">
+        KOGI STATE HOUSE<br>
+        OF ASSEMBLY
+    </div>
+
+</a>
+
+<button
+    type="button"
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open navigation menu"
+>
+    ☰
+</button>
+
+<nav id="mainNav">
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="office.html">Office</a>
+
+    <a href="legislative.html">Legislative Activities</a>
+
+    <a href="constituency.html">Constituency</a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html" class="active">Gallery</a>
+
+    <a href="contact.html" class="contact-btn">
+        Get In Touch
+    </a>
+
+</nav>
+
+</header><section class="hero"><span>Gallery Management</span>
+
+<h1>Gallery Admin</h1>
+
+<p>
+    Add photographs and official event memories
+    to the website gallery.
+</p>
+
+</section><div class="container"><div class="box">
+
+    <h2>Add New Gallery Photo</h2>
+
+    <form id="galleryForm">
+
+        <label for="title">
+            Photo Title
+        </label>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Example: Constituency Engagement"
+            required
+        >
+
+        <label for="date">
+            Date
+        </label>
+
+        <input
+            type="date"
+            id="date"
+            required
+        >
+
+        <label for="image">
+            Image URL
+        </label>
+
+        <input
+            type="url"
+            id="image"
+            placeholder="https://i.ibb.co/example/photo.jpg"
+            required
+        >
+
+        <label for="description">
+            Description
+        </label>
+
+        <textarea
+            id="description"
+            placeholder="Write a short description..."
+        ></textarea>
+
+        <button
+            type="submit"
+            class="publish-btn"
+        >
+            Add to Gallery
+        </button>
+
+    </form>
+
+
+    <div class="preview" id="preview">
+
+        <strong>Image Preview</strong>
+
+        <br><br>
+
+        <img
+            id="previewImage"
+            src=""
+            alt="Image Preview"
+        >
+
+    </div>
+
+
+    <div class="success" id="success">
+        Photo added to the gallery successfully!
+    </div>
+
+
+    <div class="error" id="error">
+        The image could not be loaded. Please check your image URL.
+    </div>
+
+</div>
+
+
+<div class="published">
+
+    <h2>Published Gallery Photos</h2>
+
+    <div
+        class="gallery-grid"
+        id="galleryList"
+    ></div>
+
+</div>
+
+</div><footer><div class="footer-content">
+
+    <div class="footer-brand">
+
+        <h3>
+            Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+        </h3>
+
+        <p>
+            Deputy Speaker, Kogi State House of Assembly.
+        </p>
+
+    </div>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="news.html">News</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
+
+<div class="copyright">
+
+    © 2026 Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.
+    All Rights Reserved.
+
+</div>
+
+</footer><script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function(){
+
+        mainNav.classList.toggle("open");
+
+        if(mainNav.classList.contains("open")){
+
+            menuToggle.innerHTML = "✕";
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close navigation menu"
+            );
+
+        }else{
+
+            menuToggle.innerHTML = "☰";
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
+
+
+    /* =========================
+       ELEMENTS
+    ========================= */
+
+    const galleryForm =
+        document.getElementById("galleryForm");
+
+    const galleryList =
+        document.getElementById("galleryList");
+
+    const imageInput =
+        document.getElementById("image");
+
+    const preview =
+        document.getElementById("preview");
+
+    const previewImage =
+        document.getElementById("previewImage");
+
+    const success =
+        document.getElementById("success");
+
+    const error =
+        document.getElementById("error");
+
+
+    /* =========================
+       GET GALLERY
+    ========================= */
+
+    function getGallery(){
+
+        try{
+
+            return JSON.parse(
+                localStorage.getItem("websiteGallery") || "[]"
+            );
+
+        }catch(e){
+
+            return [];
+
+        }
+
+    }
+
+
+    /* =========================
+       SAVE GALLERY
+    ========================= */
+
+    function saveGallery(gallery){
+
+        localStorage.setItem(
+            "websiteGallery",
+            JSON.stringify(gallery)
+        );
+
+    }
+
+
+    /* =========================
+       IMAGE PREVIEW
+    ========================= */
+
+    imageInput.addEventListener("input", function(){
+
+        const url =
+            imageInput.value.trim();
+
+        error.style.display = "none";
+
+        if(!url){
+
+            preview.style.display = "none";
+            return;
+
+        }
+
+        previewImage.src = url;
+
+        preview.style.display = "block";
+
+    });
+
+
+    previewImage.addEventListener("error", function(){
+
+        error.textContent =
+            "Image preview could not be loaded. Check that you copied the direct ImgBB image URL.";
+
+        error.style.display = "block";
+
+    });
+
+
+    previewImage.addEventListener("load", function(){
+
+        error.style.display = "none";
+
+    });
+
+
+    /* =========================
+       ADD PHOTO
+    ========================= */
+
+    galleryForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        error.style.display = "none";
+
+        const title =
+            document.getElementById("title")
+            .value
+            .trim();
+
+        const date =
+            document.getElementById("date")
+            .value;
+
+        const image =
+            document.getElementById("image")
+            .value
+            .trim();
+
+        const description =
+            document.getElementById("description")
+            .value
+            .trim();
+
+
+        if(!title || !date || !image){
+
+            error.textContent =
+                "Please fill in the title, date and image URL.";
+
+            error.style.display = "block";
+
+            return;
+
+        }
+
+
+        const gallery =
+            getGallery();
+
+
+        const newPhoto = {
+
+            id: Date.now(),
+
+            title: title,
+
+            date: date,
+
+            image: image,
+
+            description: description
+
+        };
+
+
+        gallery.unshift(newPhoto);
+
+
+        saveGallery(gallery);
+
+
+        galleryForm.reset();
+
+        preview.style.display = "none";
+
+
+        success.style.display = "block";
+
+
+        setTimeout(function(){
+
+            success.style.display = "none";
+
+        },3000);
+
+
+        displayGallery();
+
+    });
+
+
+    /* =========================
+       DISPLAY GALLERY
+    ========================= */
+
+    function displayGallery(){
+
+        const gallery =
+            getGallery();
+
+
+        if(gallery.length === 0){
+
+            galleryList.innerHTML = `
+                <div class="empty">
+                    No gallery photos have been added yet.
+                </div>
+            `;
+
+            return;
+
+        }
+
+
+        galleryList.innerHTML = "";
+
+
+        gallery.forEach(function(item){
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "gallery-item";
+
+
+            const image =
+                document.createElement("img");
+
+            image.src =
+                item.image;
+
+            image.alt =
+                item.title;
+
+            image.onerror =
+                function(){
+
+                    this.style.display = "none";
+
+                };
+
+
+            const info =
+                document.createElement("div");
+
+            info.className =
+                "gallery-info";
+
+
+            const title =
+                document.createElement("h3");
+
+            title.textContent =
+                item.title;
+
+
+            const date =
+                document.createElement("div");
+
+            date.className =
+                "gallery-date";
+
+            date.textContent =
+                item.date;
+
+
+            const description =
+                document.createElement("p");
+
+            description.textContent =
+                item.description || "";
+
+
+            const deleteButton =
+                document.createElement("button");
+
+            deleteButton.type =
+                "button";
+
+            deleteButton.className =
+                "delete-btn";
+
+            deleteButton.textContent =
+                "Delete Photo";
+
+
+            deleteButton.addEventListener(
+                "click",
+                function(){
+
+                    deleteGallery(item.id);
+
+                }
+            );
+
+
+            info.appendChild(title);
+
+            info.appendChild(date);
+
+            info.appendChild(description);
+
+            info.appendChild(deleteButton);
+
+            card.appendChild(image);
+
+            card.appendChild(info);
+
+            galleryList.appendChild(card);
+
+        });
+
+    }
+
+
+    /* =========================
+       DELETE PHOTO
+    ========================= */
+
+    function deleteGallery(id){
+
+        if(!confirm(
+            "Are you sure you want to delete this photo?"
+        )){
+
+            return;
+
+        }
+
+
+        const gallery =
+            getGallery().filter(function(item){
+
+                return item.id !== id;
+
+            });
+
+
+        saveGallery(gallery);
+
+        displayGallery();
+
+    }
+
+
+    /* =========================
+       LOAD
+    ========================= */
+
+    displayGallery();
+
+});
+
+</script></body>
+</html>
