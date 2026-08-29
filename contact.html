@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7fbf6;
+            color: #173b2b;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        header {
+            background: #003d27;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #f2bd24;
+        }
+
+        .contact-btn {
+            background: #f2bd24;
+            color: #102b20 !important;
+            padding: 11px 18px;
+            border-radius: 5px;
+        }
+
+        /* MOBILE MENU BUTTON */
+        .menu-btn {
+            display: none;
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,.5);
+            padding: 8px 12px;
+            font-size: 22px;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        /* HERO */
+        .hero {
+            background:
+                linear-gradient(rgba(0,61,39,.9), rgba(0,61,39,.9)),
+                url("images/kogi-assembly.jpg") center/cover;
+            padding: 90px 6%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .hero span {
+            color: #f2bd24;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.1;
+            margin: 12px 0 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e0ebe5;
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 6%;
+            display: grid;
+            grid-template-columns: 38% 62%;
+            gap: 50px;
+        }
+
+        /* INFO */
+        .contact-info h2,
+        .contact-form h2 {
+            font-family: "Playfair Display", serif;
+            color: #003d27;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .gold-line {
+            width: 65px;
+            height: 4px;
+            background: #f2bd24;
+            margin-bottom: 25px;
+        }
+
+        .contact-info > p {
+            color: #5e7168;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 18px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .info-icon {
+            font-size: 25px;
+            min-width: 35px;
+        }
+
+        .info-box h3 {
+            color: #003d27;
+            margin-bottom: 3px;
+        }
+
+        .info-box p {
+            color: #65776e;
+            font-size: 14px;
+        }
+
+        .info-box a {
+            color: #0c8051;
+            text-decoration: none;
+        }
+
+        /* FORM */
+        .contact-form {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.08);
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin: 18px 0 7px;
+            color: #173b2b;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d0d8d3;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #0c8051;
+        }
+
+        textarea {
+            min-height: 170px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #f2bd24;
+            color: #082d20;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #003d27;
+            color: white;
+        }
+
+        .success {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #e7f7e9;
+            color: #176b2f;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #002d20;
+            color: white;
+            padding: 45px 6% 25px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-brand h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            color: #b9ccc2;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #f2bd24;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.15);
+            color: #a9bdb3;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 950px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: #003d27;
+                padding: 20px 5%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+            }
+
+            .contact-section {
+                grid-template-columns: 1fr;
+                padding-top: 55px;
+            }
+
+            .contact-info {
+                max-width: 650px;
+                margin: auto;
+            }
+
+            .contact-form {
+                max-width: 700px;
+                margin: auto;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <a href="index.html" class="logo">
+        <img src="images/kogi-logo.png" alt="Kogi State House of Assembly">
+
+        <div class="logo-text">
+            KOGI STATE HOUSE<br>
+            OF ASSEMBLY
+        </div>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">Biography</a>
+        <a href="office.html">Office</a>
+        <a href="legislative.html">Legislative Activities</a>
+        <a href="constituency.html">Constituency</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active contact-btn">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span>Get In Touch</span>
+
+        <h1>Contact the Office</h1>
+
+        <p>
+            We welcome your questions, suggestions, enquiries
+            and messages from citizens and stakeholders.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section">
+
+    <!-- CONTACT INFORMATION -->
+    <div class="contact-info">
+
+        <h2>Contact Information</h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+            Please use the contact form to send a message to the
+            office. You can also use the contact information below.
+        </p>
+
+
+        <div class="info-box">
+
+            <div class="info-icon">📍</div>
+
+            <div>
+                <h3>Office</h3>
+                <p>
+                    Kogi State House of Assembly,
+                    Lokoja, Kogi State, Nigeria.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="info-icon">✉️</div>
+
+            <div>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:office@example.com">
+                        office@example.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="info-icon">📞</div>
+
+            <div>
+                <h3>Telephone</h3>
+                <p>
+                    <a href="tel:+2340000000000">
+                        +234 000 000 0000
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="info-icon">🕐</div>
+
+            <div>
+                <h3>Office Hours</h3>
+                <p>
+                    Monday – Friday<br>
+                    8:00 AM – 4:00 PM
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FORM -->
+    <div class="contact-form">
+
+        <h2>Send a Message</h2>
+
+        <div class="gold-line"></div>
+
+        <form id="contactForm">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            >
+
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+            >
+
+
+            <label for="subject">
+                Subject
+            </label>
+
+            <select id="subject" name="subject" required>
+
+                <option value="">
+                    Select a subject
+                </option>
+
+                <option value="General Enquiry">
+                    General Enquiry
+                </option>
+
+                <option value="Constituency Matter">
+                    Constituency Matter
+                </option>
+
+                <option value="Legislative Matter">
+                    Legislative Matter
+                </option>
+
+                <option value="Invitation">
+                    Invitation
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+
+        <div
+            class="success"
+            id="successMessage"
+        >
+            Thank you. Your message has been received successfully.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <h3>
+                Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+            </h3>
+
+            <p>
+                Deputy Speaker, Kogi State House of Assembly.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">Biography</a>
+            <a href="office.html">Office</a>
+            <a href="legislative.html">Legislative Activities</a>
+            <a href="constituency.html">Constituency</a>
+            <a href="news.html">News</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("mainNav");
+
+        nav.classList.toggle("show");
+
+    }
+
+
+    /* CONTACT FORM */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const message = {
+
+                id: Date.now(),
+
+                name:
+                    document.getElementById("name").value,
+
+                email:
+                    document.getElementById("email").value,
+
+                phone:
+                    document.getElementById("phone").value,
+
+                subject:
+                    document.getElementById("subject").value,
+
+                message:
+                    document.getElementById("message").value,
+
+                date:
+                    new Date().toLocaleString()
+
+            };
+
+
+            let messages =
+                JSON.parse(
+                    localStorage.getItem("contactMessages") || "[]"
+                );
+
+
+            messages.unshift(message);
+
+
+            localStorage.setItem(
+                "contactMessages",
+                JSON.stringify(messages)
+            );
+
+
+            contactForm.reset();
+
+
+            const success =
+                document.getElementById("successMessage");
+
+
+            success.style.display = "block";
+
+
+            setTimeout(function() {
+
+                success.style.display = "none";
+
+            }, 5000);
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
