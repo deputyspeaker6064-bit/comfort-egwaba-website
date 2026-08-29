@@ -1,892 +1,645 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-Biography | Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
-</title>
-
-<meta
-    name="description"
-    content="Official biography of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba, Deputy Speaker of the Kogi State House of Assembly and Member Representing Ibaji State Constituency."
->
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Biography | Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</title><meta name="description"
+content="Official biography of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba, Deputy Speaker of the Kogi State House of Assembly and Member Representing Ibaji State Constituency.">
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f8f5;
+    color:#173b2b;
+    line-height:1.8;
 }
 
-html {
-    scroll-behavior: smooth;
+a{text-decoration:none;}
+
+header{
+    background:#003d27;
+    color:white;
+    padding:16px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f8f5;
-    color: #173b2b;
-    line-height: 1.8;
+.nav-container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-a {
-    text-decoration: none;
+.logo{
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+    line-height:1.25;
 }
 
-header {
-    background: #003d27;
-    color: white;
-    padding: 17px 6%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+nav{
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
-.nav-container {
-    max-width: 1250px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.logo {
-    color: white;
-    font-weight: bold;
-    line-height: 1.25;
-    font-size: 14px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    font-size: 13px;
-    font-weight: bold;
+nav a{
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    white-space:nowrap;
+    padding:8px 0;
 }
 
 nav a:hover,
-nav a.active {
-    color: #f2bd24;
+nav a.active{
+    color:#f2bd24;
 }
 
-.contact-btn {
-    background: #f2bd24;
-    color: #003d27 !important;
-    padding: 9px 15px;
-    border-radius: 5px;
+.contact-btn{
+    background:#f2bd24;
+    color:#003d27!important;
+    padding:10px 16px!important;
+    border-radius:5px;
 }
 
-.menu-button {
-    display: none;
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
+.menu-button{
+    display:none;
+    width:44px;
+    height:44px;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    border-radius:6px;
 }
 
-.hero {
-    background: #003d27;
-    color: white;
-    padding: 75px 0;
+.menu-button:hover{
+    background:rgba(255,255,255,.1);
 }
 
-.container {
-    width: 90%;
-    max-width: 1150px;
-    margin: auto;
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.hero-content {
-    max-width: 900px;
+/* HERO */
+
+.hero{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,61,39,.98),
+            rgba(0,61,39,.84)
+        );
+    color:white;
+    padding:85px 0;
 }
 
-.eyebrow {
-    color: #f2bd24;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: bold;
+.hero-content{
+    max-width:900px;
 }
 
-.hero h1 {
-    font-family: Georgia, serif;
-    font-size: clamp(38px, 6vw, 62px);
-    line-height: 1.1;
-    margin: 13px 0 18px;
+.eyebrow{
+    color:#f2bd24;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:bold;
 }
 
-.hero h1 span {
-    color: #f2bd24;
+.hero h1{
+    font-family:Georgia,serif;
+    font-size:clamp(40px,6vw,66px);
+    line-height:1.1;
+    margin:12px 0 18px;
 }
 
-.hero p {
-    color: #dcebe3;
-    font-size: 18px;
-    margin: 0;
+.hero h1 span{
+    color:#f2bd24;
 }
 
-.biography {
-    padding: 65px 0 80px;
+.hero p{
+    color:#dcebe3;
+    font-size:17px;
+    margin:0;
 }
 
-.biography-intro {
-    background: white;
-    padding: 38px;
-    border-left: 5px solid #f2bd24;
-    border-radius: 9px;
-    box-shadow: 0 6px 25px rgba(0,0,0,.07);
-    margin-bottom: 28px;
+/* BIOGRAPHY */
+
+.biography{
+    padding:70px 0 80px;
 }
 
-.biography-intro h2 {
-    font-family: Georgia, serif;
-    color: #003d27;
-    margin-top: 0;
-    font-size: 32px;
+.biography-intro,
+.biography-card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 6px 25px rgba(0,0,0,.07);
 }
 
-.biography-intro p {
-    color: #52675c;
-    font-size: 17px;
+.biography-intro{
+    padding:38px;
+    border-left:5px solid #f2bd24;
+    margin-bottom:28px;
 }
 
-.biography-card {
-    background: white;
-    padding: 32px;
-    margin-bottom: 22px;
-    border-radius: 9px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+.biography-intro h2{
+    font-family:Georgia,serif;
+    color:#003d27;
+    margin-top:0;
+    font-size:32px;
 }
 
-.biography-card h2 {
-    color: #003d27;
-    font-family: Georgia, serif;
-    font-size: 28px;
-    margin-top: 0;
-    border-bottom: 2px solid #f2bd24;
-    padding-bottom: 10px;
+.biography-intro p,
+.biography-card p{
+    color:#52675c;
+    font-size:16px;
 }
 
-.biography-card p {
-    color: #52675c;
-    font-size: 16px;
-    margin-bottom: 15px;
+.biography-card{
+    padding:32px;
+    margin-bottom:22px;
 }
 
-.highlight {
-    background: #eef7ed;
-    padding: 20px;
-    border-radius: 7px;
-    margin-top: 18px;
+.biography-card h2{
+    color:#003d27;
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin-top:0;
+    border-bottom:2px solid #f2bd24;
+    padding-bottom:10px;
 }
 
-.highlight strong {
-    color: #003d27;
+.highlight{
+    background:#eef7ed;
+    padding:20px;
+    border-radius:7px;
+    margin-top:18px;
 }
 
-.legacy {
-    background: #003d27;
-    color: white;
-    padding: 70px 0;
+.highlight strong{
+    color:#003d27;
 }
 
-.legacy-content {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+/* LEGACY */
+
+.legacy{
+    background:#003d27;
+    color:white;
+    padding:70px 0;
 }
 
-.legacy .eyebrow {
-    color: #f2bd24;
+.legacy-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
-.legacy h2 {
-    font-family: Georgia, serif;
-    font-size: 39px;
-    line-height: 1.25;
-    margin: 10px 0 20px;
+.legacy .eyebrow{
+    color:#f2bd24;
 }
 
-.legacy p {
-    color: #dcebe3;
-    font-size: 17px;
+.legacy h2{
+    font-family:Georgia,serif;
+    font-size:39px;
+    line-height:1.25;
+    margin:10px 0 20px;
 }
 
-.quote {
-    margin-top: 28px;
-    padding: 23px;
-    border-left: 4px solid #f2bd24;
-    background: rgba(255,255,255,.06);
-    text-align: left;
-    font-family: Georgia, serif;
-    font-size: 19px;
+.legacy p{
+    color:#dcebe3;
+    font-size:17px;
 }
 
-footer {
-    background: #002d20;
-    color: white;
-    padding: 45px 0 22px;
+.quote{
+    margin-top:28px;
+    padding:23px;
+    border-left:4px solid #f2bd24;
+    background:rgba(255,255,255,.06);
+    text-align:left;
+    font-family:Georgia,serif;
+    font-size:19px;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 40px;
+/* FOOTER */
+
+footer{
+    background:#002d20;
+    color:white;
+    padding:50px 0 25px;
 }
 
-.footer-brand h3 {
-    font-family: Georgia, serif;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:45px;
+}
+
+.footer-brand h3{
+    font-family:Georgia,serif;
 }
 
 .footer-brand p,
-.footer-column a {
-    color: #b8cbc1;
+.footer-column a{
+    color:#b9ccc2;
 }
 
-.footer-column h4 {
-    color: #f2bd24;
+.footer-column h4{
+    color:#f2bd24;
 }
 
-.footer-column a {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
+.footer-column a{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
 }
 
-.copyright {
-    border-top: 1px solid rgba(255,255,255,.15);
-    margin-top: 35px;
-    padding-top: 17px;
-    text-align: center;
-    color: #91a89d;
-    font-size: 13px;
+.footer-column a:hover{
+    color:#f2bd24;
 }
 
-@media (max-width: 900px) {
-
-    nav {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 68px;
-        background: #003d27;
-        padding: 20px 6%;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav.show {
-        display: flex;
-    }
-
-    .menu-button {
-        display: block;
-    }
-
+.copyright{
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:40px;
+    padding-top:18px;
+    text-align:center;
+    color:#91a89d;
+    font-size:13px;
 }
 
-@media (max-width: 650px) {
+/* MOBILE MENU */
 
-    .hero {
-        padding: 55px 0;
+@media(max-width:1100px){
+
+    .menu-button{
+        display:flex;
     }
 
-    .hero p {
-        font-size: 16px;
+    nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#003d27;
+        padding:12px 5% 20px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:3px;
+        box-shadow:0 8px 20px rgba(0,0,0,.2);
+        border-top:1px solid rgba(255,255,255,.12);
+        max-height:calc(100vh - 70px);
+        overflow-y:auto;
     }
 
-    .biography {
-        padding: 45px 0 60px;
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        width:100%;
+        min-height:50px;
+        display:flex;
+        align-items:center;
+        padding:13px 16px;
+        font-size:15px;
+        border-bottom:1px solid rgba(255,255,255,.1);
+        border-radius:5px;
+    }
+
+    nav a:hover{
+        background:rgba(255,255,255,.08);
+    }
+
+    nav a.active{
+        background:rgba(242,189,36,.12);
+        color:#f2bd24;
+    }
+
+    nav a:last-child{
+        margin-top:10px;
+        border-bottom:none;
+        justify-content:center;
+    }
+
+    .contact-btn{
+        background:#f2bd24!important;
+        color:#003d27!important;
+        justify-content:center;
+    }
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+/* PHONE */
+
+@media(max-width:600px){
+
+    header{
+        padding:12px 5%;
+    }
+
+    .logo{
+        font-size:12px;
+    }
+
+    .hero{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .biography{
+        padding:55px 0 65px;
     }
 
     .biography-intro,
-    .biography-card {
-        padding: 24px;
+    .biography-card{
+        padding:24px;
     }
 
-    .biography-intro h2 {
-        font-size: 27px;
+    .biography-intro h2{
+        font-size:28px;
     }
 
-    .biography-card h2 {
-        font-size: 24px;
+    .biography-card h2{
+        font-size:24px;
     }
 
-    .legacy {
-        padding: 55px 0;
+    .legacy{
+        padding:60px 0;
     }
 
-    .legacy h2 {
-        font-size: 31px;
+    .legacy h2{
+        font-size:32px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .footer-grid{
+        grid-template-columns:1fr;
     }
-
 }
 
-</style>
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<div class="nav-container">
-
-<a
-    href="index.html"
-    class="logo"
->
-    KOGI STATE HOUSE<br>
-    OF ASSEMBLY
-</a>
-
-
-<nav id="mainNav">
-
-<a href="index.html">
-    Home
-</a>
-
-<a href="about.html">
-    About
-</a>
-
-<a href="biography.html" class="active">
-    Biography
-</a>
-
-<a href="office.html">
-    Office
-</a>
-
-<a href="legislative.html">
-    Legislative Activities
-</a>
-
-<a href="constituency.html">
-    Constituency
-</a>
-
-<a href="news.html">
-    News
-</a>
-
-<a href="gallery.html">
-    Media Gallery
-</a>
-
-<a
-    href="contact.html"
-    class="contact-btn"
->
-    Contact
-</a>
-
-</nav>
-
-
-<div
-    class="menu-button"
-    onclick="toggleMenu()"
->
-    ☰
-</div>
-
-</div>
-
-</header>
-
-
-
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-content">
-
-<div class="eyebrow">
-    Official Biography
-</div>
-
-<h1>
-    Rt. Hon. Comfort Ojoma
-    <span>Nwuchiola Egwaba</span>
-</h1>
-
-<p>
-    Deputy Speaker of the Kogi State House of Assembly
-    and Member Representing Ibaji State Constituency.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<main class="biography">
-
-<div class="container">
-
-
-<section class="biography-intro">
-
-<h2>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
-</h2>
-
-<p>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba is an accomplished
-    legislator, distinguished public servant, and trailblazing
-    political leader whose exemplary service has continued to shape
-    governance and inspire inclusive leadership in Kogi State and
-    beyond.
-</p>
-
-<p>
-    She currently serves as the Deputy Speaker of the Kogi State
-    House of Assembly and represents the people of Ibaji State
-    Constituency, making history as the first woman to occupy the
-    office of Deputy Speaker in the State's legislative history.
-</p>
-
-<p>
-    A native of Ibaji Local Government Area of Kogi State, Rt. Hon.
-    Egwaba has built a record of purposeful leadership, effective
-    representation, grassroots engagement and public service.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Education & Academic Background
-</h2>
-
-<p>
-    A native of Ibaji Local Government Area of Kogi State,
-    Rt. Hon. Egwaba attended Government Girls Secondary School,
-    Idah, before proceeding to the Kogi State College of Health
-    Sciences and Technology, Idah, where she obtained a National
-    Diploma (ND) in Medical Laboratory Technology.
-</p>
-
-<p>
-    She further obtained a Higher National Diploma (HND) in
-    Medical Laboratory Technology from the Federal School of
-    Medical Laboratory Technology (Science), Jos/Vom, Plateau
-    State, and a Bachelor of Science (B.Sc.) in Peace Studies and
-    Conflict Resolution from the National Open University of
-    Nigeria (NOUN).
-</p>
-
-<p>
-    She is currently pursuing a Master of Science (M.Sc.) in
-    International Relations and Diplomacy at Salem University,
-    Lokoja, Kogi State.
-</p>
-
-<div class="highlight">
-
-<strong>
-    Her strong academic background, combined with years of
-    grassroots engagement and public service, has equipped her
-    with the vision, knowledge and capacity to provide purposeful
-    leadership and effective representation.
-</strong>
-
-</div>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Legislative Leadership
-</h2>
-
-<p>
-    Since her election into the 8th Kogi State House of Assembly,
-    Rt. Hon. Egwaba has distinguished herself as a proactive
-    legislator committed to promoting good governance, social
-    justice, and sustainable development.
-</p>
-
-<p>
-    As Deputy Speaker, she has played a strategic role in
-    strengthening legislative oversight, fostering harmony within
-    the Assembly, and supporting the passage of people-oriented
-    laws and policies that advance the development of Kogi State.
-</p>
-
-<p>
-    Her legislative record reflects an unwavering commitment to
-    equity, inclusion, and community development.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Legislative Record & Community Development
-</h2>
-
-<p>
-    She sponsored the landmark Kogi State Oil Producing Areas
-    Development Commission (KOSOPADEC) Bill, designed to accelerate
-    the development of oil-producing communities, as well as the
-    Gender Representation Bill aimed at expanding opportunities
-    for women's participation in governance.
-</p>
-
-<p>
-    She also championed the motion for the reconstruction of the
-    strategic Idah–Ibaji Road and has consistently advocated
-    policies that improve access to quality education, healthcare,
-    agriculture, infrastructure, and economic opportunities for
-    rural communities.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Grassroots & Humanitarian Leadership
-</h2>
-
-<p>
-    Beyond the legislature, Rt. Hon. Egwaba is widely recognised
-    for her people-centred leadership and unwavering dedication
-    to grassroots development.
-</p>
-
-<p>
-    Through regular constituency engagements, town hall meetings,
-    educational support initiatives, youth and women empowerment
-    programmes, healthcare interventions, peacebuilding efforts,
-    and strategic advocacy for infrastructure development, she has
-    continued to improve the lives of her constituents.
-</p>
-
-<p>
-    Her humanitarian initiatives through the Comfort Ladies
-    Foundation have further empowered women, youths, widows, and
-    vulnerable persons, reinforcing her enduring commitment to
-    inclusive development and social welfare.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Gender Equality & Democratic Inclusion
-</h2>
-
-<p>
-    An advocate for gender equality and democratic inclusion,
-    Rt. Hon. Egwaba has consistently championed increased
-    representation of women in leadership and governance.
-</p>
-
-<p>
-    Her commitment to advancing the rights and participation of
-    women has earned her recognition beyond Nigeria's borders,
-    including her participation in the West Africa Female
-    Parliamentarians Peer Review Conference on Ending Violence
-    Against Women and Girls held in Accra, Ghana.
-</p>
-
-<p>
-    At the conference, she joined female legislators,
-    policymakers, and development partners from across the region
-    to strengthen collaborative efforts towards gender equality
-    and sustainable development.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Awards & Recognition
-</h2>
-
-<p>
-    Her outstanding contributions to public service have attracted
-    widespread recognition.
-</p>
-
-<p>
-    She was honoured as the Most Outstanding Female Legislator
-    during the Kogi State 34th Anniversary Lecture and Awards
-    organised by the Nigerian Post in 2025.
-</p>
-
-<p>
-    She has received the Award of Excellence from the Department
-    of English and Literary Studies, Federal University Lokoja,
-    among other commendations from professional bodies, community
-    organisations, youth groups, and civil society organisations.
-</p>
-
-<p>
-    She was also nominated for the prestigious Margaret Ekpo
-    Memorial Award in recognition of her outstanding contributions
-    to women's leadership and public service.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Traditional Titles & Honour
-</h2>
-
-<p>
-    In recognition of her exceptional leadership, dedication to
-    community development, and service to humanity, Rt. Hon.
-    Comfort Ojoma Nwuchiola Egwaba has been honoured with
-    distinguished traditional titles.
-</p>
-
-<p>
-    She is the Gimbiya Mata of Girinya and was conferred with the
-    revered title of Iganya Attah-Igala (Adeebu) by His Royal
-    Majesty, Agabaidu, the Attah Igala and President of the Kogi
-    State Traditional Council, in recognition of her remarkable
-    contributions to the development of the Igala Kingdom and
-    Kogi State.
-</p>
-
-</section>
-
-
-
-<section class="biography-card">
-
-<h2>
-    Faith, Integrity & Servant Leadership
-</h2>
-
-<p>
-    A woman of faith, integrity, compassion, and exceptional
-    leadership, Rt. Hon. Comfort Ojoma Nwuchiola Egwaba exemplifies
-    the ideals of servant leadership.
-</p>
-
-<p>
-    Her unwavering dedication to legislative excellence,
-    grassroots development, peacebuilding, women's empowerment,
-    and public service continues to inspire a new generation of
-    leaders while leaving an enduring legacy of impactful
-    governance.
-</p>
-
-</section>
-
-
-</div>
-
-</main>
-
-
-
-<section class="legacy">
-
-<div class="container">
-
-<div class="legacy-content">
-
-<div class="eyebrow">
-    Leadership Legacy
-</div>
-
-<h2>
-    A Symbol of Courage, Resilience & Visionary Leadership
-</h2>
-
-<p>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba remains a symbol of
-    courage, resilience, and visionary leadership whose
-    contributions to democratic governance and human development
-    have earned her a place among Nigeria's most respected
-    contemporary female legislators.
-</p>
-
-<div class="quote">
-    Her unwavering dedication to legislative excellence,
-    grassroots development, peacebuilding, women's empowerment,
-    and public service continues to inspire a new generation
-    of leaders.
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-
-<div class="footer-brand">
-
-<h3>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
-</h3>
-
-<p>
-    Deputy Speaker, Kogi State House of Assembly and Member
-    Representing Ibaji State Constituency.
-</p>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>
-    Quick Links
-</h4>
-
-<a href="index.html">
-    Home
-</a>
-
-<a href="about.html">
-    About
-</a>
-
-<a href="biography.html">
-    Biography
-</a>
-
-<a href="office.html">
-    Office
-</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>
-    Explore
-</h4>
-
-<a href="legislative.html">
-    Legislative Activities
-</a>
-
-<a href="constituency.html">
-    Constituency
-</a>
-
-<a href="news.html">
-    News
-</a>
-
-<a href="gallery.html">
-    Media Gallery
-</a>
-
-<a href="contact.html">
-    Contact
-</a>
-
-</div>
-
-
-</div>
-
-
-<div class="copyright">
-
+</style></head><body><header><div class="nav-container"><a href="index.html" class="logo">
+KOGI STATE HOUSE<br>
+OF ASSEMBLY
+</a><nav id="mainNav"><a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="biography.html" class="active">Biography</a>
+
+<a href="office.html">Office</a>
+
+<a href="legislative.html">Legislative Activities</a>
+
+<a href="constituency.html">Constituency</a>
+
+<a href="news.html">News</a>
+
+<a href="gallery.html">Media Gallery</a>
+
+<a href="contact.html" class="contact-btn">Contact</a>
+
+</nav><div class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
+☰
+</div></div></header><section class="hero"><div class="container"><div class="hero-content"><div class="eyebrow">
+Official Biography
+</div><h1>
+Rt. Hon. Comfort Ojoma
+<span>Nwuchiola Egwaba</span>
+</h1><p>
+Deputy Speaker of the Kogi State House of Assembly and Member
+Representing Ibaji State Constituency.
+</p></div></div></section><main class="biography"><div class="container"><section class="biography-intro"><h2>
+Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
+</h2><p>
+Rt. Hon. Comfort Ojoma Nwuchiola Egwaba is an accomplished
+legislator, distinguished public servant, and trailblazing
+political leader whose exemplary service has continued to shape
+governance and inspire inclusive leadership in Kogi State and
+beyond.
+</p><p>
+She currently serves as the Deputy Speaker of the Kogi State
+House of Assembly and represents the people of Ibaji State
+Constituency, making history as the first woman to occupy the
+office of Deputy Speaker in the State's legislative history.
+</p><p>
+A native of Ibaji Local Government Area of Kogi State, Rt. Hon.
+Egwaba has built a record of purposeful leadership, effective
+representation, grassroots engagement and public service.
+</p></section><section class="biography-card"><h2>Education & Academic Background</h2><p>
+A native of Ibaji Local Government Area of Kogi State,
+Rt. Hon. Egwaba attended Government Girls Secondary School,
+Idah, before proceeding to the Kogi State College of Health
+Sciences and Technology, Idah, where she obtained a National
+Diploma (ND) in Medical Laboratory Technology.
+</p><p>
+She further obtained a Higher National Diploma (HND) in
+Medical Laboratory Technology from the Federal School of
+Medical Laboratory Technology (Science), Jos/Vom, Plateau
+State, and a Bachelor of Science (B.Sc.) in Peace Studies and
+Conflict Resolution from the National Open University of
+Nigeria (NOUN).
+</p><p>
+She is currently pursuing a Master of Science (M.Sc.) in
+International Relations and Diplomacy at Salem University,
+Lokoja, Kogi State.
+</p><div class="highlight"><strong>
+Her strong academic background, combined with years of
+grassroots engagement and public service, has equipped her
+with the vision, knowledge and capacity to provide purposeful
+leadership and effective representation.
+</strong></div></section><section class="biography-card"><h2>Legislative Leadership</h2><p>
+Since her election into the 8th Kogi State House of Assembly,
+Rt. Hon. Egwaba has distinguished herself as a proactive
+legislator committed to promoting good governance, social
+justice, and sustainable development.
+</p><p>
+As Deputy Speaker, she has played a strategic role in
+strengthening legislative oversight, fostering harmony within
+the Assembly, and supporting the passage of people-oriented
+laws and policies that advance the development of Kogi State.
+</p><p>
+Her legislative record reflects an unwavering commitment to
+equity, inclusion, and community development.
+</p></section><section class="biography-card"><h2>Legislative Record & Community Development</h2><p>
+She sponsored the landmark Kogi State Oil Producing Areas
+Development Commission (KOSOPADEC) Bill, designed to accelerate
+the development of oil-producing communities, as well as the
+Gender Representation Bill aimed at expanding opportunities
+for women's participation in governance.
+</p><p>
+She also championed the motion for the reconstruction of the
+strategic Idah–Ibaji Road and has consistently advocated
+policies that improve access to quality education, healthcare,
+agriculture, infrastructure, and economic opportunities for
+rural communities.
+</p></section><section class="biography-card"><h2>Grassroots & Humanitarian Leadership</h2><p>
+Beyond the legislature, Rt. Hon. Egwaba is widely recognised
+for her people-centred leadership and unwavering dedication to
+grassroots development.
+</p><p>
+Through regular constituency engagements, town hall meetings,
+educational support initiatives, youth and women empowerment
+programmes, healthcare interventions, peacebuilding efforts,
+and strategic advocacy for infrastructure development, she has
+continued to improve the lives of her constituents.
+</p><p>
+Her humanitarian initiatives through the Comfort Ladies
+Foundation have further empowered women, youths, widows, and
+vulnerable persons, reinforcing her enduring commitment to
+inclusive development and social welfare.
+</p></section><section class="biography-card"><h2>Gender Equality & Democratic Inclusion</h2><p>
+An advocate for gender equality and democratic inclusion,
+Rt. Hon. Egwaba has consistently championed increased
+representation of women in leadership and governance.
+</p><p>
+Her commitment to advancing the rights and participation of
+women has earned her recognition beyond Nigeria's borders,
+including her participation in the West Africa Female
+Parliamentarians Peer Review Conference on Ending Violence
+Against Women and Girls held in Accra, Ghana.
+</p><p>
+At the conference, she joined female legislators,
+policymakers, and development partners from across the region
+to strengthen collaborative efforts towards gender equality
+and sustainable development.
+</p></section><section class="biography-card"><h2>Awards & Recognition</h2><p>
+Her outstanding contributions to public service have attracted
+widespread recognition.
+</p><p>
+She was honoured as the Most Outstanding Female Legislator
+during the Kogi State 34th Anniversary Lecture and Awards
+organised by the Nigerian Post in 2025.
+</p><p>
+She has received the Award of Excellence from the Department
+of English and Literary Studies, Federal University Lokoja,
+among other commendations from professional bodies, community
+organisations, youth groups, and civil society organisations.
+</p><p>
+She was also nominated for the prestigious Margaret Ekpo
+Memorial Award in recognition of her outstanding contributions
+to women's leadership and public service.
+</p></section><section class="biography-card"><h2>Traditional Titles & Honour</h2><p>
+In recognition of her exceptional leadership, dedication to
+community development, and service to humanity, Rt. Hon.
+Comfort Ojoma Nwuchiola Egwaba has been honoured with
+distinguished traditional titles.
+</p><p>
+She is the Gimbiya Mata of Girinya and was conferred with the
+revered title of Iganya Attah-Igala (Adeebu) by His Royal
+Majesty, Agabaidu, the Attah Igala and President of the Kogi
+State Traditional Council, in recognition of her remarkable
+contributions to the development of the Igala Kingdom and
+Kogi State.
+</p></section><section class="biography-card"><h2>Faith, Integrity & Servant Leadership</h2><p>
+A woman of faith, integrity, compassion, and exceptional
+leadership, Rt. Hon. Comfort Ojoma Nwuchiola Egwaba exemplifies
+the ideals of servant leadership.
+</p><p>
+Her unwavering dedication to legislative excellence,
+grassroots development, peacebuilding, women's empowerment,
+and public service continues to inspire a new generation of
+leaders while leaving an enduring legacy of impactful
+governance.
+</p></section></div></main><section class="legacy"><div class="container"><div class="legacy-content"><div class="eyebrow">
+Leadership Legacy
+</div><h2>
+A Symbol of Courage, Resilience & Visionary Leadership
+</h2><p>
+Rt. Hon. Comfort Ojoma Nwuchiola Egwaba remains a symbol of
+courage, resilience, and visionary leadership whose
+contributions to democratic governance and human development
+have earned her a place among Nigeria's most respected
+contemporary female legislators.
+</p><div class="quote">
+Her unwavering dedication to legislative excellence,
+grassroots development, peacebuilding, women's empowerment,
+and public service continues to inspire a new generation
+of leaders.
+</div></div></div></section><footer><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>
+Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
+</h3><p>
+Deputy Speaker, Kogi State House of Assembly and Member
+Representing Ibaji State Constituency.
+</p></div><div class="footer-column"><h4>Quick Links</h4><a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="biography.html">Biography</a>
+<a href="office.html">Office</a>
+<a href="legislative.html">Legislative Activities</a>
+
+</div><div class="footer-column"><h4>Explore</h4><a href="constituency.html">Constituency</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Media Gallery</a>
+<a href="contact.html">Contact</a>
+
+</div></div><div class="copyright">
 © 2026 Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba.
 All Rights Reserved.
+</div></div></footer><script>
 
-</div>
-
-</div>
-
-</footer>
-
-
-
-<script>
-
-function toggleMenu() {
+function toggleMenu(){
 
     document
-        .getElementById("mainNav")
-        .classList.toggle("show");
+    .getElementById("mainNav")
+    .classList.toggle("show");
 
 }
 
 document
-    .querySelectorAll("#mainNav a")
-    .forEach(function(link) {
+.querySelectorAll("#mainNav a")
+.forEach(function(link){
 
-        link.addEventListener(
-            "click",
-            function() {
+    link.addEventListener("click",function(){
 
-                document
-                    .getElementById("mainNav")
-                    .classList.remove("show");
-
-            }
-        );
+        document
+        .getElementById("mainNav")
+        .classList.remove("show");
 
     });
 
-</script>
+});
 
+document.addEventListener("click",function(event){
 
-</body>
+    const nav=document.getElementById("mainNav");
+    const menu=document.querySelector(".menu-button");
+
+    if(
+        nav.classList.contains("show") &&
+        !nav.contains(event.target) &&
+        !menu.contains(event.target)
+    ){
+
+        nav.classList.remove("show");
+
+    }
+
+});
+
+</script></body>
 </html>
