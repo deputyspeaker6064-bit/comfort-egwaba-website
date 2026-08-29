@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Messages | Admin</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f4;
+            color: #173b2b;
+        }
+
+        header {
+            background: #003d27;
+            color: white;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-links a {
+            text-decoration: none;
+            color: #102b20;
+            background: #f2bd24;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .top h2 {
+            margin: 0;
+            color: #003d27;
+        }
+
+        .top p {
+            color: #66776e;
+        }
+
+        .delete-all {
+            border: none;
+            background: #c62828;
+            color: white;
+            padding: 11px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .delete-all:hover {
+            background: #8e0000;
+        }
+
+        .message-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .message {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.07);
+            border-left: 4px solid #f2bd24;
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .message h3 {
+            margin: 0 0 5px;
+            color: #003d27;
+        }
+
+        .date {
+            color: #78877f;
+            font-size: 13px;
+        }
+
+        .subject {
+            display: inline-block;
+            background: #e8f4ed;
+            color: #087443;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .detail {
+            background: #f6f9f6;
+            padding: 12px;
+            border-radius: 5px;
+        }
+
+        .detail strong {
+            display: block;
+            color: #003d27;
+            margin-bottom: 3px;
+            font-size: 13px;
+        }
+
+        .detail span {
+            color: #63746b;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        .message-text {
+            background: #f6f9f6;
+            padding: 18px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            color: #52665c;
+        }
+
+        .message-actions {
+            margin-top: 18px;
+        }
+
+        .delete-btn {
+            border: none;
+            background: #c62828;
+            color: white;
+            padding: 9px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .delete-btn:hover {
+            background: #8e0000;
+        }
+
+        .empty {
+            background: white;
+            padding: 50px 25px;
+            text-align: center;
+            border-radius: 10px;
+            color: #687970;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .empty-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+
+            .message-header {
+                flex-direction: column;
+            }
+
+            .header-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        Contact Messages
+    </h1>
+
+    <div class="header-links">
+
+        <a href="admin-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="contact.html">
+            Contact Page
+        </a>
+
+    </div>
+
+</header>
+
+
+<div class="container">
+
+    <div class="top">
+
+        <div>
+
+            <h2>
+                Messages from Visitors
+            </h2>
+
+            <p id="messageTotal">
+                Loading messages...
+            </p>
+
+        </div>
+
+        <button
+            class="delete-all"
+            onclick="deleteAllMessages()"
+        >
+            Delete All
+        </button>
+
+    </div>
+
+
+    <div
+        class="message-list"
+        id="messageList"
+    ></div>
+
+</div>
+
+
+<script>
+
+    /* =========================================
+       GET MESSAGES
+    ========================================= */
+
+    function getMessages() {
+
+        return JSON.parse(
+            localStorage.getItem("contactMessages")
+            || "[]"
+        );
+
+    }
+
+
+    /* =========================================
+       SAVE MESSAGES
+    ========================================= */
+
+    function saveMessages(messages) {
+
+        localStorage.setItem(
+            "contactMessages",
+            JSON.stringify(messages)
+        );
+
+    }
+
+
+    /* =========================================
+       DISPLAY MESSAGES
+    ========================================= */
+
+    function displayMessages() {
+
+        const container =
+            document.getElementById("messageList");
+
+        const total =
+            document.getElementById("messageTotal");
+
+        const messages = getMessages();
+
+
+        total.textContent =
+            messages.length +
+            (messages.length === 1
+                ? " message received"
+                : " messages received");
+
+
+        if (messages.length === 0) {
+
+            container.innerHTML = `
+
+                <div class="empty">
+
+                    <div class="empty-icon">
+                        ✉️
+                    </div>
+
+                    <h3>
+                        No messages yet
+                    </h3>
+
+                    <p>
+                        Messages submitted through
+                        the Contact page will appear here.
+                    </p>
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        container.innerHTML = "";
+
+
+        messages.forEach(function(message) {
+
+            const article =
+                document.createElement("article");
+
+            article.className = "message";
+
+
+            const safeName =
+                escapeHTML(message.name || "Unknown");
+
+
+            const safeEmail =
+                escapeHTML(message.email || "Not provided");
+
+
+            const safePhone =
+                escapeHTML(message.phone || "Not provided");
+
+
+            const safeSubject =
+                escapeHTML(message.subject || "General");
+
+
+            const safeMessage =
+                escapeHTML(message.message || "");
+
+
+            const safeDate =
+                escapeHTML(message.date || "");
+
+
+            article.innerHTML = `
+
+                <div class="message-header">
+
+                    <div>
+
+                        <h3>
+                            ${safeName}
+                        </h3>
+
+                        <div class="date">
+                            ${safeDate}
+                        </div>
+
+                    </div>
+
+                    <span class="subject">
+                        ${safeSubject}
+                    </span>
+
+                </div>
+
+
+                <div class="details">
+
+                    <div class="detail">
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span>
+                            ${safeEmail}
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span>
+                            ${safePhone}
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="message-text">
+                    ${safeMessage}
+                </div>
+
+
+                <div class="message-actions">
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteMessage(${message.id})"
+                    >
+                        Delete Message
+                    </button>
+
+                </div>
+
+            `;
+
+
+            container.appendChild(article);
+
+        });
+
+    }
+
+
+    /* =========================================
+       DELETE ONE MESSAGE
+    ========================================= */
+
+    function deleteMessage(id) {
+
+        const confirmed =
+            confirm(
+                "Are you sure you want to delete this message?"
+            );
+
+
+        if (!confirmed) {
+            return;
+        }
+
+
+        let messages = getMessages();
+
+
+        messages =
+            messages.filter(function(message) {
+
+                return message.id !== id;
+
+            });
+
+
+        saveMessages(messages);
+
+
+        displayMessages();
+
+    }
+
+
+    /* =========================================
+       DELETE ALL
+    ========================================= */
+
+    function deleteAllMessages() {
+
+        const messages = getMessages();
+
+
+        if (messages.length === 0) {
+
+            alert("There are no messages to delete.");
+
+            return;
+
+        }
+
+
+        const confirmed =
+            confirm(
+                "Are you sure you want to delete ALL messages?"
+            );
+
+
+        if (!confirmed) {
+            return;
+        }
+
+
+        localStorage.removeItem(
+            "contactMessages"
+        );
+
+
+        displayMessages();
+
+    }
+
+
+    /* =========================================
+       SECURITY
+       Prevent HTML entered by visitors
+       from being displayed as HTML.
+    ========================================= */
+
+    function escapeHTML(value) {
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =========================================
+       LOAD
+    ========================================= */
+
+    displayMessages();
+
+</script>
+
+</body>
+</html>
