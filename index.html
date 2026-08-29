@@ -16,16 +16,18 @@ name="description"
 content="Official website of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba, Deputy Speaker of the Kogi State House of Assembly."
 >
 
-<meta
-property="og:image"
-content="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+crossorigin
+>
 
 <link
 href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
@@ -38,6 +40,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
 
 <style>
+
+/* =========================================
+   GENERAL
+========================================= */
 
 * {
     margin: 0;
@@ -102,12 +108,6 @@ header {
     align-items: center;
     gap: 12px;
     color: white;
-}
-
-.logo img {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
 }
 
 .logo-text {
@@ -181,13 +181,9 @@ nav a.active {
     background:
         linear-gradient(
             90deg,
-            rgba(0,61,39,.98) 0%,
-            rgba(0,61,39,.92) 32%,
-            rgba(0,61,39,.65) 55%,
-            rgba(0,61,39,.15) 100%
-        ),
-        url("https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png")
-        center right / cover no-repeat;
+            rgba(0,61,39,.98),
+            rgba(0,61,39,.92)
+        );
 }
 
 .hero-content {
@@ -385,9 +381,9 @@ section {
 .welcome-grid {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
-    gap: 70px;
+    gap: 40px;
 
     align-items: center;
 }
@@ -395,51 +391,6 @@ section {
 .welcome-text p {
     color: #5e7168;
     margin-bottom: 18px;
-}
-
-.welcome-photo {
-    position: relative;
-}
-
-.welcome-photo img {
-    width: 100%;
-    height: 560px;
-
-    object-fit: cover;
-    object-position: center top;
-
-    border-radius: 10px;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,.15);
-}
-
-.photo-caption {
-    position: absolute;
-
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-
-    padding: 18px;
-
-    background: rgba(0,61,39,.95);
-
-    color: white;
-
-    border-left: 4px solid #f2bd24;
-}
-
-.photo-caption strong {
-    display: block;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 18px;
-}
-
-.photo-caption span {
-    color: #f2bd24;
-    font-size: 13px;
 }
 
 
@@ -537,9 +488,9 @@ section {
 .constituency-grid {
     display: grid;
 
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1fr;
 
-    gap: 55px;
+    gap: 30px;
 
     align-items: center;
 }
@@ -586,15 +537,6 @@ section {
     margin-right: 7px;
 }
 
-.constituency-photo img {
-    width: 100%;
-    height: 430px;
-
-    object-fit: cover;
-
-    border-radius: 9px;
-}
-
 
 /* =========================================
    NEWS
@@ -628,13 +570,6 @@ section {
     transform: translateY(-5px);
 
     box-shadow: 0 12px 30px rgba(0,0,0,.10);
-}
-
-.news-card img {
-    width: 100%;
-    height: 220px;
-
-    object-fit: cover;
 }
 
 .news-content {
@@ -698,28 +633,7 @@ section {
 ========================================= */
 
 .gallery-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.gallery-card {
-    background: white;
-
-    overflow: hidden;
-
-    border-radius: 8px;
-
-    box-shadow: 0 8px 25px rgba(0,0,0,.06);
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 260px;
-
-    object-fit: cover;
+    display: none;
 }
 
 
@@ -941,31 +855,12 @@ footer {
         justify-content: center;
     }
 
-    .hero {
-        min-height: 720px;
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0,61,39,.96),
-                rgba(0,61,39,.70)
-            ),
-            url("https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png")
-            center / cover no-repeat;
-    }
-
     .values {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .welcome-grid,
-    .constituency-grid {
-        grid-template-columns: 1fr;
-    }
-
     .cards,
-    .news-grid,
-    .gallery-grid {
+    .news-grid {
         grid-template-columns: 1fr;
     }
 
@@ -985,11 +880,6 @@ footer {
 
     .logo-text {
         font-size: 11px;
-    }
-
-    .logo img {
-        width: 42px;
-        height: 42px;
     }
 
     .hero h1 {
@@ -1012,10 +902,6 @@ footer {
     .value {
         border-right: none;
         border-bottom: 1px solid #e2ebe5;
-    }
-
-    .welcome-photo img {
-        height: 480px;
     }
 
     .constituency-list {
@@ -1073,11 +959,6 @@ footer {
 
 
 <a href="index.html" class="logo">
-
-<img
-src="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
-alt="Kogi State House of Assembly Logo"
->
 
 <div class="logo-text">
 
@@ -1181,7 +1062,7 @@ Contact
 
 
 <!-- =========================================
-     HOME
+     HOME HERO
 ========================================= -->
 
 <section
@@ -1443,34 +1324,6 @@ Biography
 </div>
 
 
-<div class="welcome-photo">
-
-
-<img
-src="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
-alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
->
-
-
-<div class="photo-caption">
-
-
-<strong>
-Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
-</strong>
-
-
-<span>
-Deputy Speaker • Kogi State House of Assembly
-</span>
-
-
-</div>
-
-
-</div>
-
-
 </div>
 
 </div>
@@ -1715,18 +1568,6 @@ Stakeholder Engagement
 </div>
 
 
-<div class="constituency-photo">
-
-
-<img
-src="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
-alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
->
-
-
-</div>
-
-
 </div>
 
 </div>
@@ -1813,91 +1654,13 @@ View All News
 
 <!-- =========================================
      GALLERY
+     REMOVED FROM HOME PAGE
 ========================================= -->
 
-<section id="gallery">
-
-<div class="container">
-
-
-<div class="section-heading">
-
-
-<div class="section-label">
-Gallery
-</div>
-
-
-<h2>
-Photo Gallery
-</h2>
-
-
-<p>
-
-Images from official activities and engagements.
-
-</p>
-
-
-</div>
-
-
-<div class="gallery-grid">
-
-
-<div class="gallery-card">
-
-<img
-src="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
-alt="Official gallery image"
->
-
-</div>
-
-
-<div class="gallery-card">
-
-<img
-src="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
-alt="Official gallery image"
->
-
-</div>
-
-
-<div class="gallery-card">
-
-<img
-src="https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png"
-alt="Official gallery image"
->
-
-</div>
-
-
-</div>
-
-
-<div style="text-align:center;margin-top:30px;">
-
-<a
-href="gallery.html"
-class="btn btn-primary"
->
-
-View Full Media Gallery
-
-<i class="fas fa-images"></i>
-
-</a>
-
-</div>
-
-
-</div>
-
-</section>
+<!--
+The Home page gallery pictures have been removed.
+The full Media Gallery remains available at gallery.html.
+-->
 
 
 <!-- =========================================
@@ -2362,27 +2125,29 @@ article.className =
 "news-card";
 
 
-const defaultImage =
-"https://i.ibb.co/6R8gtkH2/file-000000003e8c81f49bdf69452893f71c.png";
-
-
 const image =
 item.image &&
 item.image.trim() !== ""
 ? item.image
-: defaultImage;
+: "";
 
+
+/*
+   Do not show any image if
+   no image was supplied.
+*/
 
 article.innerHTML = `
+
+${image ? `
 
 <img
 src="${escapeHTML(image)}"
 alt="${escapeHTML(item.title)}"
-onerror="
-this.onerror=null;
-this.src='${defaultImage}';
-"
+onerror="this.style.display='none';"
 >
+
+` : ""}
 
 
 <div class="news-content">
