@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Comfort Egwaba</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f8f5;
+    color: #173b2b;
+}
+
+header {
+    background: #003d27;
+    color: white;
+    padding: 20px 6%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+nav {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f2bd24;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #003d27;
+    margin-top: 0;
+}
+
+h3 {
+    color: #003d27;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd6d0;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.publish-btn {
+    margin-top: 22px;
+    background: #f2bd24;
+    color: #082d20;
+}
+
+.publish-btn:hover {
+    background: #003d27;
+    color: white;
+}
+
+.success {
+    display: none;
+    margin-top: 18px;
+    padding: 14px;
+    background: #e7f7e9;
+    color: #176b2f;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.error {
+    display: none;
+    margin-top: 18px;
+    padding: 14px;
+    background: #fde8e8;
+    color: #a61b1b;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.note {
+    background: #eef7ed;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    color: #36594a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: #e8efea;
+    color: #003d27;
+}
+
+.tab-btn.active {
+    background: #003d27;
+    color: white;
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+.item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #f2bd24;
+    border-radius: 7px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+
+.item img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.item h3 {
+    margin: 5px 0;
+}
+
+.item-date {
+    color: #087c4e;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.item p {
+    color: #53675d;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.share-btn {
+    background: #003d27;
+    color: white;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.facebook {
+    background: #1877F2;
+    color: white;
+}
+
+.copy {
+    background: #555;
+    color: white;
+}
+
+.delete-btn {
+    background: #c62828;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #8e0000;
+}
+
+.empty {
+    padding: 25px;
+    text-align: center;
+    background: #f5f8f5;
+    border-radius: 7px;
+    color: #65756c;
+}
+
+.status {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #003d27;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 7px;
+    display: none;
+    z-index: 9999;
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .box {
+        padding: 22px;
+    }
+
+    .actions button {
+        flex: 1 1 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Admin Dashboard</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="news.html">View News</a>
+        <a href="gallery.html">View Gallery</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="box">
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="newsPanel">
+                📰 Publish News
+            </button>
+
+            <button class="tab-btn" data-tab="galleryPanel">
+                🖼️ Add Gallery
+            </button>
+        </div>
+
+
+        <!-- =========================
+             NEWS PANEL
+        ========================== -->
+
+        <div class="panel active" id="newsPanel">
+
+            <h2>Publish New News</h2>
+
+            <div class="note">
+                Publish news here and it will be stored online in
+                your Supabase database.
+            </div>
+
+            <form id="newsForm">
+
+                <label for="newsTitle">
+                    News Title
+                </label>
+
+                <input
+                    type="text"
+                    id="newsTitle"
+                    placeholder="Enter news title"
+                    required
+                >
+
+                <label for="newsDate">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="newsDate"
+                    required
+                >
+
+                <label for="newsImage">
+                    Image URL
+                </label>
+
+                <input
+                    type="url"
+                    id="newsImage"
+                    placeholder="https://i.ibb.co/example/photo.jpg"
+                >
+
+                <label for="newsContent">
+                    News Content
+                </label>
+
+                <textarea
+                    id="newsContent"
+                    placeholder="Write the news here..."
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="publish-btn"
+                >
+                    Publish News
+                </button>
+
+            </form>
+
+            <div class="success" id="newsSuccess">
+                News published successfully.
+            </div>
+
+            <div class="error" id="newsError"></div>
+
+        </div>
+
+
+        <!-- =========================
+             GALLERY PANEL
+        ========================== -->
+
+        <div class="panel" id="galleryPanel">
+
+            <h2>Add Gallery Photo</h2>
+
+            <div class="note">
+                Add an image URL and description. The photo will
+                be stored online in your Supabase gallery.
+            </div>
+
+            <form id="galleryForm">
+
+                <label for="galleryTitle">
+                    Photo Title
+                </label>
+
+                <input
+                    type="text"
+                    id="galleryTitle"
+                    placeholder="Example: Constituency Engagement"
+                    required
+                >
+
+                <label for="galleryDate">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="galleryDate"
+                    required
+                >
+
+                <label for="galleryImage">
+                    Image URL
+                </label>
+
+                <input
+                    type="url"
+                    id="galleryImage"
+                    placeholder="https://i.ibb.co/example/photo.jpg"
+                    required
+                >
+
+                <label for="galleryCategory">
+                    Category
+                </label>
+
+                <select id="galleryCategory">
+
+                    <option value="official">
+                        Official
+                    </option>
+
+                    <option value="legislative">
+                        Legislative
+                    </option>
+
+                    <option value="constituency">
+                        Constituency
+                    </option>
+
+                    <option value="community">
+                        Community
+                    </option>
+
+                </select>
+
+                <label for="galleryDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="galleryDescription"
+                    placeholder="Write a short description..."
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="publish-btn"
+                >
+                    Add to Gallery
+                </button>
+
+            </form>
+
+            <div class="success" id="gallerySuccess">
+                Photo added successfully.
+            </div>
+
+            <div class="error" id="galleryError"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PUBLISHED NEWS
+    ========================== -->
+
+    <div class="box">
+
+        <h2>Published News</h2>
+
+        <div id="publishedNews">
+            Loading news...
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PUBLISHED GALLERY
+    ========================== -->
+
+    <div class="box">
+
+        <h2>Published Gallery</h2>
+
+        <div id="publishedGallery">
+            Loading gallery...
+        </div>
+
+    </div>
+
+</div>
+
+<div class="status" id="status"></div>
+
+
+<script>
+
+/* =========================================================
+   SUPABASE CONNECTION
+========================================================= */
+
+const SUPABASE_URL =
+    "https://dcztvgjnxbbvriftnbuy.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_dYw9Ebgoieyz4ohJAas7IA_ZYNeU8ZC";
+
+
+/* =========================================================
+   SUPABASE REQUEST
+========================================================= */
+
+async function supabaseRequest(
+    table,
+    options = {}
+) {
+
+    const url =
+        SUPABASE_URL +
+        "/rest/v1/" +
+        table;
+
+    const response =
+        await fetch(url, {
+
+            method:
+                options.method || "GET",
+
+            headers: {
+
+                "apikey":
+                    SUPABASE_KEY,
+
+                "Authorization":
+                    "Bearer " + SUPABASE_KEY,
+
+                "Content-Type":
+                    "application/json",
+
+                "Prefer":
+                    options.prefer ||
+                    "return=representation"
+
+            },
+
+            body:
+                options.body
+                ?
+                JSON.stringify(options.body)
+                :
+                undefined
+
+        });
+
+
+    const text =
+        await response.text();
+
+
+    let data = null;
+
+    try {
+
+        data =
+            text
+            ?
+            JSON.parse(text)
+            :
+            null;
+
+    } catch {
+
+        data = text;
+
+    }
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            data?.message ||
+            data?.error_description ||
+            data?.hint ||
+            text ||
+            "Supabase request failed."
+        );
+
+    }
+
+
+    return data;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+function showStatus(message) {
+
+    const status =
+        document.getElementById("status");
+
+    status.textContent =
+        message;
+
+    status.style.display =
+        "block";
+
+    setTimeout(
+        function () {
+
+            status.style.display =
+                "none";
+
+        },
+        2500
+    );
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value) {
+
+    return String(value ?? "")
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
+
+function formatDate(date) {
+
+    if (!date) return "";
+
+    const d =
+        new Date(date + "T00:00:00");
+
+    if (Number.isNaN(d.getTime())) {
+        return date;
+    }
+
+    return d.toLocaleDateString(
+        "en-NG",
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CREATE PUBLIC NEWS LINK
+========================================================= */
+
+function getNewsLink(id) {
+
+    return (
+        window.location.origin +
+        window.location.pathname
+            .replace(
+                /admin\.html.*$/i,
+                "news.html"
+            ) +
+        "?id=" +
+        encodeURIComponent(id)
+    );
+
+}
+
+
+/* =========================================================
+   CREATE PUBLIC GALLERY LINK
+========================================================= */
+
+function getGalleryLink(id) {
+
+    return (
+        window.location.origin +
+        window.location.pathname
+            .replace(
+                /admin\.html.*$/i,
+                "gallery.html"
+            ) +
+        "?id=" +
+        encodeURIComponent(id)
+    );
+
+}
+
+
+/* =========================================================
+   WHATSAPP SHARE
+========================================================= */
+
+function shareWhatsApp(
+    title,
+    link
+) {
+
+    const text =
+        title +
+        "\n\nRead more:\n" +
+        link;
+
+    const url =
+        "https://wa.me/?text=" +
+        encodeURIComponent(text);
+
+    window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer"
+    );
+
+}
+
+
+/* =========================================================
+   FACEBOOK SHARE
+========================================================= */
+
+function shareFacebook(link) {
+
+    const url =
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(link);
+
+    window.open(
+        url,
+        "_blank",
+        "width=700,height=500"
+    );
+
+}
+
+
+/* =========================================================
+   COPY LINK
+========================================================= */
+
+async function copyLink(link) {
+
+    try {
+
+        await navigator.clipboard.writeText(link);
+
+        showStatus(
+            "Link copied successfully."
+        );
+
+    } catch {
+
+        window.prompt(
+            "Copy this link:",
+            link
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+document
+    .querySelectorAll(".tab-btn")
+    .forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .querySelectorAll(".tab-btn")
+                    .forEach(function(btn) {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                document
+                    .querySelectorAll(".panel")
+                    .forEach(function(panel) {
+
+                        panel.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                document
+                    .getElementById(
+                        button.dataset.tab
+                    )
+                    .classList.add(
+                        "active"
+                    );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   NEWS FORM
+========================================================= */
+
+document
+    .getElementById("newsForm")
+    .addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+
+            const success =
+                document.getElementById(
+                    "newsSuccess"
+                );
+
+            const errorBox =
+                document.getElementById(
+                    "newsError"
+                );
+
+
+            success.style.display =
+                "none";
+
+            errorBox.style.display =
+                "none";
+
+
+            const title =
+                document
+                    .getElementById("newsTitle")
+                    .value
+                    .trim();
+
+
+            const date =
+                document
+                    .getElementById("newsDate")
+                    .value;
+
+
+            const image =
+                document
+                    .getElementById("newsImage")
+                    .value
+                    .trim();
+
+
+            const content =
+                document
+                    .getElementById("newsContent")
+                    .value
+                    .trim();
+
+
+            try {
+
+                await supabaseRequest(
+                    "news",
+                    {
+
+                        method: "POST",
+
+                        body: {
+
+                            title:
+                                title,
+
+                            date:
+                                date,
+
+                            image:
+                                image || null,
+
+                            content:
+                                content
+
+                        }
+
+                    }
+                );
+
+
+                document
+                    .getElementById("newsForm")
+                    .reset();
+
+
+                success.style.display =
+                    "block";
+
+
+                showStatus(
+                    "News published."
+                );
+
+
+                loadNews();
+
+            } catch (error) {
+
+                console.error(error);
+
+                errorBox.textContent =
+                    "Could not publish news: " +
+                    error.message;
+
+                errorBox.style.display =
+                    "block";
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   GALLERY FORM
+========================================================= */
+
+document
+    .getElementById("galleryForm")
+    .addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+
+            const success =
+                document.getElementById(
+                    "gallerySuccess"
+                );
+
+            const errorBox =
+                document.getElementById(
+                    "galleryError"
+                );
+
+
+            success.style.display =
+                "none";
+
+            errorBox.style.display =
+                "none";
+
+
+            const title =
+                document
+                    .getElementById("galleryTitle")
+                    .value
+                    .trim();
+
+
+            const date =
+                document
+                    .getElementById("galleryDate")
+                    .value;
+
+
+            const image =
+                document
+                    .getElementById("galleryImage")
+                    .value
+                    .trim();
+
+
+            const category =
+                document
+                    .getElementById("galleryCategory")
+                    .value;
+
+
+            const description =
+                document
+                    .getElementById("galleryDescription")
+                    .value
+                    .trim();
+
+
+            try {
+
+                await supabaseRequest(
+                    "gallery",
+                    {
+
+                        method: "POST",
+
+                        body: {
+
+                            title:
+                                title,
+
+                            date:
+                                date,
+
+                            image:
+                                image,
+
+                            category:
+                                category,
+
+                            description:
+                                description || null
+
+                        }
+
+                    }
+                );
+
+
+                document
+                    .getElementById("galleryForm")
+                    .reset();
+
+
+                success.style.display =
+                    "block";
+
+
+                showStatus(
+                    "Photo added."
+                );
+
+
+                loadGallery();
+
+            } catch (error) {
+
+                console.error(error);
+
+                errorBox.textContent =
+                    "Could not add photo: " +
+                    error.message;
+
+                errorBox.style.display =
+                    "block";
+
+            }
+
+        }
+    );
+
+
+/* =========================================================
+   LOAD NEWS
+========================================================= */
+
+async function loadNews() {
+
+    const container =
+        document.getElementById(
+            "publishedNews"
+        );
+
+
+    try {
+
+        const news =
+            await supabaseRequest(
+                "news?select=*&order=created_at.desc"
+            );
+
+
+        if (
+            !news ||
+            news.length === 0
+        ) {
+
+            container.innerHTML = `
+                <div class="empty">
+                    No news published yet.
+                </div>
+            `;
+
+            return;
+
+        }
+
+
+        container.innerHTML = "";
+
+
+        news.forEach(function(item) {
+
+            const article =
+                document.createElement(
+                    "div"
+                );
+
+            article.className =
+                "item";
+
+
+            const link =
+                getNewsLink(item.id);
+
+
+            article.innerHTML = `
+
+                ${
+                    item.image
+                    ?
+                    `
+                    <img
+                        src="${escapeHTML(item.image)}"
+                        alt="${escapeHTML(item.title)}"
+                        onerror="this.style.display='none'"
+                    >
+                    `
+                    :
+                    ""
+                }
+
+                <h3>
+                    ${escapeHTML(item.title)}
+                </h3>
+
+                <div class="item-date">
+                    ${escapeHTML(
+                        formatDate(item.date)
+                    )}
+                </div>
+
+                <p>
+                    ${escapeHTML(item.content)}
+                </p>
+
+                <div class="actions">
+
+                    <button
+                        class="whatsapp"
+                        type="button"
+                    >
+                        WhatsApp
+                    </button>
+
+                    <button
+                        class="facebook"
+                        type="button"
+                    >
+                        Facebook
+                    </button>
+
+                    <button
+                        class="copy"
+                        type="button"
+                    >
+                        Copy Link
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        type="button"
+                    >
+                        Delete
+                    </button>
+
+                </div>
+            `;
+
+
+            article
+                .querySelector(".whatsapp")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        shareWhatsApp(
+                            item.title,
+                            link
+                        );
+
+                    }
+                );
+
+
+            article
+                .querySelector(".facebook")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        shareFacebook(
+                            link
+                        );
+
+                    }
+                );
+
+
+            article
+                .querySelector(".copy")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        copyLink(
+                            link
+                        );
+
+                    }
+                );
+
+
+            article
+                .querySelector(".delete-btn")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        deleteNews(
+                            item.id
+                        );
+
+                    }
+                );
+
+
+            container.appendChild(
+                article
+            );
+
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        container.innerHTML = `
+            <div class="empty">
+                Could not load news.<br><br>
+                ${escapeHTML(error.message)}
+            </div>
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   DELETE NEWS
+========================================================= */
+
+async function deleteNews(id) {
+
+    if (
+        !confirm(
+            "Are you sure you want to delete this news?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    try {
+
+        await supabaseRequest(
+            "news?id=eq." +
+            encodeURIComponent(id),
+            {
+
+                method: "DELETE",
+
+                prefer:
+                    "return=minimal"
+
+            }
+        );
+
+
+        showStatus(
+            "News deleted."
+        );
+
+
+        loadNews();
+
+    } catch (error) {
+
+        alert(
+            "Could not delete news: " +
+            error.message
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   LOAD GALLERY
+========================================================= */
+
+async function loadGallery() {
+
+    const container =
+        document.getElementById(
+            "publishedGallery"
+        );
+
+
+    try {
+
+        const gallery =
+            await supabaseRequest(
+                "gallery?select=*&order=created_at.desc"
+            );
+
+
+        if (
+            !gallery ||
+            gallery.length === 0
+        ) {
+
+            container.innerHTML = `
+                <div class="empty">
+                    No gallery photos added yet.
+                </div>
+            `;
+
+            return;
+
+        }
+
+
+        container.innerHTML = "";
+
+
+        gallery.forEach(function(item) {
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+            card.className =
+                "item";
+
+
+            const link =
+                getGalleryLink(item.id);
+
+
+            card.innerHTML = `
+
+                <img
+                    src="${escapeHTML(item.image)}"
+                    alt="${escapeHTML(item.title)}"
+                    onerror="this.style.display='none'"
+                >
+
+                <h3>
+                    ${escapeHTML(item.title)}
+                </h3>
+
+                <div class="item-date">
+                    ${escapeHTML(
+                        formatDate(item.date)
+                    )}
+                    ·
+                    ${escapeHTML(
+                        item.category || "official"
+                    )}
+                </div>
+
+                <p>
+                    ${escapeHTML(
+                        item.description || ""
+                    )}
+                </p>
+
+                <div class="actions">
+
+                    <button
+                        class="whatsapp"
+                        type="button"
+                    >
+                        WhatsApp
+                    </button>
+
+                    <button
+                        class="facebook"
+                        type="button"
+                    >
+                        Facebook
+                    </button>
+
+                    <button
+                        class="copy"
+                        type="button"
+                    >
+                        Copy Link
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        type="button"
+                    >
+                        Delete
+                    </button>
+
+                </div>
+            `;
+
+
+            card
+                .querySelector(".whatsapp")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        shareWhatsApp(
+                            item.title,
+                            link
+                        );
+
+                    }
+                );
+
+
+            card
+                .querySelector(".facebook")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        shareFacebook(
+                            link
+                        );
+
+                    }
+                );
+
+
+            card
+                .querySelector(".copy")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        copyLink(
+                            link
+                        );
+
+                    }
+                );
+
+
+            card
+                .querySelector(".delete-btn")
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        deleteGallery(
+                            item.id
+                        );
+
+                    }
+                );
+
+
+            container.appendChild(
+                card
+            );
+
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        container.innerHTML = `
+            <div class="empty">
+                Could not load gallery.<br><br>
+                ${escapeHTML(error.message)}
+            </div>
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   DELETE GALLERY
+========================================================= */
+
+async function deleteGallery(id) {
+
+    if (
+        !confirm(
+            "Are you sure you want to delete this photo?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    try {
+
+        await supabaseRequest(
+            "gallery?id=eq." +
+            encodeURIComponent(id),
+            {
+
+                method: "DELETE",
+
+                prefer:
+                    "return=minimal"
+
+            }
+        );
+
+
+        showStatus(
+            "Photo deleted."
+        );
+
+
+        loadGallery();
+
+    } catch (error) {
+
+        alert(
+            "Could not delete photo: " +
+            error.message
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        loadNews();
+
+        loadGallery();
+
+    }
+);
+
+</script>
+
+</body>
+</html>
