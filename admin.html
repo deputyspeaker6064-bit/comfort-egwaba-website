@@ -100,16 +100,26 @@ label {
     margin-bottom: 7px;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     padding: 13px;
     border: 1px solid #ccd8d1;
     border-radius: 6px;
     font-size: 15px;
+    font-family: Arial, sans-serif;
 }
 
-input:focus {
+textarea {
+    min-height: 260px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+input:focus,
+textarea:focus {
     outline: 2px solid #b8d6c6;
+    border-color: #087c4e;
 }
 
 button {
@@ -119,6 +129,11 @@ button {
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
 }
 
 .publish {
@@ -138,6 +153,7 @@ button {
 .cancel {
     background: #e5ece8;
     color: #003d27;
+    margin-left: 8px;
 }
 
 .delete {
@@ -196,6 +212,13 @@ button {
     margin-bottom: 15px;
 }
 
+.news-preview {
+    color: #4e6259;
+    white-space: pre-wrap;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
 .actions {
     display: flex;
     flex-wrap: wrap;
@@ -214,6 +237,10 @@ button {
     margin-top: 6px;
 }
 
+.required {
+    color: #b42318;
+}
+
 @media (max-width: 600px) {
 
     .card {
@@ -226,6 +253,14 @@ button {
 
     .header-link {
         font-size: 13px;
+    }
+
+    textarea {
+        min-height: 220px;
+    }
+
+    .cancel {
+        margin-left: 5px;
     }
 
 }
@@ -263,7 +298,7 @@ View News →
 <h1>News Management</h1>
 
 <p>
-Add new news or update news already published on the website.
+Add new news, write the full news story, or update published news.
 </p>
 
 </div>
@@ -278,7 +313,7 @@ Add new news or update news already published on the website.
 
 <section class="card" id="newsManagement">
 
-<h2>📰 Update News</h2>
+<h2>📰 Publish News</h2>
 
 <div
 id="notice"
@@ -288,16 +323,19 @@ class="notice"
 
 <form id="newsForm">
 
+
 <input
 type="hidden"
 id="newsId"
 >
 
 
+<!-- NEWS HEADLINE -->
+
 <div class="form-group">
 
 <label for="title">
-News Headline
+News Headline <span class="required">*</span>
 </label>
 
 <input
@@ -310,10 +348,12 @@ required
 </div>
 
 
+<!-- NEWS DATE -->
+
 <div class="form-group">
 
 <label for="date">
-News Date
+News Date <span class="required">*</span>
 </label>
 
 <input
@@ -324,6 +364,8 @@ required
 
 </div>
 
+
+<!-- IMAGE URL -->
 
 <div class="form-group">
 
@@ -339,6 +381,33 @@ placeholder="Paste the direct image URL here"
 
 <div class="small-note">
 Example: https://i.ibb.co/...
+</div>
+
+</div>
+
+
+<!-- NEWS BODY -->
+
+<div class="form-group">
+
+<label for="content">
+News Body / Full Story <span class="required">*</span>
+</label>
+
+<textarea
+id="content"
+placeholder="Write the full news story here...
+
+Example:
+
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba today attended...
+
+Write as many paragraphs as you need."
+required
+></textarea>
+
+<div class="small-note">
+This is the main body of the news that visitors will read.
 </div>
 
 </div>
@@ -361,6 +430,7 @@ style="display:none;"
 >
 Cancel Update
 </button>
+
 
 </form>
 
@@ -631,6 +701,10 @@ onerror="this.style.display='none'"
 ""
 }
 
+<div class="news-preview">
+${escapeHTML(item.content)}
+</div>
+
 <div class="actions">
 
 <button
@@ -720,6 +794,12 @@ document.getElementById("image")
 .trim();
 
 
+const content =
+document.getElementById("content")
+.value
+.trim();
+
+
 if (!title) {
 
 showNotice(
@@ -744,13 +824,27 @@ return;
 }
 
 
+if (!content) {
+
+showNotice(
+"Please write the news body.",
+"error"
+);
+
+return;
+
+}
+
+
 const payload = {
 
 title: title,
 
 date: date,
 
-image: image || null
+image: image || null,
+
+content: content
 
 };
 
@@ -928,6 +1022,12 @@ item.image ?? "";
 
 
 document.getElementById(
+"content"
+).value =
+item.content ?? "";
+
+
+document.getElementById(
 "saveButton"
 ).textContent =
 "Update News";
@@ -1092,18 +1192,6 @@ async function() {
 resetForm();
 
 await loadNews();
-
-
-/*
-   Open directly at the News Management box.
-*/
-
-document
-.getElementById("newsManagement")
-.scrollIntoView({
-behavior: "smooth",
-block: "start"
-});
 
 }
 );
