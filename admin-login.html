@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Comfort Egwaba</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background:
+                linear-gradient(
+                    rgba(0,61,39,.94),
+                    rgba(0,45,32,.97)
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 430px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0,0,0,.25);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #003d27;
+            font-size: 24px;
+        }
+
+        .logo p {
+            color: #718078;
+            margin: 7px 0 0;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #003d27;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #173b2b;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccd5cf;
+            border-radius: 6px;
+            font-size: 15px;
+            margin-bottom: 18px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #0c8051;
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            background: #f2bd24;
+            color: #102b20;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #003d27;
+            color: white;
+        }
+
+        .error {
+            display: none;
+            background: #fdeaea;
+            color: #a51d1d;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #003d27;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            color: #c08d00;
+        }
+
+        .security-note {
+            text-align: center;
+            margin-top: 25px;
+            color: #8a968f;
+            font-size: 12px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="logo">
+
+        <img
+            src="images/kogi-logo.png"
+            alt="Kogi State House of Assembly"
+        >
+
+        <h1>
+            Administration
+        </h1>
+
+        <p>
+            Official Website Management
+        </p>
+
+    </div>
+
+
+    <h2>
+        Admin Login
+    </h2>
+
+
+    <div
+        class="error"
+        id="error"
+    >
+        Incorrect username or password.
+    </div>
+
+
+    <form id="loginForm">
+
+        <label for="username">
+            Username
+        </label>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter username"
+            autocomplete="username"
+            required
+        >
+
+
+        <label for="password">
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            autocomplete="current-password"
+            required
+        >
+
+
+        <button type="submit">
+            Login to Dashboard
+        </button>
+
+    </form>
+
+
+    <a
+        href="index.html"
+        class="back"
+    >
+        ← Return to Website
+    </a>
+
+
+    <div class="security-note">
+        Administration area
+    </div>
+
+</div>
+
+
+<script>
+
+    /*
+    ==================================================
+       ADMIN LOGIN
+    ==================================================
+
+       DEMO LOGIN
+
+       Username:
+       admin
+
+       Password:
+       admin123
+
+       IMPORTANT:
+       This is a front-end demo login only.
+       It does NOT provide real server security.
+
+    ==================================================
+    */
+
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+
+    const error =
+        document.getElementById("error");
+
+
+    loginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const username =
+                document
+                    .getElementById("username")
+                    .value
+                    .trim();
+
+
+            const password =
+                document
+                    .getElementById("password")
+                    .value;
+
+
+            /*
+            ==========================================
+               LOGIN DETAILS
+            ==========================================
+            */
+
+            const correctUsername = "admin";
+
+            const correctPassword = "admin123";
+
+
+            if (
+                username === correctUsername &&
+                password === correctPassword
+            ) {
+
+                /*
+                Save login status
+                */
+
+                sessionStorage.setItem(
+                    "adminLoggedIn",
+                    "true"
+                );
+
+
+                /*
+                Open dashboard
+                */
+
+                window.location.href =
+                    "admin-dashboard.html";
+
+            }
+
+            else {
+
+                error.style.display = "block";
+
+            }
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
