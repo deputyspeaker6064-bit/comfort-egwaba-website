@@ -3,1406 +3,958 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Biography | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
-    </title>
-
-    <meta name="description"
-          content="Biography and official profile of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba, Deputy Speaker of the Kogi State House of Assembly.">
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
-
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            color: #173b2b;
-            background: #f7fbf6;
-            line-height: 1.7;
-        }
-
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-
-        a {
-            text-decoration: none;
-        }
-
-
-        /* =====================================================
-           HEADER
-        ===================================================== */
-
-        header {
-            height: 80px;
-            background: #003d27;
-
-            position: sticky;
-            top: 0;
-
-            z-index: 9999;
-
-            box-shadow:
-                0 3px 15px rgba(0,0,0,.15);
-        }
-
-
-        .nav-container {
-            width: 90%;
-            max-width: 1400px;
-
-            height: 100%;
-
-            margin: auto;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-        }
-
-
-        /* LOGO */
-
-        .logo {
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            color: white;
-
-            min-width: 0;
-        }
-
-
-        .logo img {
-            width: 52px;
-            height: 52px;
-
-            object-fit: contain;
-
-            flex-shrink: 0;
-        }
-
-
-        .logo-text {
-            font-size: 15px;
-
-            font-weight: 700;
-
-            line-height: 1.15;
-        }
-
-
-        /* NAVIGATION */
-
-        nav {
-            display: flex;
-
-            align-items: center;
-
-            gap: 22px;
-        }
-
-
-        nav a {
-            color: white;
-
-            font-size: 13px;
-
-            font-weight: 600;
-
-            transition:
-                color .3s ease,
-                background .3s ease;
-        }
-
-
-        nav a:hover,
-        nav a.active {
-            color: #f2bd24;
-        }
-
-
-        /* CONTACT BUTTON */
-
-        .nav-contact {
-            background: #f2bd24;
-
-            color: #082d20 !important;
-
-            padding: 11px 18px;
-
-            border-radius: 5px;
-        }
-
-
-        .nav-contact:hover {
-            background: white;
-
-            color: #003d27 !important;
-        }
-
-
-        /* MOBILE BUTTON */
-
-        .mobile-menu {
-            display: none;
-
-            width: 44px;
-            height: 44px;
-
-            border: none;
-
-            background: transparent;
-
-            color: white;
-
-            font-size: 25px;
-
-            cursor: pointer;
-
-            align-items: center;
-
-            justify-content: center;
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .page-hero {
-
-            background:
-
-                linear-gradient(
-                    rgba(0,61,39,.88),
-                    rgba(0,61,39,.88)
-                ),
-
-                url("images/kogi-assembly.jpg")
-                center/cover no-repeat;
-
-            min-height: 360px;
-
-            display: flex;
-
-            align-items: center;
-
-            padding: 70px 7%;
-
-            color: white;
-        }
-
-
-        .page-hero-content {
-            max-width: 850px;
-        }
-
-
-        .small-title {
-
-            color: #f2bd24;
-
-            font-weight: 700;
-
-            text-transform: uppercase;
-
-            letter-spacing: 3px;
-
-            font-size: 14px;
-
-            margin-bottom: 12px;
-        }
-
-
-        .page-hero h1 {
-
-            font-family:
-                "Playfair Display", serif;
-
-            font-size:
-                clamp(40px, 6vw, 70px);
-
-            line-height: 1.1;
-
-            margin-bottom: 20px;
-        }
-
-
-        .page-hero p {
-
-            font-size: 18px;
-
-            max-width: 700px;
-
-            opacity: .95;
-        }
-
-
-        /* =====================================================
-           ABOUT SECTION
-        ===================================================== */
-
-        .about {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            padding: 90px 6%;
-
-            display: grid;
-
-            grid-template-columns:
-                42% 58%;
-
-            gap: 65px;
-
-            align-items: center;
-        }
-
-
-        .portrait {
-            position: relative;
-        }
-
-
-        .portrait img {
-
-            width: 100%;
-
-            height: 620px;
-
-            object-fit: cover;
-
-            object-position: top;
-
-            border-radius: 10px;
-
-            box-shadow:
-                0 20px 50px rgba(0,0,0,.15);
-        }
-
-
-        .portrait-label {
-
-            position: absolute;
-
-            bottom: 20px;
-
-            left: 20px;
-
-            right: 20px;
-
-            background:
-                rgba(0,61,39,.94);
-
-            color: white;
-
-            padding: 18px 20px;
-
-            border-left:
-                4px solid #f2bd24;
-        }
-
-
-        .portrait-label strong {
-
-            display: block;
-
-            font-family:
-                "Playfair Display", serif;
-
-            font-size: 19px;
-        }
-
-
-        .portrait-label span {
-
-            font-size: 13px;
-
-            color: #f2bd24;
-        }
-
-
-        .about-content .eyebrow {
-
-            color: #0c8051;
-
-            font-weight: 700;
-
-            text-transform: uppercase;
-
-            letter-spacing: 2px;
-
-            font-size: 13px;
-        }
-
-
-        .about-content h2 {
-
-            font-family:
-                "Playfair Display", serif;
-
-            color: #003d27;
-
-            font-size:
-                clamp(34px, 4vw, 50px);
-
-            line-height: 1.2;
-
-            margin: 10px 0 25px;
-        }
-
-
-        .gold-line {
-
-            width: 70px;
-
-            height: 4px;
-
-            background: #f2bd24;
-
-            margin-bottom: 25px;
-        }
-
-
-        .about-content p {
-
-            color: #52665c;
-
-            margin-bottom: 18px;
-        }
-
-
-        /* =====================================================
-           PROFILE
-        ===================================================== */
-
-        .profile-section {
-
-            background: #003d27;
-
-            color: white;
-
-            padding: 85px 6%;
-        }
-
-
-        .section-heading {
-
-            text-align: center;
-
-            max-width: 750px;
-
-            margin: 0 auto 50px;
-        }
-
-
-        .section-heading span {
-
-            color: #f2bd24;
-
-            text-transform: uppercase;
-
-            letter-spacing: 2px;
-
-            font-size: 13px;
-
-            font-weight: 700;
-        }
-
-
-        .section-heading h2 {
-
-            font-family:
-                "Playfair Display", serif;
-
-            font-size: 42px;
-
-            margin: 8px 0 12px;
-        }
-
-
-        .section-heading p {
-
-            color: #d6e4dc;
-        }
-
-
-        .cards {
-
-            max-width: 1150px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-
-        .card {
-
-            background: #f6faf5;
-
-            color: #173b2b;
-
-            padding: 32px;
-
-            border-radius: 8px;
-
-            border-top:
-                4px solid #f2bd24;
-        }
-
-
-        .card-icon {
-
-            font-size: 35px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .card h3 {
-
-            font-family:
-                "Playfair Display", serif;
-
-            font-size: 23px;
-
-            margin-bottom: 12px;
-
-            color: #003d27;
-        }
-
-
-        .card p {
-
-            color: #63766c;
-
-            font-size: 15px;
-        }
-
-
-        /* =====================================================
-           QUOTE
-        ===================================================== */
-
-        .quote {
-
-            padding: 80px 6%;
-
-            text-align: center;
-
-            background: #eef7ed;
-        }
-
-
-        .quote-inner {
-
-            max-width: 900px;
-
-            margin: auto;
-        }
-
-
-        .quote-mark {
-
-            font-family: Georgia, serif;
-
-            font-size: 80px;
-
-            line-height: .7;
-
-            color: #f2bd24;
-        }
-
-
-        .quote blockquote {
-
-            font-family:
-                "Playfair Display", serif;
-
-            font-size:
-                clamp(25px, 4vw, 38px);
-
-            color: #003d27;
-
-            margin: 25px 0;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer {
-
-            background: #002d20;
-
-            color: white;
-
-            padding: 50px 6% 25px;
-        }
-
-
-        .footer-content {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 40px;
-        }
-
-
-        .footer-brand {
-
-            max-width: 600px;
-        }
-
-
-        .footer-brand h3 {
-
-            font-family:
-                "Playfair Display", serif;
-
-            font-size: 23px;
-
-            margin-bottom: 8px;
-        }
-
-
-        .footer-brand p {
-
-            color: #b9ccc2;
-        }
-
-
-        .footer-links {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, auto);
-
-            gap: 8px 25px;
-        }
-
-
-        .footer-links a {
-
-            color: white;
-
-            font-size: 14px;
-
-            transition: color .3s ease;
-        }
-
-
-        .footer-links a:hover {
-
-            color: #f2bd24;
-        }
-
-
-        .copyright {
-
-            max-width: 1200px;
-
-            margin: 35px auto 0;
-
-            padding-top: 20px;
-
-            border-top:
-                1px solid rgba(255,255,255,.15);
-
-            color: #a9bdb3;
-
-            font-size: 13px;
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 1050px) {
-
-            nav {
-                gap: 14px;
-            }
-
-            nav a {
-                font-size: 12px;
-            }
-
-        }
-
-
-        @media (max-width: 900px) {
-
-            header {
-                height: 72px;
-            }
-
-
-            .mobile-menu {
-                display: flex;
-            }
-
-
-            nav {
-
-                display: none;
-
-                position: absolute;
-
-                top: 72px;
-
-                left: 0;
-
-                width: 100%;
-
-                padding: 20px 7%;
-
-                background: #003d27;
-
-                flex-direction: column;
-
-                align-items: stretch;
-
-                gap: 0;
-
-                box-shadow:
-                    0 10px 25px rgba(0,0,0,.2);
-            }
-
-
-            nav.show {
-                display: flex;
-            }
-
-
-            nav a {
-
-                display: block;
-
-                padding: 13px 5px;
-
-                font-size: 14px;
-
-                border-bottom:
-                    1px solid rgba(255,255,255,.1);
-            }
-
-
-            nav .nav-contact {
-
-                margin-top: 12px;
-
-                text-align: center;
-
-                border-bottom: none;
-            }
-
-
-            .about {
-
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-
-                padding-top: 60px;
-            }
-
-
-            .portrait {
-
-                max-width: 600px;
-
-                margin: auto;
-            }
-
-
-            .cards {
-
-                grid-template-columns: 1fr;
-
-                max-width: 600px;
-            }
-
-
-            .footer-content {
-
-                flex-direction: column;
-            }
-
-        }
-
-
-        @media (max-width: 550px) {
-
-            .nav-container {
-                width: 88%;
-            }
-
-
-            .logo img {
-
-                width: 42px;
-
-                height: 42px;
-            }
-
-
-            .logo-text {
-
-                font-size: 11px;
-            }
-
-
-            .page-hero {
-
-                min-height: 400px;
-
-                padding:
-                    60px 6%;
-            }
-
-
-            .page-hero h1 {
-
-                font-size: 40px;
-            }
-
-
-            .page-hero p {
-
-                font-size: 15px;
-            }
-
-
-            .about {
-
-                padding:
-                    60px 6%;
-            }
-
-
-            .portrait img {
-
-                height: 500px;
-            }
-
-
-            .profile-section {
-
-                padding:
-                    65px 6%;
-            }
-
-
-            .section-heading h2 {
-
-                font-size: 35px;
-            }
-
-
-            .footer-links {
-
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>About | Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</title>
+
+<meta
+    name="description"
+    content="Official biography of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba, Deputy Speaker of the Kogi State House of Assembly and Member Representing Ibaji State Constituency."
+>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f8f5;
+    color: #173b2b;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #003d27;
+    color: white;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f2bd24;
+}
+
+.contact-btn {
+    background: #f2bd24;
+    color: #003d27 !important;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,61,39,.97),
+            rgba(0,61,39,.82)
+        );
+
+    color: white;
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.label {
+    color: #f2bd24;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.1;
+    margin: 12px 0 20px;
+}
+
+.hero h1 span {
+    color: #f2bd24;
+}
+
+.hero p {
+    color: #dcebe3;
+    font-size: 18px;
+    max-width: 800px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.profile-section {
+    padding: 75px 0;
+}
+
+.profile-intro {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0,0,0,.07);
+    border-left: 5px solid #f2bd24;
+    margin-bottom: 35px;
+}
+
+.profile-intro h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 34px;
+    margin-top: 0;
+}
+
+.profile-intro p {
+    color: #53675d;
+    font-size: 16px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 9px;
+    box-shadow: 0 6px 22px rgba(0,0,0,.06);
+}
+
+.profile-card h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 27px;
+    line-height: 1.3;
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f2bd24;
+}
+
+.profile-card p {
+    color: #53675d;
+    margin-bottom: 0;
+}
+
+.highlight {
+    background: #eef7ed;
+    border-radius: 8px;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.highlight strong {
+    color: #003d27;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.legacy {
+    background: #003d27;
+    color: white;
+    padding: 70px 0;
+}
+
+.legacy-content {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.legacy .label {
+    color: #f2bd24;
+}
+
+.legacy h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin: 10px 0 20px;
+}
+
+.legacy p {
+    color: #dcebe3;
+    font-size: 17px;
+}
+
+.quote {
+    margin-top: 30px;
+    padding: 25px;
+    border-left: 4px solid #f2bd24;
+    background: rgba(255,255,255,.06);
+    text-align: left;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.cta {
+    background: #f2bd24;
+    padding: 60px 0;
+}
+
+.cta-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 36px;
+    margin: 0 0 8px;
+}
+
+.cta p {
+    color: #355344;
+}
+
+.cta-button {
+    background: #003d27;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+footer {
+    background: #002d20;
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-brand h3 {
+    font-family: Georgia, serif;
+}
+
+.footer-brand p,
+.footer-column a {
+    color: #b9ccc2;
+}
+
+.footer-column h4 {
+    color: #f2bd24;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.15);
+    margin-top: 40px;
+    padding-top: 18px;
+    text-align: center;
+    color: #91a89d;
+    font-size: 13px;
+}
+
+@media(max-width:900px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #003d27;
+        padding: 20px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .profile-section {
+        padding: 55px 0;
+    }
+
+    .profile-intro,
+    .profile-card {
+        padding: 25px;
+    }
+
+    .profile-intro h2 {
+        font-size: 28px;
+    }
+
+    .profile-card h2 {
+        font-size: 24px;
+    }
+
+    .legacy {
+        padding: 55px 0;
+    }
+
+    .legacy h2 {
+        font-size: 32px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 
 </head>
-
 
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
-    <div class="nav-container">
+<div class="nav-container">
 
+<a href="index.html" class="logo">
+    KOGI STATE HOUSE<br>
+    OF ASSEMBLY
+</a>
 
-        <!-- LOGO -->
+<nav id="navigation">
 
-        <a href="index.html"
-           class="logo"
-           aria-label="Kogi State House of Assembly Home">
+<a href="index.html">
+    Home
+</a>
 
-            <img
-                src="images/kogi-logo.png"
-                alt="Kogi State House of Assembly Logo"
-            >
+<a href="about.html" class="active">
+    About
+</a>
 
-            <div class="logo-text">
+<a href="office.html">
+    Office
+</a>
 
-                KOGI STATE HOUSE<br>
-                OF ASSEMBLY
+<a href="legislative.html">
+    Legislative Activities
+</a>
 
-            </div>
+<a href="constituency.html">
+    Constituency
+</a>
 
-        </a>
+<a href="news.html">
+    News
+</a>
 
+<a href="gallery.html">
+    Media Gallery
+</a>
 
-        <!-- MOBILE MENU -->
+<a href="contact.html" class="contact-btn">
+    Contact
+</a>
 
-        <button
-            class="mobile-menu"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="navigation">
+</nav>
 
-            ☰
+<div
+    class="mobile-menu"
+    onclick="toggleMenu()"
+>
+    ☰
+</div>
 
-        </button>
-
-
-        <!-- MAIN NAVIGATION -->
-
-        <nav id="navigation"
-             aria-label="Main navigation">
-
-
-            <a href="index.html">
-                Home
-            </a>
-
-
-            <a href="about.html"
-               class="active">
-                Biography
-            </a>
-
-
-            <a href="office.html">
-                Office
-            </a>
-
-
-            <a href="legislative.html">
-                Legislative Activities
-            </a>
-
-
-            <a href="constituency.html">
-                Constituency
-            </a>
-
-
-            <a href="news.html">
-                News
-            </a>
-
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-
-            <a href="contact.html"
-               class="nav-contact">
-                Contact
-            </a>
-
-        </nav>
-
-    </div>
+</div>
 
 </header>
 
 
+<section class="hero">
 
-<!-- =====================================================
-     PAGE HERO
-===================================================== -->
+<div class="container">
 
-<section class="page-hero">
+<div class="hero-content">
 
-    <div class="page-hero-content">
+<div class="label">
+    Official Biography
+</div>
 
-        <div class="small-title">
-            Biography
-        </div>
+<h1>
+    Rt. Hon. Comfort Ojoma
+    <span>Nwuchiola Egwaba</span>
+</h1>
 
+<p>
+    Deputy Speaker of the Kogi State House of Assembly
+    and Member Representing Ibaji State Constituency.
+</p>
 
-        <h1>
-            Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
-        </h1>
+</div>
 
-
-        <p>
-            Deputy Speaker, Kogi State House of Assembly,
-            committed to effective representation,
-            legislative service and the advancement of
-            good governance.
-        </p>
-
-    </div>
+</div>
 
 </section>
 
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section class="about">
-
-
-    <div class="portrait">
-
-        <img
-            src="https://i.ibb.co/KjtNqDh0/file-000000003e8c81f49bdf69452893f71c.png"
-            alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
-        >
-
-
-        <div class="portrait-label">
-
-            <strong>
-                Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
-            </strong>
-
-            <span>
-                Deputy Speaker, Kogi State House of Assembly
-            </span>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="about-content">
-
-
-        <div class="eyebrow">
-            Leadership & Public Service
-        </div>
-
-
-        <h2>
-            About the Deputy Speaker
-        </h2>
-
-
-        <div class="gold-line"></div>
-
-
-        <p>
-            Rt. Hon. Comfort Nwuchiola Ojomah Egwaba serves
-            as Deputy Speaker of the Kogi State House of
-            Assembly.
-        </p>
-
-
-        <p>
-            In this capacity, the Deputy Speaker contributes
-            to the legislative responsibilities of the House
-            and supports the effective conduct of legislative
-            proceedings.
-        </p>
-
-
-        <p>
-            Her office is focused on responsible
-            representation, constructive legislative
-            engagement, accountability and initiatives that
-            contribute to the development and wellbeing of
-            the people of Kogi State.
-        </p>
-
-
-        <p>
-            This website provides citizens and stakeholders
-            with information about the office, legislative
-            activities, constituency engagement, public
-            programmes and official updates.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROFILE
-===================================================== -->
 
 <section class="profile-section">
 
-
-    <div class="section-heading">
-
-        <span>
-            Public Service
-        </span>
+<div class="container">
 
 
-        <h2>
-            A Commitment to Service
-        </h2>
+<div class="profile-intro">
+
+<h2>
+    About Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
+</h2>
+
+<p>
+    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba is an accomplished
+    legislator, distinguished public servant, and trailblazing
+    political leader whose exemplary service has continued to
+    shape governance and inspire inclusive leadership in Kogi
+    State and beyond.
+</p>
+
+<p>
+    She currently serves as the Deputy Speaker of the Kogi State
+    House of Assembly and represents the people of Ibaji State
+    Constituency, making history as the first woman to occupy the
+    office of Deputy Speaker in the State's legislative history.
+</p>
+
+<p>
+    A native of Ibaji Local Government Area of Kogi State, Rt. Hon.
+    Egwaba has built a record of purposeful leadership, effective
+    representation, grassroots engagement and public service.
+</p>
+
+</div>
 
 
-        <p>
-            The office of the Deputy Speaker supports the
-            legislative process while promoting effective
-            representation and engagement with citizens.
-        </p>
-
-    </div>
+<div class="profile-grid">
 
 
+<div class="profile-card">
 
-    <div class="cards">
+<h2>
+    Education & Professional Background
+</h2>
 
+<p>
+    Rt. Hon. Egwaba attended Government Girls Secondary School,
+    Idah, before proceeding to the Kogi State College of Health
+    Sciences and Technology, Idah, where she obtained a National
+    Diploma (ND) in Medical Laboratory Technology.
+</p>
 
-        <div class="card">
+<p>
+    She further obtained a Higher National Diploma (HND) in
+    Medical Laboratory Technology from the Federal School of
+    Medical Laboratory Technology (Science), Jos/Vom, Plateau
+    State, and a Bachelor of Science (B.Sc.) in Peace Studies
+    and Conflict Resolution from the National Open University
+    of Nigeria (NOUN).
+</p>
 
-            <div class="card-icon">
-                ⚖️
-            </div>
+<p>
+    She is currently pursuing a Master of Science (M.Sc.) in
+    International Relations and Diplomacy at Salem University,
+    Lokoja, Kogi State.
+</p>
 
+<div class="highlight">
 
-            <h3>
-                Legislative Service
-            </h3>
+<strong>
+    Her strong academic background, combined with years of
+    grassroots engagement and public service, has equipped her
+    with the vision, knowledge and capacity to provide purposeful
+    leadership and effective representation.
+</strong>
 
+</div>
 
-            <p>
-                Supporting legislative proceedings and the
-                responsibilities of the Kogi State House
-                of Assembly.
-            </p>
-
-        </div>
-
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                🤝
-            </div>
-
-
-            <h3>
-                Representation
-            </h3>
-
-
-            <p>
-                Promoting constructive engagement between
-                elected representatives, communities and
-                other stakeholders.
-            </p>
-
-        </div>
+</div>
 
 
+<div class="profile-card">
 
-        <div class="card">
+<h2>
+    Legislative Leadership
+</h2>
 
-            <div class="card-icon">
-                🌱
-            </div>
+<p>
+    Since her election into the 8th Kogi State House of Assembly,
+    Rt. Hon. Egwaba has distinguished herself as a proactive
+    legislator committed to promoting good governance, social
+    justice, and sustainable development.
+</p>
+
+<p>
+    As Deputy Speaker, she has played a strategic role in
+    strengthening legislative oversight, fostering harmony within
+    the Assembly, and supporting the passage of people-oriented
+    laws and policies that advance the development of Kogi State.
+</p>
+
+<p>
+    Her legislative record reflects an unwavering commitment to
+    equity, inclusion, and community development.
+</p>
+
+</div>
 
 
-            <h3>
-                Development
-            </h3>
+<div class="profile-card">
+
+<h2>
+    Legislative Achievements
+</h2>
+
+<p>
+    She sponsored the landmark Kogi State Oil Producing Areas
+    Development Commission (KOSOPADEC) Bill, designed to
+    accelerate the development of oil-producing communities,
+    as well as the Gender Representation Bill aimed at expanding
+    opportunities for women's participation in governance.
+</p>
+
+<p>
+    She also championed the motion for the reconstruction of
+    the strategic Idah–Ibaji Road.
+</p>
+
+<p>
+    She has consistently advocated policies that improve access
+    to quality education, healthcare, agriculture, infrastructure,
+    and economic opportunities for rural communities.
+</p>
+
+</div>
 
 
-            <p>
-                Supporting initiatives and conversations
-                aimed at advancing inclusive development
-                across Kogi State.
-            </p>
+<div class="profile-card">
 
-        </div>
+<h2>
+    Grassroots & Humanitarian Service
+</h2>
 
-    </div>
+<p>
+    Beyond the legislature, Rt. Hon. Egwaba is widely recognised
+    for her people-centred leadership and unwavering dedication
+    to grassroots development.
+</p>
+
+<p>
+    Through regular constituency engagements, town hall meetings,
+    educational support initiatives, youth and women empowerment
+    programmes, healthcare interventions, peacebuilding efforts,
+    and strategic advocacy for infrastructure development, she
+    has continued to improve the lives of her constituents.
+</p>
+
+<p>
+    Her humanitarian initiatives through the Comfort Ladies
+    Foundation have further empowered women, youths, widows, and
+    vulnerable persons, reinforcing her enduring commitment to
+    inclusive development and social welfare.
+</p>
+
+</div>
+
+
+<div class="profile-card">
+
+<h2>
+    Gender Equality & Regional Advocacy
+</h2>
+
+<p>
+    An advocate for gender equality and democratic inclusion,
+    Rt. Hon. Egwaba has consistently championed increased
+    representation of women in leadership and governance.
+</p>
+
+<p>
+    Her commitment to advancing the rights and participation
+    of women has earned her recognition beyond Nigeria's borders,
+    including her participation in the West Africa Female
+    Parliamentarians Peer Review Conference on Ending Violence
+    Against Women and Girls held in Accra, Ghana.
+</p>
+
+<p>
+    At the conference, she joined female legislators,
+    policymakers, and development partners from across the
+    region to strengthen collaborative efforts towards gender
+    equality and sustainable development.
+</p>
+
+</div>
+
+
+<div class="profile-card">
+
+<h2>
+    Awards & Recognition
+</h2>
+
+<p>
+    Her outstanding contributions to public service have attracted
+    widespread recognition.
+</p>
+
+<p>
+    She was honoured as the Most Outstanding Female Legislator
+    during the Kogi State 34th Anniversary Lecture and Awards
+    organised by the Nigerian Post in 2025.
+</p>
+
+<p>
+    She has also received the Award of Excellence from the
+    Department of English and Literary Studies, Federal University
+    Lokoja, among other commendations from professional bodies,
+    community organisations, youth groups, and civil society
+    organisations.
+</p>
+
+<p>
+    She was also nominated for the prestigious Margaret Ekpo
+    Memorial Award in recognition of her outstanding contributions
+    to women's leadership and public service.
+</p>
+
+</div>
+
+
+<div class="profile-card full-width">
+
+<h2>
+    Traditional Titles & Honour
+</h2>
+
+<p>
+    In recognition of her exceptional leadership, dedication to
+    community development, and service to humanity, Rt. Hon.
+    Comfort Ojoma Nwuchiola Egwaba has been honoured with
+    distinguished traditional titles.
+</p>
+
+<p>
+    She is the Gimbiya Mata of Girinya and was conferred with the
+    revered title of Iganya Attah-Igala (Adeebu) by His Royal
+    Majesty, Agabaidu, the Attah Igala and President of the Kogi
+    State Traditional Council, in recognition of her remarkable
+    contributions to the development of the Igala Kingdom and
+    Kogi State.
+</p>
+
+</div>
+
+
+<div class="profile-card full-width">
+
+<h2>
+    Faith, Integrity & Servant Leadership
+</h2>
+
+<p>
+    A woman of faith, integrity, compassion, and exceptional
+    leadership, Rt. Hon. Comfort Ojoma Nwuchiola Egwaba exemplifies
+    the ideals of servant leadership.
+</p>
+
+<p>
+    Her unwavering dedication to legislative excellence,
+    grassroots development, peacebuilding, women's empowerment,
+    and public service continues to inspire a new generation of
+    leaders while leaving an enduring legacy of impactful
+    governance.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
+<section class="legacy">
 
-<!-- =====================================================
-     QUOTE
-===================================================== -->
+<div class="container">
 
-<section class="quote">
+<div class="legacy-content">
 
-    <div class="quote-inner">
+<div class="label">
+    Leadership Legacy
+</div>
 
+<h2>
+    A Symbol of Courage, Resilience & Visionary Leadership
+</h2>
 
-        <div class="quote-mark">
-            “
-        </div>
+<p>
+    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba remains a symbol of
+    courage, resilience, and visionary leadership whose
+    contributions to democratic governance and human development
+    have earned her a place among Nigeria's most respected
+    contemporary female legislators.
+</p>
 
+<div class="quote">
 
-        <blockquote>
+Her leadership continues to reflect a commitment to legislative
+excellence, grassroots development, peacebuilding, women's
+empowerment, and inclusive public service.
 
-            Effective representation begins with listening,
-            responsible leadership and a commitment to service.
+</div>
 
-        </blockquote>
+</div>
 
-
-        <div class="gold-line"
-             style="margin: auto;">
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
+<section class="cta">
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<h2>
+    Stay Connected
+</h2>
+
+<p>
+    Follow the latest activities, news and public engagements.
+</p>
+
+</div>
+
+<a
+    href="contact.html"
+    class="cta-button"
+>
+    Contact the Office
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 
 <footer>
 
+<div class="container">
 
-    <div class="footer-content">
-
-
-        <div class="footer-brand">
-
-            <h3>
-                Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
-            </h3>
+<div class="footer-grid">
 
 
-            <p>
-                Deputy Speaker, Kogi State House of Assembly
-                and Member Representing Ibaji Local Government
-                Constituency.
-            </p>
+<div class="footer-brand">
 
-        </div>
+<h3>
+    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
+</h3>
 
+<p>
+    Deputy Speaker, Kogi State House of Assembly
+    and Member Representing Ibaji State Constituency.
+</p>
 
-
-        <div class="footer-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                Biography
-            </a>
-
-            <a href="office.html">
-                Office
-            </a>
-
-            <a href="legislative.html">
-                Legislative Activities
-            </a>
-
-            <a href="constituency.html">
-                Constituency
-            </a>
-
-            <a href="news.html">
-                News
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 
+<div class="footer-column">
 
-    <div class="copyright">
+<h4>
+    Quick Links
+</h4>
 
-        © 2026 Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.
-        All Rights Reserved.
+<a href="index.html">
+    Home
+</a>
 
-    </div>
+<a href="about.html">
+    About
+</a>
+
+<a href="office.html">
+    Office
+</a>
+
+<a href="legislative.html">
+    Legislative Activities
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Explore
+</h4>
+
+<a href="constituency.html">
+    Constituency
+</a>
+
+<a href="news.html">
+    News & Updates
+</a>
+
+<a href="gallery.html">
+    Media Gallery
+</a>
+
+<a href="contact.html">
+    Contact
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba.
+All Rights Reserved.
+
+</div>
+
+</div>
 
 </footer>
 
 
-
-<!-- =====================================================
-     MOBILE MENU JAVASCRIPT
-===================================================== -->
-
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+function toggleMenu() {
+
+    document
+        .getElementById("navigation")
+        .classList.toggle("show");
+
+}
 
 
-    const menuToggle =
-        document.getElementById("menuToggle");
+document
+    .querySelectorAll("nav a")
+    .forEach(function(link) {
 
+        link.addEventListener(
+            "click",
+            function() {
 
-    const navigation =
-        document.getElementById("navigation");
+                document
+                    .getElementById("navigation")
+                    .classList.remove("show");
 
-
-    if (!menuToggle || !navigation) {
-        return;
-    }
-
-
-    /* OPEN / CLOSE MENU */
-
-    menuToggle.addEventListener("click", function () {
-
-        const isOpen =
-            navigation.classList.toggle("show");
-
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
-
-
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
+            }
         );
 
     });
-
-
-    /* CLOSE AFTER CLICKING A LINK */
-
-    navigation
-        .querySelectorAll("a")
-        .forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                navigation.classList.remove("show");
-
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-            });
-
-        });
-
-
-    /* CLOSE WITH ESCAPE */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key === "Escape" &&
-                navigation.classList.contains("show")
-            ) {
-
-                navigation.classList.remove("show");
-
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-
-                menuToggle.focus();
-
-            }
-
-        }
-    );
-
-});
 
 </script>
 
