@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Settings | Admin</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f4;
+    color: #173b2b;
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background: #003d27;
+    color: white;
+    padding: 25px 18px;
+    overflow-y: auto;
+}
+
+.sidebar-logo {
+    text-align: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.sidebar-logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.sidebar-logo h2 {
+    font-size: 17px;
+    margin: 8px 0 3px;
+}
+
+.sidebar-logo p {
+    margin: 0;
+    color: #b9ccc2;
+    font-size: 12px;
+}
+
+.menu {
+    margin-top: 22px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: rgba(242,189,36,.18);
+    color: #f2bd24;
+}
+
+/* ===============================
+   MAIN
+================================ */
+
+.main {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+.topbar {
+    background: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+.topbar h1 {
+    margin: 0;
+    color: #003d27;
+    font-size: 22px;
+}
+
+.topbar a {
+    text-decoration: none;
+    background: #f2bd24;
+    color: #102b20;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.content {
+    max-width: 950px;
+    padding: 35px;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+}
+
+.box h2 {
+    margin-top: 0;
+    color: #003d27;
+}
+
+.box-intro {
+    color: #6b7972;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #173b2b;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5cf;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0c8051;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.save-btn {
+    margin-top: 10px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #f2bd24;
+    color: #102b20;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #003d27;
+    color: white;
+}
+
+.success {
+    display: none;
+    margin-top: 18px;
+    padding: 13px;
+    border-radius: 5px;
+    background: #e7f7e9;
+    color: #176b2f;
+}
+
+/* ===============================
+   DANGER ZONE
+================================ */
+
+.danger {
+    margin-top: 25px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #c62828;
+}
+
+.danger h3 {
+    margin-top: 0;
+    color: #a51d1d;
+}
+
+.reset-btn {
+    border: none;
+    padding: 11px 16px;
+    background: #c62828;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background: #8e0000;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field.full {
+        grid-column: auto;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .topbar {
+        padding: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 18px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- ===============================
+     SIDEBAR
+================================ -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <img
+            src="images/kogi-logo.png"
+            alt="Kogi State House of Assembly"
+        >
+
+        <h2>
+            Admin Panel
+        </h2>
+
+        <p>
+            Comfort Egwaba
+        </p>
+
+    </div>
+
+
+    <div class="menu">
+
+        <a href="admin-dashboard.html">
+            📊 Dashboard
+        </a>
+
+        <a href="admin.html">
+            📰 News
+        </a>
+
+        <a href="gallery-admin.html">
+            🖼️ Gallery
+        </a>
+
+        <a href="project.html">
+            🏗️ Projects
+        </a>
+
+        <a href="award.html">
+            🏆 Awards
+        </a>
+
+        <a href="events.html">
+            📅 Events
+        </a>
+
+        <a href="contact-admin.html">
+            ✉️ Messages
+        </a>
+
+        <a href="settings.html" class="active">
+            ⚙️ Settings
+        </a>
+
+        <a href="index.html">
+            🌐 View Website
+        </a>
+
+        <a
+            href="#"
+            onclick="logoutAdmin(); return false;"
+        >
+            🚪 Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ===============================
+     MAIN
+================================ -->
+
+<main class="main">
+
+
+    <div class="topbar">
+
+        <h1>
+            Website Settings
+        </h1>
+
+        <a href="admin-dashboard.html">
+            Dashboard
+        </a>
+
+    </div>
+
+
+
+    <div class="content">
+
+
+        <div class="box">
+
+            <h2>
+                General Information
+            </h2>
+
+            <p class="box-intro">
+                Update the information used throughout
+                your website.
+            </p>
+
+
+            <form id="settingsForm">
+
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="field">
+
+                        <label for="name">
+                            Official Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter official name"
+                        >
+
+                    </div>
+
+
+                    <!-- POSITION -->
+
+                    <div class="field">
+
+                        <label for="position">
+                            Position / Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="position"
+                            placeholder="Enter position"
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="field">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="field">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email address"
+                        >
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="field full">
+
+                        <label for="address">
+                            Office Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="Enter office address"
+                        >
+
+                    </div>
+
+
+                    <!-- FACEBOOK -->
+
+                    <div class="field">
+
+                        <label for="facebook">
+                            Facebook URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="facebook"
+                            placeholder="https://facebook.com/..."
+                        >
+
+                    </div>
+
+
+                    <!-- X -->
+
+                    <div class="field">
+
+                        <label for="twitter">
+                            X / Twitter URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="twitter"
+                            placeholder="https://x.com/..."
+                        >
+
+                    </div>
+
+
+                    <!-- INSTAGRAM -->
+
+                    <div class="field">
+
+                        <label for="instagram">
+                            Instagram URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="instagram"
+                            placeholder="https://instagram.com/..."
+                        >
+
+                    </div>
+
+
+                    <!-- WEBSITE -->
+
+                    <div class="field">
+
+                        <label for="website">
+                            Website URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="website"
+                            placeholder="https://example.com"
+                        >
+
+                    </div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="field full">
+
+                        <label for="description">
+                            Website Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            placeholder="Write a short description of the website..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    Save Settings
+                </button>
+
+
+                <div
+                    class="success"
+                    id="success"
+                >
+                    Settings saved successfully.
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- ===============================
+             RESET
+        ================================= -->
+
+        <div class="danger">
+
+            <h3>
+                Reset Settings
+            </h3>
+
+            <p>
+                This will remove the saved website
+                settings from this browser.
+            </p>
+
+            <button
+                class="reset-btn"
+                onclick="resetSettings()"
+            >
+                Reset Settings
+            </button>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<script>
+
+/* =========================================
+   LOGIN PROTECTION
+========================================= */
+
+if (
+    sessionStorage.getItem("adminLoggedIn")
+    !== "true"
+) {
+
+    window.location.href =
+        "admin-login.html";
+
+}
+
+
+/* =========================================
+   GET SETTINGS
+========================================= */
+
+function getSettings() {
+
+    return JSON.parse(
+        localStorage.getItem("websiteSettings")
+        || "{}"
+    );
+
+}
+
+
+/* =========================================
+   LOAD SETTINGS
+========================================= */
+
+function loadSettings() {
+
+    const settings =
+        getSettings();
+
+
+    document.getElementById("name").value =
+        settings.name || "";
+
+
+    document.getElementById("position").value =
+        settings.position || "";
+
+
+    document.getElementById("phone").value =
+        settings.phone || "";
+
+
+    document.getElementById("email").value =
+        settings.email || "";
+
+
+    document.getElementById("address").value =
+        settings.address || "";
+
+
+    document.getElementById("facebook").value =
+        settings.facebook || "";
+
+
+    document.getElementById("twitter").value =
+        settings.twitter || "";
+
+
+    document.getElementById("instagram").value =
+        settings.instagram || "";
+
+
+    document.getElementById("website").value =
+        settings.website || "";
+
+
+    document.getElementById("description").value =
+        settings.description || "";
+
+}
+
+
+/* =========================================
+   SAVE SETTINGS
+========================================= */
+
+document
+.getElementById("settingsForm")
+.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const settings = {
+
+            name:
+                document.getElementById("name").value.trim(),
+
+            position:
+                document.getElementById("position").value.trim(),
+
+            phone:
+                document.getElementById("phone").value.trim(),
+
+            email:
+                document.getElementById("email").value.trim(),
+
+            address:
+                document.getElementById("address").value.trim(),
+
+            facebook:
+                document.getElementById("facebook").value.trim(),
+
+            twitter:
+                document.getElementById("twitter").value.trim(),
+
+            instagram:
+                document.getElementById("instagram").value.trim(),
+
+            website:
+                document.getElementById("website").value.trim(),
+
+            description:
+                document.getElementById("description").value.trim()
+
+        };
+
+
+        localStorage.setItem(
+            "websiteSettings",
+            JSON.stringify(settings)
+        );
+
+
+        const success =
+            document.getElementById("success");
+
+
+        success.style.display = "block";
+
+
+        setTimeout(function() {
+
+            success.style.display = "none";
+
+        }, 3000);
+
+    }
+);
+
+
+/* =========================================
+   RESET SETTINGS
+========================================= */
+
+function resetSettings() {
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to reset all website settings?"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    localStorage.removeItem(
+        "websiteSettings"
+    );
+
+
+    loadSettings();
+
+    alert("Settings have been reset.");
+
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+function logoutAdmin() {
+
+    sessionStorage.removeItem(
+        "adminLoggedIn"
+    );
+
+    window.location.href =
+        "admin-login.html";
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+loadSettings();
+
+</script>
+
+</body>
+</html>
