@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Article | Office of the Deputy Speaker</title>
+
+    <meta name="description"
+          content="Official news and media publication from the Office of the Deputy Speaker, Kogi State House of Assembly.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7faf7;
+    color: #40574d;
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+    height: 80px;
+
+    background: #003d27;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 3px 15px rgba(0,0,0,.15);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1400px;
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+nav a {
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #f2bd24;
+}
+
+.nav-contact {
+    background: #f2bd24;
+
+    color: #082d20 !important;
+
+    padding: 10px 17px;
+
+    border-radius: 5px;
+}
+
+.nav-contact:hover {
+    background: white;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    display: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   ARTICLE
+===================================== */
+
+.article-section {
+    padding: 70px 0 90px;
+}
+
+
+/* BACK BUTTON */
+
+.back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #087c4e;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+.back-link:hover {
+    color: #003d27;
+}
+
+
+/* CATEGORY */
+
+.article-category {
+    display: inline-block;
+
+    color: #087c4e;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+/* TITLE */
+
+.article-title {
+    font-family: "Playfair Display", serif;
+
+    color: #003d27;
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1.15;
+
+    max-width: 950px;
+
+    margin-bottom: 15px;
+}
+
+
+/* DATE */
+
+.article-date {
+    color: #7c8b84;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+.article-date i {
+    margin-right: 6px;
+
+    color: #087c4e;
+}
+
+
+/* FEATURE IMAGE */
+
+.article-image {
+    width: 100%;
+
+    max-height: 620px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.12);
+}
+
+
+/* ARTICLE BODY */
+
+.article-body {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #40574d;
+
+    max-width: 900px;
+}
+
+.article-body p {
+    margin-bottom: 23px;
+}
+
+.article-body h2 {
+    font-family: "Playfair Display", serif;
+
+    color: #003d27;
+
+    font-size: 30px;
+
+    margin: 35px 0 15px;
+}
+
+.article-body h3 {
+    font-family: "Playfair Display", serif;
+
+    color: #003d27;
+
+    font-size: 24px;
+
+    margin: 30px 0 12px;
+}
+
+.article-body ul,
+.article-body ol {
+    margin: 0 0 25px 25px;
+}
+
+.article-body li {
+    margin-bottom: 8px;
+}
+
+
+/* =====================================
+   SHARE BOX
+===================================== */
+
+.share-box {
+    margin-top: 50px;
+
+    padding: 28px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    border: 1px solid #dfe9e3;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05);
+}
+
+.share-box h3 {
+    font-family: "Playfair Display", serif;
+
+    color: #003d27;
+
+    font-size: 23px;
+
+    margin-bottom: 17px;
+}
+
+.share-box p {
+    color: #7a8982;
+
+    font-size: 13px;
+
+    margin-bottom: 17px;
+}
+
+
+/* SHARE BUTTONS */
+
+.share-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.share-btn {
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+
+    opacity: .9;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp {
+    background: #25D366;
+}
+
+
+/* FACEBOOK */
+
+.facebook {
+    background: #1877F2;
+}
+
+
+/* X */
+
+.x-twitter {
+    background: #000000;
+}
+
+
+/* TELEGRAM */
+
+.telegram {
+    background: #229ED9;
+}
+
+
+/* LINKEDIN */
+
+.linkedin {
+    background: #0A66C2;
+}
+
+
+/* EMAIL */
+
+.email {
+    background: #087c4e;
+}
+
+
+/* INSTAGRAM */
+
+.instagram {
+    background: #C13584;
+}
+
+
+/* COPY LINK */
+
+.copy-link {
+    background: #687970;
+}
+
+
+/* SHARE STATUS */
+
+.share-status {
+    margin-top: 12px;
+
+    min-height: 20px;
+
+    color: #087c4e;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================
+   NOT FOUND
+===================================== */
+
+.not-found {
+    min-height: 550px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.not-found i {
+    font-size: 55px;
+
+    color: #087c4e;
+
+    margin-bottom: 20px;
+}
+
+.not-found h1 {
+    font-family: "Playfair Display", serif;
+
+    color: #003d27;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.not-found p {
+    color: #75837c;
+
+    margin-bottom: 25px;
+}
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #f2bd24;
+
+    color: #082d20;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #002d20;
+
+    color: white;
+
+    padding: 45px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #b9ccc2;
+
+    font-size: 13px;
+}
+
+.footer-column h4 {
+    color: #f2bd24;
+
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    display: block;
+
+    color: #d1dfd9;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.footer-column a:hover {
+    color: #f2bd24;
+}
+
+.copyright {
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.15);
+
+    text-align: center;
+
+    color: #91a89d;
+
+    font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: #003d27;
+
+        padding: 25px 7%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: 72px;
+    }
+
+    nav {
+        top: 72px;
+    }
+
+    .logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo-text {
+        font-size: 11px;
+    }
+
+    .article-section {
+        padding: 50px 0 65px;
+    }
+
+    .article-title {
+        font-size: 37px;
+    }
+
+    .article-body {
+        font-size: 16px;
+    }
+
+    .article-image {
+        max-height: 450px;
+    }
+
+    .share-box {
+        padding: 22px;
+    }
+
+    .share-btn {
+        flex: 1 1 45%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header>
+
+    <div class="nav-container">
+
+
+        <a href="index.html"
+           class="logo">
+
+            <img
+                src="images/kogi-logo.png"
+                alt="Kogi State House of Assembly Logo"
+            >
+
+            <div class="logo-text">
+                KOGI STATE HOUSE<br>
+                OF ASSEMBLY
+            </div>
+
+        </a>
+
+
+        <nav id="navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#office">
+                Office
+            </a>
+
+            <a href="index.html#constituency">
+                Constituency
+            </a>
+
+            <a href="press.html">
+                Press / Media
+            </a>
+
+            <a href="index.html#contact"
+               class="nav-contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="mobile-menu"
+             onclick="toggleMenu()"
+             aria-label="Open navigation menu">
+
+            <i class="fas fa-bars"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================
+     ARTICLE CONTAINER
+===================================== -->
+
+<main id="articleContainer">
+
+    <!-- Article will be loaded here -->
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    Rt. Hon. Comfort Nwuchiola
+                    Ojomah Egwaba
+                </h3>
+
+                <p>
+                    Deputy Speaker, Kogi State House
+                    of Assembly and Member Representing
+                    Ibaji Local Government Constituency.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#office">
+                    Office
+                </a>
+
+                <a href="press.html">
+                    Press / Media
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="index.html#contact">
+                    Contact Office
+                </a>
+
+                <a
+                    href="https://wa.me/2348064963258"
+                    target="_blank"
+                    rel="noopener">
+                    WhatsApp
+                </a>
+
+                <a href="mailto:comfortnwuchiola@gmail.com">
+                    Email Office
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Office of Rt. Hon. Comfort Nwuchiola
+            Ojomah Egwaba. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+
+/* =====================================
+   NEWS STORAGE
+===================================== */
+
+const STORAGE_KEY =
+    "deputySpeakerNews";
+
+
+/* =====================================
+   GET ARTICLE ID FROM URL
+===================================== */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const articleId =
+    params.get("id");
+
+
+/* =====================================
+   LOAD NEWS
+===================================== */
+
+const news =
+    JSON.parse(
+        localStorage.getItem(
+            STORAGE_KEY
+        )
+    ) || [];
+
+
+/* =====================================
+   FIND ARTICLE
+===================================== */
+
+const article =
+    news.find(
+        item =>
+            String(item.id) ===
+            String(articleId)
+            &&
+            item.status === "published"
+    );
+
+
+/* =====================================
+   ARTICLE CONTAINER
+===================================== */
+
+const container =
+    document.getElementById(
+        "articleContainer"
+    );
+
+
+/* =====================================
+   IF ARTICLE DOES NOT EXIST
+===================================== */
+
+if (!article) {
+
+    container.innerHTML = `
+
+        <section class="not-found">
+
+            <i class="fas fa-newspaper"></i>
+
+            <h1>
+                Article Not Found
+            </h1>
+
+            <p>
+                The publication you are looking
+                for could not be found or has not
+                been published.
+            </p>
+
+            <a
+                href="press.html"
+                class="back-button">
+
+                <i class="fas fa-arrow-left"></i>
+
+                Back to Press & Media
+
+            </a>
+
+        </section>
+
+    `;
+
+}
+
+
+/* =====================================
+   ARTICLE EXISTS
+===================================== */
+
+else {
+
+    renderArticle(article);
+
+}
+
+
+/* =====================================
+   RENDER ARTICLE
+===================================== */
+
+function renderArticle(article) {
+
+
+    const image =
+        article.image ||
+        "images/comfort-egwaba.jpg";
+
+
+    container.innerHTML = `
+
+        <section class="article-section">
+
+            <div class="container">
+
+
+                <!-- BACK -->
+
+                <a
+                    href="press.html"
+                    class="back-link">
+
+                    <i class="fas fa-arrow-left"></i>
+
+                    Back to Press & Media
+
+                </a>
+
+
+                <!-- CATEGORY -->
+
+                <div class="article-category">
+
+                    ${escapeHtml(
+                        article.category ||
+                        "News"
+                    )}
+
+                </div>
+
+
+                <!-- TITLE -->
+
+                <h1 class="article-title">
+
+                    ${escapeHtml(
+                        article.title ||
+                        "Untitled Article"
+                    )}
+
+                </h1>
+
+
+                <!-- DATE -->
+
+                <div class="article-date">
+
+                    <i class="far fa-calendar"></i>
+
+                    ${escapeHtml(
+                        article.date ||
+                        ""
+                    )}
+
+                </div>
+
+
+                <!-- IMAGE -->
+
+                <img
+                    class="article-image"
+                    src="${escapeAttribute(image)}"
+                    alt="${escapeAttribute(
+                        article.title ||
+                        "News article"
+                    )}"
+                >
+
+
+                <!-- BODY -->
+
+                <div class="article-body">
+
+                    ${formatBody(
+                        article.body ||
+                        ""
+                    )}
+
+                </div>
+
+
+                <!-- SHARE -->
+
+                <div class="share-box">
+
+                    <h3>
+                        Share This Story
+                    </h3>
+
+                    <p>
+                        Share this official publication
+                        with your friends, colleagues and
+                        community.
+                    </p>
+
+
+                    <div class="share-buttons">
+
+
+                        <!-- WHATSAPP -->
+
+                        <button
+                            type="button"
+                            class="share-btn whatsapp"
+                            onclick="shareWhatsApp()">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                            WhatsApp
+
+                        </button>
+
+
+                        <!-- FACEBOOK -->
+
+                        <button
+                            type="button"
+                            class="share-btn facebook"
+                            onclick="shareFacebook()">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                            Facebook
+
+                        </button>
+
+
+                        <!-- X -->
+
+                        <button
+                            type="button"
+                            class="share-btn x-twitter"
+                            onclick="shareX()">
+
+                            <i class="fab fa-x-twitter"></i>
+
+                            X
+
+                        </button>
+
+
+                        <!-- TELEGRAM -->
+
+                        <button
+                            type="button"
+                            class="share-btn telegram"
+                            onclick="shareTelegram()">
+
+                            <i class="fab fa-telegram-plane"></i>
+
+                            Telegram
+
+                        </button>
+
+
+                        <!-- LINKEDIN -->
+
+                        <button
+                            type="button"
+                            class="share-btn linkedin"
+                            onclick="shareLinkedIn()">
+
+                            <i class="fab fa-linkedin-in"></i>
+
+                            LinkedIn
+
+                        </button>
+
+
+                        <!-- EMAIL -->
+
+                        <button
+                            type="button"
+                            class="share-btn email"
+                            onclick="shareEmail()">
+
+                            <i class="fas fa-envelope"></i>
+
+                            Email
+
+                        </button>
+
+
+                        <!-- INSTAGRAM -->
+
+                        <button
+                            type="button"
+                            class="share-btn instagram"
+                            onclick="openInstagram()">
+
+                            <i class="fab fa-instagram"></i>
+
+                            Instagram
+
+                        </button>
+
+
+                        <!-- COPY LINK -->
+
+                        <button
+                            type="button"
+                            class="share-btn copy-link"
+                            onclick="copyLink()">
+
+                            <i class="fas fa-link"></i>
+
+                            Copy Link
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="shareStatus"
+                        class="share-status"
+                        aria-live="polite">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    `;
+
+
+    /* Update browser title */
+
+    document.title =
+        article.title +
+        " | Office of the Deputy Speaker";
+
+}
+
+
+/* =====================================
+   WHATSAPP
+===================================== */
+
+function shareWhatsApp() {
+
+    const url =
+        encodeURIComponent(
+            window.location.href
+        );
+
+    const text =
+        encodeURIComponent(
+            article.title +
+            "\n\n"
+        );
+
+
+    window.open(
+        "https://wa.me/?text=" +
+        text +
+        url,
+
+        "_blank"
+    );
+
+}
+
+
+/* =====================================
+   FACEBOOK
+===================================== */
+
+function shareFacebook() {
+
+    const url =
+        encodeURIComponent(
+            window.location.href
+        );
+
+
+    window.open(
+
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        url,
+
+        "_blank",
+
+        "width=650,height=500"
+    );
+
+}
+
+
+/* =====================================
+   X / TWITTER
+===================================== */
+
+function shareX() {
+
+    const url =
+        encodeURIComponent(
+            window.location.href
+        );
+
+    const text =
+        encodeURIComponent(
+            article.title
+        );
+
+
+    window.open(
+
+        "https://twitter.com/intent/tweet?text=" +
+        text +
+        "&url=" +
+        url,
+
+        "_blank",
+
+        "width=650,height=500"
+    );
+
+}
+
+
+/* =====================================
+   TELEGRAM
+===================================== */
+
+function shareTelegram() {
+
+    const url =
+        encodeURIComponent(
+            window.location.href
+        );
+
+    const text =
+        encodeURIComponent(
+            article.title
+        );
+
+
+    window.open(
+
+        "https://t.me/share/url?url=" +
+        url +
+        "&text=" +
+        text,
+
+        "_blank"
+    );
+
+}
+
+
+/* =====================================
+   LINKEDIN
+===================================== */
+
+function shareLinkedIn() {
+
+    const url =
+        encodeURIComponent(
+            window.location.href
+        );
+
+
+    window.open(
+
+        "https://www.linkedin.com/sharing/share-offsite/?url=" +
+        url,
+
+        "_blank",
+
+        "width=650,height=500"
+    );
+
+}
+
+
+/* =====================================
+   EMAIL
+===================================== */
+
+function shareEmail() {
+
+    const subject =
+        encodeURIComponent(
+            article.title
+        );
+
+
+    const body =
+        encodeURIComponent(
+
+            "I thought you might be interested in this official publication:\n\n" +
+
+            article.title +
+
+            "\n\n" +
+
+            window.location.href
+
+        );
+
+
+    window.location.href =
+        "mailto:?subject=" +
+        subject +
+        "&body=" +
+        body;
+
+}
+
+
+/* =====================================
+   INSTAGRAM
+===================================== */
+
+function openInstagram() {
+
+    const status =
+        document.getElementById(
+            "shareStatus"
+        );
+
+
+    /*
+       Instagram does not provide a standard
+       website URL sharing endpoint.
+
+       We therefore open Instagram and tell
+       the user to paste the copied article link.
+    */
+
+    copyLink();
+
+
+    if (status) {
+
+        status.textContent =
+            "Article link copied. Paste it into your Instagram post, story or message.";
+
+    }
+
+
+    window.open(
+        "https://www.instagram.com/",
+        "_blank"
+    );
+
+}
+
+
+/* =====================================
+   COPY LINK
+===================================== */
+
+async function copyLink() {
+
+    const status =
+        document.getElementById(
+            "shareStatus"
+        );
+
+
+    const url =
+        window.location.href;
+
+
+    try {
+
+        await navigator.clipboard.writeText(
+            url
+        );
+
+
+        if (status) {
+
+            status.textContent =
+                "Article link copied successfully.";
+
+        }
+
+    }
+
+    catch (error) {
+
+        /*
+           Fallback for browsers that do not
+           support navigator.clipboard.
+        */
+
+        const textarea =
+            document.createElement(
+                "textarea"
+            );
+
+        textarea.value = url;
+
+        textarea.style.position =
+            "fixed";
+
+        textarea.style.left =
+            "-9999px";
+
+        document.body.appendChild(
+            textarea
+        );
+
+        textarea.select();
+
+        document.execCommand(
+            "copy"
+        );
+
+        textarea.remove();
+
+
+        if (status) {
+
+            status.textContent =
+                "Article link copied successfully.";
+
+        }
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE MENU
+===================================== */
+
+function toggleMenu() {
+
+    const navigation =
+        document.getElementById(
+            "navigation"
+        );
+
+
+    navigation.classList.toggle(
+        "show"
+    );
+
+}
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document
+    .querySelectorAll("nav a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .getElementById(
+                        "navigation"
+                    )
+                    .classList.remove(
+                        "show"
+                    );
+
+            }
+        );
+
+    });
+
+
+/* =====================================
+   FORMAT ARTICLE BODY
+===================================== */
+
+function formatBody(text) {
+
+    if (!text) {
+
+        return "<p>No article content available.</p>";
+
+    }
+
+
+    /*
+       Escape dangerous HTML first.
+       This allows the admin to safely
+       publish normal text.
+    */
+
+    const safe =
+        escapeHtml(text);
+
+
+    /*
+       Convert blank lines into paragraphs.
+    */
+
+    const paragraphs =
+        safe
+            .split(/\n\s*\n/)
+            .filter(
+                paragraph =>
+                    paragraph.trim() !== ""
+            );
+
+
+    return paragraphs
+        .map(
+            paragraph =>
+                "<p>" +
+                paragraph
+                    .replace(/\n/g, "<br>") +
+                "</p>"
+        )
+        .join("");
+
+}
+
+
+/* =====================================
+   ESCAPE HTML
+===================================== */
+
+function escapeHtml(text) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text || "";
+
+
+    return div.innerHTML;
+
+}
+
+
+/* =====================================
+   ESCAPE ATTRIBUTE
+===================================== */
+
+function escapeAttribute(text) {
+
+    return escapeHtml(text)
+        .replace(/"/g, "&quot;");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
