@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Media Gallery | Comfort Egwaba</title>
+
+<meta
+    name="description"
+    content="Official media gallery of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba."
+>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f8f5;
+    color: #173b2b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #003d27;
+    color: white;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f2bd24;
+}
+
+.contact-btn {
+    background: #f2bd24;
+    color: #003d27 !important;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,61,39,.97),
+            rgba(0,61,39,.80)
+        );
+
+    color: white;
+    padding: 85px 0;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.label {
+    color: #f2bd24;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.1;
+    margin: 10px 0 15px;
+}
+
+.hero h1 span {
+    color: #f2bd24;
+}
+
+.hero p {
+    color: #dcebe3;
+    max-width: 680px;
+}
+
+.gallery-section {
+    padding: 80px 0;
+}
+
+.heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.heading .label {
+    color: #087c4e;
+}
+
+.heading h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 42px;
+    margin: 8px 0;
+}
+
+.heading p {
+    color: #687970;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    border: none;
+    background: #e4ece7;
+    color: #003d27;
+    padding: 10px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #003d27;
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-card {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-content {
+    padding: 19px;
+}
+
+.gallery-date {
+    color: #087c4e;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gallery-content h3 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    margin: 7px 0;
+    font-size: 21px;
+}
+
+.gallery-content p {
+    color: #687970;
+    white-space: pre-wrap;
+}
+
+.category {
+    display: inline-block;
+    background: #eef7ed;
+    color: #087c4e;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.share-title {
+    color: #003d27;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: 8px;
+}
+
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.share-buttons button {
+    border: none;
+    border-radius: 5px;
+    padding: 9px 11px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.facebook {
+    background: #1877F2;
+    color: white;
+}
+
+.copy {
+    background: #555;
+    color: white;
+}
+
+.loading,
+.empty,
+.error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    background: white;
+    border-radius: 8px;
+}
+
+.loading {
+    color: #087c4e;
+}
+
+.empty {
+    color: #687970;
+}
+
+.error {
+    color: #a61b1b;
+}
+
+.cta {
+    background: #f2bd24;
+    padding: 65px 0;
+}
+
+.cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.cta h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 38px;
+    margin: 0 0 8px;
+}
+
+.cta p {
+    color: #355344;
+}
+
+.cta-button {
+    background: #003d27;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer {
+    background: #002d20;
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-brand h3 {
+    font-family: Georgia, serif;
+}
+
+.footer-brand p,
+.footer-column a {
+    color: #b9ccc2;
+}
+
+.footer-column h4 {
+    color: #f2bd24;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.15);
+    margin-top: 40px;
+    padding-top: 18px;
+    text-align: center;
+    color: #91a89d;
+    font-size: 13px;
+}
+
+.status {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    background: #003d27;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 6px;
+    display: none;
+    z-index: 5000;
+}
+
+@media(max-width:900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #003d27;
+        padding: 20px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .gallery-section {
+        padding: 60px 0;
+    }
+
+    .heading h2 {
+        font-size: 34px;
+    }
+
+    .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .share-buttons button {
+        flex: 1 1 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="nav-container">
+
+<a href="index.html" class="logo">
+    KOGI STATE HOUSE<br>
+    OF ASSEMBLY
+</a>
+
+<nav id="navigation">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="office.html">Office</a>
+
+<a href="legislative.html">
+    Legislative Activities
+</a>
+
+<a href="constituency.html">
+    Constituency
+</a>
+
+<a href="news.html">
+    News
+</a>
+
+<a href="gallery.html" class="active">
+    Media Gallery
+</a>
+
+<a href="contact.html" class="contact-btn">
+    Contact
+</a>
+
+</nav>
+
+<div
+    class="mobile-menu"
+    onclick="toggleMenu()"
+>
+    ☰
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="label">
+    Official Media
+</div>
+
+<h1>
+    Media
+    <span>Gallery</span>
+</h1>
+
+<p>
+    Explore official photographs and moments from
+    legislative activities, constituency engagements,
+    community events and other public activities.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="gallery-section">
+
+<div class="container">
+
+<div class="heading">
+
+<div class="label">
+    Photo Gallery
+</div>
+
+<h2>
+    Latest Moments
+</h2>
+
+<p>
+    Official photographs and highlights from the
+    activities of the office.
+</p>
+
+</div>
+
+
+<div class="filters">
+
+<button
+    class="filter-btn active"
+    data-filter="all"
+>
+    All
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="official"
+>
+    Official
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="legislative"
+>
+    Legislative
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="constituency"
+>
+    Constituency
+</button>
+
+<button
+    class="filter-btn"
+    data-filter="community"
+>
+    Community
+</button>
+
+</div>
+
+
+<div
+    class="gallery-grid"
+    id="galleryContainer"
+>
+
+<div class="loading">
+    Loading gallery...
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<h2>
+    Stay Connected
+</h2>
+
+<p>
+    Follow the latest news and activities from the office.
+</p>
+
+</div>
+
+<a
+    href="contact.html"
+    class="cta-button"
+>
+    Contact the Office
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<h3>
+    Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</h3>
+
+<p>
+    Deputy Speaker, Kogi State House of Assembly
+    and Member Representing Ibaji Local Government
+    Constituency.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Quick Links
+</h4>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="office.html">Office</a>
+
+<a href="legislative.html">
+    Legislative Activities
+</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+    Explore
+</h4>
+
+<a href="constituency.html">
+    Constituency
+</a>
+
+<a href="news.html">
+    News & Updates
+</a>
+
+<a href="gallery.html">
+    Media Gallery
+</a>
+
+<a href="contact.html">
+    Contact
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Office of Rt. Hon. Comfort Nwuchiola
+Ojomah Egwaba. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<div
+    class="status"
+    id="status"
+></div>
+
+
+<script>
+
+/* =========================================================
+   SUPABASE CONNECTION
+========================================================= */
+
+const SUPABASE_URL =
+    "https://dcztvgjnxbbvriftnbuy.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_dYw9Ebgoieyz4ohJAas7IA_ZYNeU8ZC";
+
+
+let allGallery = [];
+
+let currentFilter = "all";
+
+
+/* =========================================================
+   SUPABASE REQUEST
+========================================================= */
+
+async function getGallery() {
+
+    const response =
+        await fetch(
+            SUPABASE_URL +
+            "/rest/v1/gallery?select=*&order=created_at.desc",
+            {
+
+                method: "GET",
+
+                headers: {
+
+                    "apikey":
+                        SUPABASE_KEY,
+
+                    "Authorization":
+                        "Bearer " +
+                        SUPABASE_KEY
+
+                }
+
+            }
+        );
+
+
+    const text =
+        await response.text();
+
+
+    let data;
+
+    try {
+
+        data =
+            text
+            ?
+            JSON.parse(text)
+            :
+            [];
+
+    } catch {
+
+        data = [];
+
+    }
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            data?.message ||
+            data?.hint ||
+            text ||
+            "Could not load gallery."
+        );
+
+    }
+
+
+    return data;
+
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(value) {
+
+    return String(value ?? "")
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
+
+function formatDate(date) {
+
+    if (!date) {
+        return "";
+    }
+
+    const d =
+        new Date(
+            date + "T00:00:00"
+        );
+
+
+    if (
+        Number.isNaN(
+            d.getTime()
+        )
+    ) {
+
+        return date;
+
+    }
+
+
+    return d.toLocaleDateString(
+        "en-NG",
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   GALLERY LINK
+========================================================= */
+
+function getGalleryLink(id) {
+
+    return (
+        window.location.origin +
+        window.location.pathname +
+        "?id=" +
+        encodeURIComponent(id)
+    );
+
+}
+
+
+/* =========================================================
+   WHATSAPP SHARE
+========================================================= */
+
+function shareWhatsApp(
+    title,
+    link
+) {
+
+    const text =
+        title +
+        "\n\nView photo:\n" +
+        link;
+
+
+    window.open(
+        "https://wa.me/?text=" +
+        encodeURIComponent(text),
+        "_blank"
+    );
+
+}
+
+
+/* =========================================================
+   FACEBOOK SHARE
+========================================================= */
+
+function shareFacebook(link) {
+
+    window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(link),
+        "_blank",
+        "width=700,height=500"
+    );
+
+}
+
+
+/* =========================================================
+   COPY LINK
+========================================================= */
+
+async function copyLink(link) {
+
+    try {
+
+        await navigator.clipboard.writeText(
+            link
+        );
+
+        showStatus(
+            "Gallery link copied."
+        );
+
+    } catch {
+
+        window.prompt(
+            "Copy this link:",
+            link
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+function showStatus(message) {
+
+    const status =
+        document.getElementById(
+            "status"
+        );
+
+
+    status.textContent =
+        message;
+
+
+    status.style.display =
+        "block";
+
+
+    setTimeout(
+        function() {
+
+            status.style.display =
+                "none";
+
+        },
+        2500
+    );
+
+}
+
+
+/* =========================================================
+   DISPLAY GALLERY
+========================================================= */
+
+function displayGallery() {
+
+    const container =
+        document.getElementById(
+            "galleryContainer"
+        );
+
+
+    let gallery =
+        allGallery;
+
+
+    if (currentFilter !== "all") {
+
+        gallery =
+            allGallery.filter(
+                function(item) {
+
+                    return (
+                        String(
+                            item.category || ""
+                        ).toLowerCase()
+                        ===
+                        currentFilter
+                    );
+
+                }
+            );
+
+    }
+
+
+    if (
+        !gallery ||
+        gallery.length === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div class="empty">
+
+                ${
+                    currentFilter === "all"
+                    ?
+                    "No gallery photos have been added yet."
+                    :
+                    "No photos found in this category."
+                }
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    gallery.forEach(function(item) {
+
+        const card =
+            document.createElement(
+                "article"
+            );
+
+
+        card.className =
+            "gallery-card";
+
+
+        const link =
+            getGalleryLink(item.id);
+
+
+        const category =
+            String(
+                item.category ||
+                "official"
+            ).toLowerCase();
+
+
+        card.innerHTML = `
+
+            <img
+                class="gallery-image"
+                src="${escapeHTML(item.image)}"
+                alt="${escapeHTML(item.title)}"
+                onerror="
+                    this.style.display='none'
+                "
+            >
+
+            <div class="gallery-content">
+
+                <div class="gallery-date">
+
+                    ${escapeHTML(
+                        formatDate(item.date)
+                    )}
+
+                </div>
+
+                <span class="category">
+
+                    ${escapeHTML(
+                        category
+                    )}
+
+                </span>
+
+                <h3>
+
+                    ${escapeHTML(
+                        item.title
+                    )}
+
+                </h3>
+
+                ${
+                    item.description
+                    ?
+                    `
+                    <p>
+                        ${escapeHTML(
+                            item.description
+                        )}
+                    </p>
+                    `
+                    :
+                    ""
+                }
+
+                <div class="share-title">
+                    Share this photo
+                </div>
+
+                <div class="share-buttons">
+
+                    <button
+                        class="whatsapp"
+                        type="button"
+                    >
+                        WhatsApp
+                    </button>
+
+                    <button
+                        class="facebook"
+                        type="button"
+                    >
+                        Facebook
+                    </button>
+
+                    <button
+                        class="copy"
+                        type="button"
+                    >
+                        Copy Link
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        card
+            .querySelector(".whatsapp")
+            .addEventListener(
+                "click",
+                function() {
+
+                    shareWhatsApp(
+                        item.title,
+                        link
+                    );
+
+                }
+            );
+
+
+        card
+            .querySelector(".facebook")
+            .addEventListener(
+                "click",
+                function() {
+
+                    shareFacebook(
+                        link
+                    );
+
+                }
+            );
+
+
+        card
+            .querySelector(".copy")
+            .addEventListener(
+                "click",
+                function() {
+
+                    copyLink(
+                        link
+                    );
+
+                }
+            );
+
+
+        container.appendChild(
+            card
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   LOAD GALLERY
+========================================================= */
+
+async function loadGallery() {
+
+    const container =
+        document.getElementById(
+            "galleryContainer"
+        );
+
+
+    try {
+
+        allGallery =
+            await getGallery();
+
+
+        displayGallery();
+
+
+        /*
+           If a specific gallery ID was
+           shared, scroll to it.
+        */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const selectedId =
+            params.get("id");
+
+
+        if (selectedId) {
+
+            setTimeout(
+                function() {
+
+                    const images =
+                        document.querySelectorAll(
+                            ".gallery-card"
+                        );
+
+
+                    images.forEach(
+                        function(card) {
+
+                            /*
+                               Highlight the
+                               first matching
+                               shared item.
+                            */
+
+                            const image =
+                                card.querySelector(
+                                    ".gallery-image"
+                                );
+
+                            if (
+                                image &&
+                                image.src
+                            ) {
+
+                                card.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center"
+                                });
+
+                            }
+
+                        }
+                    );
+
+                },
+                400
+            );
+
+        }
+
+
+    } catch (error) {
+
+        console.error(error);
+
+
+        container.innerHTML = `
+
+            <div class="error">
+
+                <strong>
+                    Unable to load gallery.
+                </strong>
+
+                <br><br>
+
+                ${escapeHTML(
+                    error.message
+                )}
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+document
+    .querySelectorAll(".filter-btn")
+    .forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .querySelectorAll(
+                        ".filter-btn"
+                    )
+                    .forEach(
+                        function(btn) {
+
+                            btn.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                currentFilter =
+                    button.dataset.filter;
+
+
+                displayGallery();
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navigation")
+        .classList.toggle("show");
+
+}
+
+
+document
+    .querySelectorAll("nav a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .getElementById(
+                        "navigation"
+                    )
+                    .classList.remove(
+                        "show"
+                    );
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   START
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        loadGallery();
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
