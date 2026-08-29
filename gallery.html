@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,7 +33,7 @@ a {
     text-decoration: none;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header {
     background: #003d27;
@@ -91,7 +92,7 @@ nav a.active {
     cursor: pointer;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
     background:
@@ -139,7 +140,7 @@ nav a.active {
     max-width: 680px;
 }
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 
 .gallery-section {
     padding: 80px 0;
@@ -166,7 +167,7 @@ nav a.active {
     color: #687970;
 }
 
-/* FILTERS */
+/* ================= FILTERS ================= */
 
 .filters {
     display: flex;
@@ -192,7 +193,7 @@ nav a.active {
     color: white;
 }
 
-/* EMPTY GALLERY */
+/* ================= GALLERY GRID ================= */
 
 .gallery-grid {
     display: grid;
@@ -200,35 +201,135 @@ nav a.active {
     gap: 25px;
 }
 
-.empty-gallery {
-    grid-column: 1 / -1;
-    text-align: center;
+.gallery-card {
     background: white;
-    padding: 70px 20px;
-    border-radius: 10px;
-    color: #687970;
+    border-radius: 9px;
+    overflow: hidden;
     box-shadow: 0 7px 25px rgba(0,0,0,.07);
+    transition: .3s;
 }
 
-.empty-gallery .icon {
-    font-size: 55px;
-    opacity: .35;
-    margin-bottom: 12px;
+.gallery-card:hover {
+    transform: translateY(-5px);
 }
 
-.empty-gallery p {
-    margin: 0 0 8px;
-    font-family: Georgia, serif;
-    font-size: 28px;
+.gallery-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-content {
+    padding: 19px;
+}
+
+.gallery-date {
+    color: #087c4e;
+    font-size: 12px;
+    text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gallery-content h3 {
+    font-family: Georgia, serif;
     color: #003d27;
+    margin: 7px 0;
+    font-size: 21px;
 }
 
-.empty-gallery span {
-    font-size: 15px;
+.gallery-content p {
+    color: #687970;
 }
 
-/* CTA */
+.category {
+    display: inline-block;
+    background: #eef7ed;
+    color: #087c4e;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+/* ================= SHARE ================= */
+
+.share-title {
+    color: #003d27;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: 8px;
+}
+
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.share-buttons button {
+    border: none;
+    border-radius: 5px;
+    padding: 9px 11px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.facebook {
+    background: #1877F2;
+    color: white;
+}
+
+.copy {
+    background: #555;
+    color: white;
+}
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.93);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* ================= CTA ================= */
 
 .cta {
     background: #f2bd24;
@@ -261,7 +362,7 @@ nav a.active {
     font-weight: bold;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
     background: #002d20;
@@ -303,7 +404,7 @@ footer {
     font-size: 13px;
 }
 
-/* MOBILE */
+/* ================= MOBILE MENU ================= */
 
 @media (max-width: 1100px) {
 
@@ -330,6 +431,10 @@ footer {
         flex-direction: column;
         align-items: stretch;
         gap: 4px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.20);
+        border-top: 1px solid rgba(255,255,255,.12);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     nav.show {
@@ -338,8 +443,37 @@ footer {
 
     nav a {
         width: 100%;
+        display: flex;
+        align-items: center;
+        min-height: 52px;
         padding: 14px 16px;
+        color: white;
         font-size: 15px;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255,255,255,.10);
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background: rgba(255,255,255,.08);
+        color: #f2bd24;
+    }
+
+    nav a.active {
+        background: rgba(242,189,36,.12);
+        color: #f2bd24;
+    }
+
+    nav a:last-child {
+        margin-top: 10px;
+        border-bottom: none;
+        justify-content: center;
+    }
+
+    .contact-btn {
+        background: #f2bd24 !important;
+        color: #003d27 !important;
+        justify-content: center;
     }
 
     .gallery-grid {
@@ -347,10 +481,32 @@ footer {
     }
 }
 
+/* ================= SMALL PHONES ================= */
+
 @media (max-width: 600px) {
 
     header {
         padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .mobile-menu {
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+    }
+
+    nav {
+        padding: 10px 5% 16px;
+    }
+
+    nav a {
+        min-height: 52px;
+        padding: 14px 13px;
+        font-size: 14px;
     }
 
     .gallery-grid {
@@ -377,6 +533,23 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
+    .share-buttons button {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 380px) {
+
+    nav a {
+        font-size: 13px;
+        min-height: 50px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
 }
 
 </style>
@@ -384,6 +557,8 @@ footer {
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -404,31 +579,22 @@ footer {
 
 <a href="office.html">Office</a>
 
-<a href="legislative.html">
-    Legislative Activities
-</a>
+<a href="legislative.html">Legislative Activities</a>
 
-<a href="constituency.html">
-    Constituency
-</a>
+<a href="constituency.html">Constituency</a>
 
-<a href="news.html">
-    News
-</a>
+<a href="news.html">News</a>
 
-<a href="gallery.html" class="active">
-    Media Gallery
-</a>
+<a href="gallery.html" class="active">Media Gallery</a>
 
-<a href="contact.html" class="contact-btn">
-    Contact
-</a>
+<a href="contact.html" class="contact-btn">Contact</a>
 
 </nav>
 
 <div
     class="mobile-menu"
     onclick="toggleMenu()"
+    aria-label="Open menu"
 >
     ☰
 </div>
@@ -437,6 +603,8 @@ footer {
 
 </header>
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
 <div class="container">
@@ -444,18 +612,17 @@ footer {
 <div class="hero-content">
 
 <div class="label">
-    Official Media
+Official Media
 </div>
 
 <h1>
-    Media
-    <span>Gallery</span>
+Media <span>Gallery</span>
 </h1>
 
 <p>
-    Explore official photographs and moments from
-    legislative activities, constituency engagements,
-    community events and other public activities.
+Explore official photographs and moments from
+legislative activities, constituency engagements,
+community events and other public activities.
 </p>
 
 </div>
@@ -463,6 +630,8 @@ footer {
 </div>
 
 </section>
+
+<!-- ================= GALLERY ================= -->
 
 <section class="gallery-section">
 
@@ -471,69 +640,396 @@ footer {
 <div class="heading">
 
 <div class="label">
-    Photo Gallery
+Photo Gallery
 </div>
 
 <h2>
-    Latest Moments
+Latest Moments
 </h2>
 
 <p>
-    Official photographs and highlights from the
-    activities of the office.
+Official photographs and highlights from the
+activities of the office.
 </p>
 
 </div>
 
+<!-- FILTERS -->
+
 <div class="filters">
 
-<button class="filter-btn active">
-    All
+<button class="filter-btn active" data-filter="all">
+All
 </button>
 
-<button class="filter-btn">
-    Official
+<button class="filter-btn" data-filter="official">
+Official
 </button>
 
-<button class="filter-btn">
-    Legislative
+<button class="filter-btn" data-filter="legislative">
+Legislative
 </button>
 
-<button class="filter-btn">
-    Constituency
+<button class="filter-btn" data-filter="constituency">
+Constituency
 </button>
 
-<button class="filter-btn">
-    Community
+<button class="filter-btn" data-filter="community">
+Community
 </button>
 
 </div>
 
-<!-- ALL OLD PHOTOS HAVE BEEN REMOVED -->
+<!-- ================= FIVE PHOTOS ================= -->
 
-<div class="gallery-grid" id="galleryContainer">
+<div class="gallery-grid">
 
-    <div class="empty-gallery">
+<!-- PHOTO 1 -->
 
-        <div class="icon">
-            ▧
-        </div>
+<article
+class="gallery-card"
+data-category="legislative"
+>
 
-        <p>
-            No photos to display.
-        </p>
+<img
+class="gallery-image"
+src="https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png"
+alt="House Session"
+loading="lazy"
+onclick="openLightbox(this.src)"
+>
 
-        <span>
-            Check back later for updates.
-        </span>
+<div class="gallery-content">
 
-    </div>
+<div class="gallery-date">
+Legislative Gallery
+</div>
+
+<span class="category">
+Legislative
+</span>
+
+<h3>
+House Session
+</h3>
+
+<p>
+Official photograph from a House session
+at the Kogi State House of Assembly.
+</p>
+
+<div class="share-title">
+Share this photo
+</div>
+
+<div class="share-buttons">
+
+<button
+class="whatsapp"
+onclick="shareWhatsApp('House Session', window.location.href)"
+>
+WhatsApp
+</button>
+
+<button
+class="facebook"
+onclick="shareFacebook(window.location.href)"
+>
+Facebook
+</button>
+
+<button
+class="copy"
+onclick="copyLink(window.location.href)"
+>
+Copy Link
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 2 -->
+
+<article
+class="gallery-card"
+data-category="official"
+>
+
+<img
+class="gallery-image"
+src="https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png"
+alt="Award"
+loading="lazy"
+onclick="openLightbox(this.src)"
+>
+
+<div class="gallery-content">
+
+<div class="gallery-date">
+Official Gallery
+</div>
+
+<span class="category">
+Official
+</span>
+
+<h3>
+Award
+</h3>
+
+<p>
+A special moment celebrating an award
+and recognition for service.
+</p>
+
+<div class="share-title">
+Share this photo
+</div>
+
+<div class="share-buttons">
+
+<button
+class="whatsapp"
+onclick="shareWhatsApp('Award', window.location.href)"
+>
+WhatsApp
+</button>
+
+<button
+class="facebook"
+onclick="shareFacebook(window.location.href)"
+>
+Facebook
+</button>
+
+<button
+class="copy"
+onclick="copyLink(window.location.href)"
+>
+Copy Link
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 3 -->
+
+<article
+class="gallery-card"
+data-category="official"
+>
+
+<img
+class="gallery-image"
+src="https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png"
+alt="With the Governor of Kogi State"
+loading="lazy"
+onclick="openLightbox(this.src)"
+>
+
+<div class="gallery-content">
+
+<div class="gallery-date">
+Official Gallery
+</div>
+
+<span class="category">
+Official
+</span>
+
+<h3>
+With the Governor of Kogi State
+</h3>
+
+<p>
+An official moment with the Governor of
+Kogi State.
+</p>
+
+<div class="share-title">
+Share this photo
+</div>
+
+<div class="share-buttons">
+
+<button
+class="whatsapp"
+onclick="shareWhatsApp('With the Governor of Kogi State', window.location.href)"
+>
+WhatsApp
+</button>
+
+<button
+class="facebook"
+onclick="shareFacebook(window.location.href)"
+>
+Facebook
+</button>
+
+<button
+class="copy"
+onclick="copyLink(window.location.href)"
+>
+Copy Link
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 4 -->
+
+<article
+class="gallery-card"
+data-category="community"
+>
+
+<img
+class="gallery-image"
+src="https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png"
+alt="Addressing Women"
+loading="lazy"
+onclick="openLightbox(this.src)"
+>
+
+<div class="gallery-content">
+
+<div class="gallery-date">
+Community Gallery
+</div>
+
+<span class="category">
+Community
+</span>
+
+<h3>
+Addressing Women
+</h3>
+
+<p>
+An engagement with women during a public
+community activity.
+</p>
+
+<div class="share-title">
+Share this photo
+</div>
+
+<div class="share-buttons">
+
+<button
+class="whatsapp"
+onclick="shareWhatsApp('Addressing Women', window.location.href)"
+>
+WhatsApp
+</button>
+
+<button
+class="facebook"
+onclick="shareFacebook(window.location.href)"
+>
+Facebook
+</button>
+
+<button
+class="copy"
+onclick="copyLink(window.location.href)"
+>
+Copy Link
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 5 -->
+
+<article
+class="gallery-card"
+data-category="community"
+>
+
+<img
+class="gallery-image"
+src="https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png"
+alt="Interaction with Her Fellow Women"
+loading="lazy"
+onclick="openLightbox(this.src)"
+>
+
+<div class="gallery-content">
+
+<div class="gallery-date">
+Community Gallery
+</div>
+
+<span class="category">
+Community
+</span>
+
+<h3>
+Interaction with Her Fellow Women
+</h3>
+
+<p>
+A moment of interaction and engagement
+with fellow women in the community.
+</p>
+
+<div class="share-title">
+Share this photo
+</div>
+
+<div class="share-buttons">
+
+<button
+class="whatsapp"
+onclick="shareWhatsApp('Interaction with Her Fellow Women', window.location.href)"
+>
+WhatsApp
+</button>
+
+<button
+class="facebook"
+onclick="shareFacebook(window.location.href)"
+>
+Facebook
+</button>
+
+<button
+class="copy"
+onclick="copyLink(window.location.href)"
+>
+Copy Link
+</button>
+
+</div>
+
+</div>
+
+</article>
 
 </div>
 
 </div>
 
 </section>
+
+<!-- ================= CTA ================= -->
 
 <section class="cta">
 
@@ -544,20 +1040,20 @@ footer {
 <div>
 
 <h2>
-    Stay Connected
+Stay Connected
 </h2>
 
 <p>
-    Follow the latest news and activities from the office.
+Follow the latest news and activities from the office.
 </p>
 
 </div>
 
 <a
-    href="contact.html"
-    class="cta-button"
+href="contact.html"
+class="cta-button"
 >
-    Contact the Office
+Contact the Office
 </a>
 
 </div>
@@ -565,6 +1061,8 @@ footer {
 </div>
 
 </section>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -575,13 +1073,13 @@ footer {
 <div class="footer-brand">
 
 <h3>
-    Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
 </h3>
 
 <p>
-    Deputy Speaker, Kogi State House of Assembly
-    and Member Representing Ibaji Local Government
-    Constituency.
+Deputy Speaker, Kogi State House of Assembly
+and Member Representing Ibaji Local Government
+Constituency.
 </p>
 
 </div>
@@ -589,40 +1087,34 @@ footer {
 <div class="footer-column">
 
 <h4>
-    Quick Links
+Quick Links
 </h4>
 
 <a href="index.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="biography.html">Biography</a>
+
 <a href="office.html">Office</a>
-<a href="legislative.html">
-    Legislative Activities
-</a>
+
+<a href="legislative.html">Legislative Activities</a>
 
 </div>
 
 <div class="footer-column">
 
 <h4>
-    Explore
+Explore
 </h4>
 
-<a href="constituency.html">
-    Constituency
-</a>
+<a href="constituency.html">Constituency</a>
 
-<a href="news.html">
-    News & Updates
-</a>
+<a href="news.html">News & Updates</a>
 
-<a href="gallery.html">
-    Media Gallery
-</a>
+<a href="gallery.html">Media Gallery</a>
 
-<a href="contact.html">
-    Contact
-</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -639,13 +1131,237 @@ Ojomah Egwaba. All Rights Reserved.
 
 </footer>
 
+<!-- ================= LIGHTBOX ================= -->
+
+<div
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox()"
+>
+
+<span
+class="lightbox-close"
+onclick="closeLightbox()"
+>
+×
+</span>
+
+<img
+id="lightboxImage"
+src=""
+alt="Gallery image"
+onclick="event.stopPropagation()"
+>
+
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
+
+/* MOBILE MENU */
 
 function toggleMenu() {
 
     document
         .getElementById("navigation")
         .classList.toggle("show");
+
+}
+
+
+/* CLOSE MENU AFTER LINK */
+
+document
+.querySelectorAll("#navigation a")
+.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById("navigation")
+                .classList.remove("show");
+
+        }
+    );
+
+});
+
+
+/* CLOSE MENU OUTSIDE */
+
+document.addEventListener(
+"click",
+function(event) {
+
+    const navigation =
+        document.getElementById("navigation");
+
+    const menu =
+        document.querySelector(".mobile-menu");
+
+    if (
+        navigation.classList.contains("show") &&
+        !navigation.contains(event.target) &&
+        !menu.contains(event.target)
+    ) {
+
+        navigation.classList.remove("show");
+
+    }
+
+});
+
+
+/* FILTERS */
+
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+
+const galleryCards =
+document.querySelectorAll(".gallery-card");
+
+filterButtons.forEach(
+function(button) {
+
+    button.addEventListener(
+        "click",
+        function() {
+
+            filterButtons.forEach(
+                function(btn) {
+
+                    btn.classList.remove("active");
+
+                }
+            );
+
+            button.classList.add("active");
+
+            const filter =
+                button.dataset.filter;
+
+            galleryCards.forEach(
+                function(card) {
+
+                    const category =
+                        card.dataset.category;
+
+                    if (
+                        filter === "all" ||
+                        category === filter
+                    ) {
+
+                        card.style.display = "";
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+});
+
+
+/* LIGHTBOX */
+
+function openLightbox(image) {
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    lightboxImage.src = image;
+
+    lightbox.classList.add("show");
+
+}
+
+
+function closeLightbox() {
+
+    document
+        .getElementById("lightbox")
+        .classList.remove("show");
+
+}
+
+
+/* ESCAPE KEY */
+
+document.addEventListener(
+"keydown",
+function(event) {
+
+    if (event.key === "Escape") {
+
+        closeLightbox();
+
+    }
+
+});
+
+
+/* WHATSAPP */
+
+function shareWhatsApp(title, link) {
+
+    const message =
+        title +
+        "\n\nView this photo:\n" +
+        link;
+
+    window.open(
+        "https://wa.me/?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+
+}
+
+
+/* FACEBOOK */
+
+function shareFacebook(link) {
+
+    window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(link),
+        "_blank",
+        "width=700,height=500"
+    );
+
+}
+
+
+/* COPY LINK */
+
+async function copyLink(link) {
+
+    try {
+
+        await navigator.clipboard.writeText(link);
+
+        alert("Gallery link copied.");
+
+    } catch {
+
+        window.prompt(
+            "Copy this link:",
+            link
+        );
+
+    }
 
 }
 
