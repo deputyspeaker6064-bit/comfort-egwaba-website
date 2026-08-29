@@ -5,7 +5,10 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Media Gallery | Comfort Egwaba</title>
 
@@ -35,6 +38,11 @@ body {
 a {
     text-decoration: none;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
     background: #003d27;
@@ -92,6 +100,11 @@ nav a.active {
     cursor: pointer;
 }
 
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero {
     background:
         linear-gradient(
@@ -138,6 +151,11 @@ nav a.active {
     max-width: 680px;
 }
 
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
 .gallery-section {
     padding: 80px 0;
 }
@@ -163,6 +181,11 @@ nav a.active {
     color: #687970;
 }
 
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
 .filters {
     display: flex;
     justify-content: center;
@@ -186,6 +209,11 @@ nav a.active {
     background: #003d27;
     color: white;
 }
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
 
 .gallery-grid {
     display: grid;
@@ -249,6 +277,11 @@ nav a.active {
     margin-top: 3px;
 }
 
+
+/* =========================================================
+   SHARE BUTTONS
+========================================================= */
+
 .share-title {
     color: #003d27;
     font-size: 13px;
@@ -287,6 +320,11 @@ nav a.active {
     color: white;
 }
 
+
+/* =========================================================
+   STATUS / LOADING
+========================================================= */
+
 .loading,
 .empty,
 .error {
@@ -309,7 +347,10 @@ nav a.active {
     color: #a61b1b;
 }
 
-/* LIGHTBOX */
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
 
 .lightbox {
     display: none;
@@ -335,13 +376,18 @@ nav a.active {
 
 .lightbox-close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 15px;
+    right: 25px;
     color: white;
-    font-size: 40px;
+    font-size: 42px;
     cursor: pointer;
     font-weight: bold;
 }
+
+
+/* =========================================================
+   CTA
+========================================================= */
 
 .cta {
     background: #f2bd24;
@@ -373,6 +419,11 @@ nav a.active {
     border-radius: 5px;
     font-weight: bold;
 }
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
     background: #002d20;
@@ -414,6 +465,11 @@ footer {
     font-size: 13px;
 }
 
+
+/* =========================================================
+   STATUS MESSAGE
+========================================================= */
+
 .status {
     position: fixed;
     left: 50%;
@@ -427,35 +483,175 @@ footer {
     z-index: 10000;
 }
 
-@media(max-width:900px) {
 
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* =========================================================
+   TABLET / MOBILE MENU
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        position: relative;
+    }
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 44px;
+        height: 44px;
+
+        font-size: 27px;
+        color: white;
+
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .mobile-menu:hover {
+        background: rgba(255,255,255,.12);
     }
 
     nav {
         display: none;
+
         position: absolute;
-        top: 70px;
+
+        top: 68px;
         left: 0;
+
         width: 100%;
+
         background: #003d27;
-        padding: 20px 6%;
+
+        padding: 12px 6% 18px;
+
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+
+        gap: 0;
+
+        box-shadow:
+            0 8px 20px rgba(0,0,0,.20);
+
+        border-top:
+            1px solid rgba(255,255,255,.12);
+
+        max-height:
+            calc(100vh - 70px);
+
+        overflow-y: auto;
     }
 
     nav.show {
         display: flex;
     }
 
-    .mobile-menu {
-        display: block;
+    nav a {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        min-height: 48px;
+
+        padding: 13px 14px;
+
+        color: white;
+
+        font-size: 15px;
+        font-weight: bold;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.10);
+
+        border-radius: 5px;
+
+        transition:
+            background .2s ease,
+            color .2s ease;
+    }
+
+    nav a:hover {
+        background: rgba(255,255,255,.08);
+        color: #f2bd24;
+    }
+
+    nav a.active {
+        background: rgba(242,189,36,.12);
+        color: #f2bd24;
+    }
+
+    nav a:last-child {
+        margin-top: 10px;
+        border-bottom: none;
+
+        justify-content: center;
+    }
+
+    .contact-btn {
+        background: #f2bd24 !important;
+        color: #003d27 !important;
+
+        text-align: center;
+        justify-content: center;
+
+        padding: 12px 16px !important;
+    }
+
+    .contact-btn:hover {
+        background: #ffd45c !important;
+        color: #003d27 !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
 }
 
-@media(max-width:600px) {
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .mobile-menu {
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+    }
+
+    nav {
+        top: 64px;
+        padding: 10px 5% 16px;
+    }
+
+    nav a {
+        min-height: 50px;
+        padding: 14px 13px;
+        font-size: 14px;
+    }
+
+    nav a + a {
+        margin-top: 2px;
+    }
+
+    .contact-btn {
+        min-height: 48px;
+    }
 
     .gallery-grid {
         grid-template-columns: 1fr;
@@ -488,29 +684,67 @@ footer {
 
 }
 
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    nav a {
+        font-size: 13px;
+        min-height: 48px;
+        padding: 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   END CSS
+========================================================= */
+
 </style>
 
 </head>
 
+
 <body>
 
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
 <header>
 
 <div class="nav-container">
 
 <a href="index.html" class="logo">
+
     KOGI STATE HOUSE<br>
     OF ASSEMBLY
+
 </a>
+
 
 <nav id="navigation">
 
-<a href="index.html">Home</a>
+<a href="index.html">
+    Home
+</a>
 
-<a href="about.html">About</a>
+<a href="about.html">
+    About
+</a>
 
-<a href="office.html">Office</a>
+<a href="office.html">
+    Office
+</a>
 
 <a href="legislative.html">
     Legislative Activities
@@ -534,17 +768,25 @@ footer {
 
 </nav>
 
+
 <div
     class="mobile-menu"
     onclick="toggleMenu()"
+    aria-label="Open menu"
 >
+
     ☰
+
 </div>
 
 </div>
 
 </header>
 
+
+<!-- =======================================================
+     HERO
+======================================================= -->
 
 <section class="hero">
 
@@ -574,6 +816,10 @@ footer {
 </section>
 
 
+<!-- =======================================================
+     GALLERY SECTION
+======================================================= -->
+
 <section class="gallery-section">
 
 <div class="container">
@@ -595,6 +841,8 @@ footer {
 
 </div>
 
+
+<!-- FILTERS -->
 
 <div class="filters">
 
@@ -636,6 +884,8 @@ footer {
 </div>
 
 
+<!-- GALLERY -->
+
 <div
     class="gallery-grid"
     id="galleryContainer"
@@ -651,6 +901,10 @@ footer {
 
 </section>
 
+
+<!-- =======================================================
+     CTA
+======================================================= -->
 
 <section class="cta">
 
@@ -684,11 +938,16 @@ footer {
 </section>
 
 
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
 <footer>
 
 <div class="container">
 
 <div class="footer-grid">
+
 
 <div class="footer-brand">
 
@@ -711,11 +970,17 @@ footer {
     Quick Links
 </h4>
 
-<a href="index.html">Home</a>
+<a href="index.html">
+    Home
+</a>
 
-<a href="about.html">About</a>
+<a href="about.html">
+    About
+</a>
 
-<a href="office.html">Office</a>
+<a href="office.html">
+    Office
+</a>
 
 <a href="legislative.html">
     Legislative Activities
@@ -763,7 +1028,9 @@ Ojomah Egwaba. All Rights Reserved.
 </footer>
 
 
-<!-- LIGHTBOX -->
+<!-- =======================================================
+     LIGHTBOX
+======================================================= -->
 
 <div
     class="lightbox"
@@ -785,6 +1052,8 @@ Ojomah Egwaba. All Rights Reserved.
 
 </div>
 
+
+<!-- STATUS -->
 
 <div
     class="status"
@@ -811,120 +1080,166 @@ let currentFilter = "all";
 
 
 /* =========================================================
-   DEFAULT GALLERY PHOTOS
-   YOUR 8 IMAGES
+   YOUR 8 GALLERY PHOTOS
 ========================================================= */
 
 const defaultGallery = [
 
     {
         id: "default-1",
+
         image:
         "https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png",
+
         title:
         "Official Engagement",
+
         description:
         "Official photograph from the activities of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.",
+
         category:
         "official",
+
         date:
         "2026-08-29"
     },
+
 
     {
         id: "default-2",
+
         image:
         "https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png",
+
         title:
         "Official Moment",
+
         description:
         "A moment from the official activities of the office.",
+
         category:
         "official",
+
         date:
         "2026-08-29"
     },
+
 
     {
         id: "default-3",
+
         image:
         "https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png",
+
         title:
         "Legislative Activity",
+
         description:
         "Official photograph highlighting legislative and public service activities.",
+
         category:
         "legislative",
+
         date:
         "2026-08-29"
     },
+
 
     {
         id: "default-4",
+
         image:
         "https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png",
+
         title:
         "Constituency Engagement",
+
         description:
         "A photograph from constituency engagement and public service.",
+
         category:
         "constituency",
+
         date:
         "2026-08-29"
     },
+
 
     {
         id: "default-5",
+
         image:
         "https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png",
+
         title:
         "Community Engagement",
+
         description:
         "A moment from community engagement and interaction.",
+
         category:
         "community",
+
         date:
         "2026-08-29"
     },
+
 
     {
         id: "default-6",
+
         image:
         "https://i.ibb.co/8LzPD7VH/file-000000001dcc81f49a4c531584731c18.png",
+
         title:
         "Official Activity",
+
         description:
         "Official photograph from the office's public activities.",
+
         category:
         "official",
+
         date:
         "2026-08-29"
     },
+
 
     {
         id: "default-7",
+
         image:
         "https://i.ibb.co/gMY3fQp9/file-000000001e0c81f48321276cfb752bc5.png",
+
         title:
         "Public Service",
+
         description:
         "Official moment from public service activities.",
+
         category:
         "constituency",
+
         date:
         "2026-08-29"
     },
 
+
     {
         id: "default-8",
+
         image:
         "https://i.ibb.co/d0CjF10G/file-000000006a1c82109b0d8705a7fcd1aa.png",
+
         title:
         "Community Moment",
+
         description:
         "A special moment from community and constituency activities.",
+
         category:
         "community",
+
         date:
         "2026-08-29"
     }
@@ -943,16 +1258,20 @@ async function getGallery() {
             SUPABASE_URL +
             "/rest/v1/gallery?select=*&order=created_at.desc",
             {
+
                 method: "GET",
 
                 headers: {
+
                     "apikey":
                         SUPABASE_KEY,
 
                     "Authorization":
                         "Bearer " +
                         SUPABASE_KEY
+
                 }
+
             }
         );
 
@@ -1025,7 +1344,9 @@ function escapeHTML(value) {
 function formatDate(date) {
 
     if (!date) {
+
         return "";
+
     }
 
 
@@ -1176,7 +1497,7 @@ function showStatus(message) {
 
 
 /* =========================================================
-   OPEN LIGHTBOX
+   LIGHTBOX
 ========================================================= */
 
 function openLightbox(image) {
@@ -1185,6 +1506,7 @@ function openLightbox(image) {
         document.getElementById(
             "lightbox"
         );
+
 
     const lightboxImage =
         document.getElementById(
@@ -1203,23 +1525,25 @@ function openLightbox(image) {
 }
 
 
-/* =========================================================
-   CLOSE LIGHTBOX
-========================================================= */
-
 function closeLightbox() {
 
     document
-        .getElementById("lightbox")
-        .classList.remove("show");
+        .getElementById(
+            "lightbox"
+        )
+        .classList.remove(
+            "show"
+        );
 
 }
 
 
-/* CLOSE LIGHTBOX WHEN BACKGROUND IS CLICKED */
+/* CLOSE LIGHTBOX */
 
 document
-    .getElementById("lightbox")
+    .getElementById(
+        "lightbox"
+    )
     .addEventListener(
         "click",
         function(event) {
@@ -1263,13 +1587,17 @@ function displayGallery() {
                 function(item) {
 
                     return (
+
                         String(
                             item.category ||
                             ""
                         )
                         .toLowerCase()
+
                         ===
+
                         currentFilter
+
                     );
 
                 }
@@ -1290,10 +1618,15 @@ function displayGallery() {
                 ${
                     currentFilter ===
                     "all"
+
                     ?
+
                     "No gallery photos have been added yet."
+
                     :
+
                     "No photos found in this category."
+
                 }
 
             </div>
@@ -1321,6 +1654,12 @@ function displayGallery() {
                 "gallery-card";
 
 
+            card.setAttribute(
+                "data-gallery-id",
+                item.id
+            );
+
+
             const link =
                 getGalleryLink(
                     item.id
@@ -1340,6 +1679,10 @@ function displayGallery() {
                     class="gallery-image"
                     src="${escapeHTML(item.image)}"
                     alt="${escapeHTML(item.title)}"
+                    loading="lazy"
+                    onerror="
+                        this.style.display='none'
+                    "
                 >
 
                 <div class="gallery-content">
@@ -1418,24 +1761,22 @@ function displayGallery() {
             `;
 
 
-            /* IMAGE CLICK */
+            /* IMAGE LIGHTBOX */
 
-            const image =
-                card.querySelector(
+            card
+                .querySelector(
                     ".gallery-image"
+                )
+                .addEventListener(
+                    "click",
+                    function() {
+
+                        openLightbox(
+                            item.image
+                        );
+
+                    }
                 );
-
-
-            image.addEventListener(
-                "click",
-                function() {
-
-                    openLightbox(
-                        item.image
-                    );
-
-                }
-            );
 
 
             /* WHATSAPP */
@@ -1538,13 +1879,16 @@ async function loadGallery() {
 
 
         /*
-         Combine the 8 permanent images
-         with images from Supabase.
+            Combine your 8 permanent photos
+            with photos from Supabase.
         */
 
         allGallery = [
+
             ...defaultGallery,
+
             ...supabaseGallery
+
         ];
 
 
@@ -1552,8 +1896,7 @@ async function loadGallery() {
 
 
         /*
-         Open specific shared photo
-         if ?id= is present.
+            Open a specific shared photo.
         */
 
         const params =
@@ -1580,10 +1923,13 @@ async function loadGallery() {
                     if (selectedCard) {
 
                         selectedCard.scrollIntoView({
+
                             behavior:
                                 "smooth",
+
                             block:
                                 "center"
+
                         });
 
                     }
@@ -1601,8 +1947,8 @@ async function loadGallery() {
 
 
         /*
-         Even if Supabase fails,
-         display the 8 default photos.
+            If Supabase fails,
+            still display your 8 photos.
         */
 
         allGallery =
@@ -1681,6 +2027,8 @@ function toggleMenu() {
 }
 
 
+/* CLOSE MOBILE MENU AFTER CLICKING A LINK */
+
 document
     .querySelectorAll(
         "nav a"
@@ -1705,6 +2053,70 @@ document
 
         }
     );
+
+
+/* =========================================================
+   CLOSE MENU WHEN CLICKING OUTSIDE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const navigation =
+            document.getElementById(
+                "navigation"
+            );
+
+        const menuButton =
+            document.querySelector(
+                ".mobile-menu"
+            );
+
+
+        if (
+            navigation.classList.contains(
+                "show"
+            )
+            &&
+            !navigation.contains(
+                event.target
+            )
+            &&
+            !menuButton.contains(
+                event.target
+            )
+        ) {
+
+            navigation.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE LIGHTBOX WITH ESC KEY
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
 
 
 /* =========================================================
