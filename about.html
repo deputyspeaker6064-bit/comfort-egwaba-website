@@ -4,20 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<title>About | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba</title>
 
-<title>About | Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</title>
-
-<meta
-    name="description"
-    content="Official biography of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba, Deputy Speaker of the Kogi State House of Assembly and Member Representing Ibaji State Constituency."
->
+<meta name="description"
+content="About the office and public service of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba, Deputy Speaker of the Kogi State House of Assembly.">
 
 <style>
+
+/* ================= GENERAL ================= */
 
 * {
     box-sizing: border-box;
@@ -32,12 +28,15 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f8f5;
     color: #173b2b;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 a {
     text-decoration: none;
 }
+
+
+/* ================= HEADER ================= */
 
 header {
     background: #003d27;
@@ -68,13 +67,14 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     font-size: 13px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 nav a:hover,
@@ -91,15 +91,18 @@ nav a.active {
 
 .mobile-menu {
     display: none;
-    font-size: 25px;
+    font-size: 27px;
     cursor: pointer;
 }
+
+
+/* ================= HERO ================= */
 
 .hero {
     background:
         linear-gradient(
             90deg,
-            rgba(0,61,39,.97),
+            rgba(0,61,39,.98),
             rgba(0,61,39,.82)
         );
 
@@ -107,8 +110,14 @@ nav a.active {
     padding: 90px 0;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
 .hero-content {
-    max-width: 850px;
+    max-width: 800px;
 }
 
 .label {
@@ -121,9 +130,9 @@ nav a.active {
 
 .hero h1 {
     font-family: Georgia, serif;
-    font-size: clamp(40px, 6vw, 64px);
+    font-size: clamp(42px, 6vw, 68px);
     line-height: 1.1;
-    margin: 12px 0 20px;
+    margin: 12px 0 18px;
 }
 
 .hero h1 span {
@@ -132,137 +141,157 @@ nav a.active {
 
 .hero p {
     color: #dcebe3;
-    font-size: 18px;
-    max-width: 800px;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.profile-section {
-    padding: 75px 0;
-}
-
-.profile-intro {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 7px 25px rgba(0,0,0,.07);
-    border-left: 5px solid #f2bd24;
-    margin-bottom: 35px;
-}
-
-.profile-intro h2 {
-    font-family: Georgia, serif;
-    color: #003d27;
-    font-size: 34px;
-    margin-top: 0;
-}
-
-.profile-intro p {
-    color: #53675d;
-    font-size: 16px;
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.profile-card {
-    background: white;
-    padding: 30px;
-    border-radius: 9px;
-    box-shadow: 0 6px 22px rgba(0,0,0,.06);
-}
-
-.profile-card h2 {
-    font-family: Georgia, serif;
-    color: #003d27;
-    font-size: 27px;
-    line-height: 1.3;
-    margin-top: 0;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #f2bd24;
-}
-
-.profile-card p {
-    color: #53675d;
-    margin-bottom: 0;
-}
-
-.highlight {
-    background: #eef7ed;
-    border-radius: 8px;
-    padding: 22px;
-    margin-top: 20px;
-}
-
-.highlight strong {
-    color: #003d27;
-}
-
-.full-width {
-    grid-column: 1 / -1;
-}
-
-.legacy {
-    background: #003d27;
-    color: white;
-    padding: 70px 0;
-}
-
-.legacy-content {
-    max-width: 950px;
-    margin: auto;
-    text-align: center;
-}
-
-.legacy .label {
-    color: #f2bd24;
-}
-
-.legacy h2 {
-    font-family: Georgia, serif;
-    font-size: 40px;
-    margin: 10px 0 20px;
-}
-
-.legacy p {
-    color: #dcebe3;
+    max-width: 720px;
     font-size: 17px;
 }
 
-.quote {
-    margin-top: 30px;
-    padding: 25px;
-    border-left: 4px solid #f2bd24;
-    background: rgba(255,255,255,.06);
-    text-align: left;
-    font-family: Georgia, serif;
-    font-size: 20px;
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    padding: 80px 0;
 }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.about-content .label {
+    color: #087c4e;
+}
+
+.about-content h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.about-content p {
+    color: #53675e;
+    margin-bottom: 18px;
+}
+
+
+/* ================= HIGHLIGHTS ================= */
+
+.highlights {
+    padding: 75px 0;
+    background: white;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 45px;
+}
+
+.section-heading .label {
+    color: #087c4e;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 40px;
+    margin: 8px 0 12px;
+}
+
+.section-heading p {
+    color: #687970;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.highlight-card {
+    background: #f5f8f5;
+    padding: 30px 25px;
+    border-radius: 10px;
+    border-top: 4px solid #f2bd24;
+    box-shadow: 0 6px 20px rgba(0,0,0,.05);
+}
+
+.highlight-card h3 {
+    font-family: Georgia, serif;
+    color: #003d27;
+    font-size: 23px;
+    margin-top: 0;
+}
+
+.highlight-card p {
+    color: #687970;
+}
+
+
+/* ================= VALUES ================= */
+
+.values {
+    padding: 80px 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0,0,0,.06);
+}
+
+.value-number {
+    color: #f2bd24;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.value-card h3 {
+    font-family: Georgia, serif;
+    color: #003d27;
+}
+
+.value-card p {
+    color: #687970;
+}
+
+
+/* ================= CTA ================= */
 
 .cta {
     background: #f2bd24;
-    padding: 60px 0;
+    padding: 65px 0;
 }
 
 .cta-box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 25px;
 }
 
 .cta h2 {
     font-family: Georgia, serif;
     color: #003d27;
-    font-size: 36px;
+    font-size: 38px;
     margin: 0 0 8px;
 }
 
@@ -276,8 +305,10 @@ nav a.active {
     padding: 13px 22px;
     border-radius: 5px;
     font-weight: bold;
-    white-space: nowrap;
 }
+
+
+/* ================= FOOTER ================= */
 
 footer {
     background: #002d20;
@@ -319,76 +350,136 @@ footer {
     font-size: 13px;
 }
 
-@media(max-width:900px) {
+
+/* ================= MOBILE MENU ================= */
+
+@media (max-width: 1100px) {
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        color: white;
+        cursor: pointer;
+        border-radius: 6px;
+    }
 
     nav {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: #003d27;
-        padding: 20px 6%;
+        padding: 12px 5% 20px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        gap: 4px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.20);
+        border-top: 1px solid rgba(255,255,255,.12);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     nav.show {
         display: flex;
     }
 
-    .mobile-menu {
-        display: block;
+    nav a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        min-height: 52px;
+        padding: 14px 16px;
+        color: white;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255,255,255,.10);
+        border-radius: 5px;
     }
 
-    .profile-grid {
+    nav a:hover {
+        background: rgba(255,255,255,.08);
+        color: #f2bd24;
+    }
+
+    nav a.active {
+        background: rgba(242,189,36,.12);
+        color: #f2bd24;
+    }
+
+    nav a:last-child {
+        margin-top: 10px;
+        border-bottom: none;
+        justify-content: center;
+    }
+
+    .contact-btn {
+        background: #f2bd24 !important;
+        color: #003d27 !important;
+        justify-content: center;
+    }
+}
+
+
+/* ================= TABLETS ================= */
+
+@media (max-width: 900px) {
+
+    .about-grid {
         grid-template-columns: 1fr;
     }
 
-    .full-width {
-        grid-column: auto;
+    .about-image {
+        max-height: 550px;
     }
 
-    .cta-box {
-        flex-direction: column;
-        align-items: flex-start;
+    .highlight-grid,
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
     }
-
 }
 
-@media(max-width:600px) {
+
+/* ================= PHONES ================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
 
     .hero {
         padding: 65px 0;
     }
 
-    .hero p {
-        font-size: 16px;
+    .about-section,
+    .values {
+        padding: 60px 0;
     }
 
-    .profile-section {
-        padding: 55px 0;
+    .highlights {
+        padding: 60px 0;
     }
 
-    .profile-intro,
-    .profile-card {
-        padding: 25px;
+    .about-content h2,
+    .section-heading h2 {
+        font-size: 34px;
     }
 
-    .profile-intro h2 {
-        font-size: 28px;
+    .highlight-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 
-    .profile-card h2 {
-        font-size: 24px;
-    }
-
-    .legacy {
-        padding: 55px 0;
-    }
-
-    .legacy h2 {
-        font-size: 32px;
+    .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-grid {
@@ -401,8 +492,11 @@ footer {
 
 </head>
 
+
 <body>
 
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -413,6 +507,7 @@ footer {
     OF ASSEMBLY
 </a>
 
+
 <nav id="navigation">
 
 <a href="index.html">
@@ -421,6 +516,10 @@ footer {
 
 <a href="about.html" class="active">
     About
+</a>
+
+<a href="biography.html">
+    Biography
 </a>
 
 <a href="office.html">
@@ -449,9 +548,11 @@ footer {
 
 </nav>
 
+
 <div
     class="mobile-menu"
     onclick="toggleMenu()"
+    aria-label="Open menu"
 >
     ☰
 </div>
@@ -461,6 +562,8 @@ footer {
 </header>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
 <div class="container">
@@ -468,17 +571,19 @@ footer {
 <div class="hero-content">
 
 <div class="label">
-    Official Biography
+    About The Office
 </div>
 
 <h1>
-    Rt. Hon. Comfort Ojoma
-    <span>Nwuchiola Egwaba</span>
+    Serving With
+    <span>Purpose</span>
 </h1>
 
 <p>
-    Deputy Speaker of the Kogi State House of Assembly
-    and Member Representing Ibaji State Constituency.
+    Learn more about the office, its public service
+    responsibilities, commitment to the people and
+    vision for a stronger and more prosperous
+    constituency.
 </p>
 
 </div>
@@ -488,318 +593,65 @@ footer {
 </section>
 
 
-<section class="profile-section">
+<!-- ================= ABOUT CONTENT ================= -->
+
+<section class="about-section">
 
 <div class="container">
 
+<div class="about-grid">
 
-<div class="profile-intro">
 
-<h2>
-    About Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
-</h2>
+<div>
 
-<p>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba is an accomplished
-    legislator, distinguished public servant, and trailblazing
-    political leader whose exemplary service has continued to
-    shape governance and inspire inclusive leadership in Kogi
-    State and beyond.
-</p>
-
-<p>
-    She currently serves as the Deputy Speaker of the Kogi State
-    House of Assembly and represents the people of Ibaji State
-    Constituency, making history as the first woman to occupy the
-    office of Deputy Speaker in the State's legislative history.
-</p>
-
-<p>
-    A native of Ibaji Local Government Area of Kogi State, Rt. Hon.
-    Egwaba has built a record of purposeful leadership, effective
-    representation, grassroots engagement and public service.
-</p>
+<img
+    class="about-image"
+    src="https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png"
+    alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+>
 
 </div>
 
 
-<div class="profile-grid">
-
-
-<div class="profile-card">
-
-<h2>
-    Education & Professional Background
-</h2>
-
-<p>
-    Rt. Hon. Egwaba attended Government Girls Secondary School,
-    Idah, before proceeding to the Kogi State College of Health
-    Sciences and Technology, Idah, where she obtained a National
-    Diploma (ND) in Medical Laboratory Technology.
-</p>
-
-<p>
-    She further obtained a Higher National Diploma (HND) in
-    Medical Laboratory Technology from the Federal School of
-    Medical Laboratory Technology (Science), Jos/Vom, Plateau
-    State, and a Bachelor of Science (B.Sc.) in Peace Studies
-    and Conflict Resolution from the National Open University
-    of Nigeria (NOUN).
-</p>
-
-<p>
-    She is currently pursuing a Master of Science (M.Sc.) in
-    International Relations and Diplomacy at Salem University,
-    Lokoja, Kogi State.
-</p>
-
-<div class="highlight">
-
-<strong>
-    Her strong academic background, combined with years of
-    grassroots engagement and public service, has equipped her
-    with the vision, knowledge and capacity to provide purposeful
-    leadership and effective representation.
-</strong>
-
-</div>
-
-</div>
-
-
-<div class="profile-card">
-
-<h2>
-    Legislative Leadership
-</h2>
-
-<p>
-    Since her election into the 8th Kogi State House of Assembly,
-    Rt. Hon. Egwaba has distinguished herself as a proactive
-    legislator committed to promoting good governance, social
-    justice, and sustainable development.
-</p>
-
-<p>
-    As Deputy Speaker, she has played a strategic role in
-    strengthening legislative oversight, fostering harmony within
-    the Assembly, and supporting the passage of people-oriented
-    laws and policies that advance the development of Kogi State.
-</p>
-
-<p>
-    Her legislative record reflects an unwavering commitment to
-    equity, inclusion, and community development.
-</p>
-
-</div>
-
-
-<div class="profile-card">
-
-<h2>
-    Legislative Achievements
-</h2>
-
-<p>
-    She sponsored the landmark Kogi State Oil Producing Areas
-    Development Commission (KOSOPADEC) Bill, designed to
-    accelerate the development of oil-producing communities,
-    as well as the Gender Representation Bill aimed at expanding
-    opportunities for women's participation in governance.
-</p>
-
-<p>
-    She also championed the motion for the reconstruction of
-    the strategic Idah–Ibaji Road.
-</p>
-
-<p>
-    She has consistently advocated policies that improve access
-    to quality education, healthcare, agriculture, infrastructure,
-    and economic opportunities for rural communities.
-</p>
-
-</div>
-
-
-<div class="profile-card">
-
-<h2>
-    Grassroots & Humanitarian Service
-</h2>
-
-<p>
-    Beyond the legislature, Rt. Hon. Egwaba is widely recognised
-    for her people-centred leadership and unwavering dedication
-    to grassroots development.
-</p>
-
-<p>
-    Through regular constituency engagements, town hall meetings,
-    educational support initiatives, youth and women empowerment
-    programmes, healthcare interventions, peacebuilding efforts,
-    and strategic advocacy for infrastructure development, she
-    has continued to improve the lives of her constituents.
-</p>
-
-<p>
-    Her humanitarian initiatives through the Comfort Ladies
-    Foundation have further empowered women, youths, widows, and
-    vulnerable persons, reinforcing her enduring commitment to
-    inclusive development and social welfare.
-</p>
-
-</div>
-
-
-<div class="profile-card">
-
-<h2>
-    Gender Equality & Regional Advocacy
-</h2>
-
-<p>
-    An advocate for gender equality and democratic inclusion,
-    Rt. Hon. Egwaba has consistently championed increased
-    representation of women in leadership and governance.
-</p>
-
-<p>
-    Her commitment to advancing the rights and participation
-    of women has earned her recognition beyond Nigeria's borders,
-    including her participation in the West Africa Female
-    Parliamentarians Peer Review Conference on Ending Violence
-    Against Women and Girls held in Accra, Ghana.
-</p>
-
-<p>
-    At the conference, she joined female legislators,
-    policymakers, and development partners from across the
-    region to strengthen collaborative efforts towards gender
-    equality and sustainable development.
-</p>
-
-</div>
-
-
-<div class="profile-card">
-
-<h2>
-    Awards & Recognition
-</h2>
-
-<p>
-    Her outstanding contributions to public service have attracted
-    widespread recognition.
-</p>
-
-<p>
-    She was honoured as the Most Outstanding Female Legislator
-    during the Kogi State 34th Anniversary Lecture and Awards
-    organised by the Nigerian Post in 2025.
-</p>
-
-<p>
-    She has also received the Award of Excellence from the
-    Department of English and Literary Studies, Federal University
-    Lokoja, among other commendations from professional bodies,
-    community organisations, youth groups, and civil society
-    organisations.
-</p>
-
-<p>
-    She was also nominated for the prestigious Margaret Ekpo
-    Memorial Award in recognition of her outstanding contributions
-    to women's leadership and public service.
-</p>
-
-</div>
-
-
-<div class="profile-card full-width">
-
-<h2>
-    Traditional Titles & Honour
-</h2>
-
-<p>
-    In recognition of her exceptional leadership, dedication to
-    community development, and service to humanity, Rt. Hon.
-    Comfort Ojoma Nwuchiola Egwaba has been honoured with
-    distinguished traditional titles.
-</p>
-
-<p>
-    She is the Gimbiya Mata of Girinya and was conferred with the
-    revered title of Iganya Attah-Igala (Adeebu) by His Royal
-    Majesty, Agabaidu, the Attah Igala and President of the Kogi
-    State Traditional Council, in recognition of her remarkable
-    contributions to the development of the Igala Kingdom and
-    Kogi State.
-</p>
-
-</div>
-
-
-<div class="profile-card full-width">
-
-<h2>
-    Faith, Integrity & Servant Leadership
-</h2>
-
-<p>
-    A woman of faith, integrity, compassion, and exceptional
-    leadership, Rt. Hon. Comfort Ojoma Nwuchiola Egwaba exemplifies
-    the ideals of servant leadership.
-</p>
-
-<p>
-    Her unwavering dedication to legislative excellence,
-    grassroots development, peacebuilding, women's empowerment,
-    and public service continues to inspire a new generation of
-    leaders while leaving an enduring legacy of impactful
-    governance.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="legacy">
-
-<div class="container">
-
-<div class="legacy-content">
+<div class="about-content">
 
 <div class="label">
-    Leadership Legacy
+    About
 </div>
 
 <h2>
-    A Symbol of Courage, Resilience & Visionary Leadership
+    A Commitment To Public Service
 </h2>
 
 <p>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba remains a symbol of
-    courage, resilience, and visionary leadership whose
-    contributions to democratic governance and human development
-    have earned her a place among Nigeria's most respected
-    contemporary female legislators.
+    The Office of Rt. Hon. Comfort Nwuchiola Ojomah
+    Egwaba is dedicated to effective representation,
+    responsible leadership and meaningful engagement
+    with the people of Ibaji Local Government
+    Constituency.
 </p>
 
-<div class="quote">
+<p>
+    As Deputy Speaker of the Kogi State House of
+    Assembly and Member representing Ibaji Local
+    Government Constituency, the office serves as a
+    bridge between the people and the legislative
+    institution.
+</p>
 
-Her leadership continues to reflect a commitment to legislative
-excellence, grassroots development, peacebuilding, women's
-empowerment, and inclusive public service.
+<p>
+    The office is committed to listening to the needs
+    of constituents, supporting initiatives that improve
+    lives and promoting development through effective
+    representation and legislative engagement.
+</p>
+
+<p>
+    Through regular constituency interaction,
+    legislative activities and community engagement,
+    the office continues to work toward a more
+    inclusive and prosperous future for the people.
+</p>
 
 </div>
 
@@ -809,6 +661,170 @@ empowerment, and inclusive public service.
 
 </section>
 
+
+<!-- ================= HIGHLIGHTS ================= -->
+
+<section class="highlights">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+    Our Focus
+</div>
+
+<h2>
+    Areas Of Commitment
+</h2>
+
+<p>
+    The office focuses on representation, development
+    and meaningful engagement with constituents.
+</p>
+
+</div>
+
+
+<div class="highlight-grid">
+
+
+<div class="highlight-card">
+
+<h3>
+    Effective Representation
+</h3>
+
+<p>
+    Promoting the interests and concerns of the people
+    of Ibaji through responsible legislative and
+    constituency representation.
+</p>
+
+</div>
+
+
+<div class="highlight-card">
+
+<h3>
+    Community Development
+</h3>
+
+<p>
+    Supporting initiatives and engagements that
+    contribute to social and economic development
+    within the constituency.
+</p>
+
+</div>
+
+
+<div class="highlight-card">
+
+<h3>
+    People-Centred Leadership
+</h3>
+
+<p>
+    Maintaining communication with constituents and
+    encouraging participation in matters affecting
+    the community.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= VALUES ================= -->
+
+<section class="values">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="label">
+    Our Values
+</div>
+
+<h2>
+    Principles That Guide The Office
+</h2>
+
+</div>
+
+
+<div class="values-grid">
+
+
+<div class="value-card">
+
+<div class="value-number">
+    01
+</div>
+
+<h3>
+    Integrity
+</h3>
+
+<p>
+    Upholding honesty, accountability and responsible
+    public service.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-number">
+    02
+</div>
+
+<h3>
+    Service
+</h3>
+
+<p>
+    Putting the needs and aspirations of the people
+    at the centre of public representation.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-number">
+    03
+</div>
+
+<h3>
+    Progress
+</h3>
+
+<p>
+    Supporting constructive initiatives that can
+    contribute to a better future for the constituency.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
 
 <section class="cta">
 
@@ -823,7 +839,8 @@ empowerment, and inclusive public service.
 </h2>
 
 <p>
-    Follow the latest activities, news and public engagements.
+    Follow the activities and latest updates from
+    the office.
 </p>
 
 </div>
@@ -832,7 +849,7 @@ empowerment, and inclusive public service.
     href="contact.html"
     class="cta-button"
 >
-    Contact the Office
+    Contact The Office
 </a>
 
 </div>
@@ -841,6 +858,8 @@ empowerment, and inclusive public service.
 
 </section>
 
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -852,12 +871,13 @@ empowerment, and inclusive public service.
 <div class="footer-brand">
 
 <h3>
-    Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
+    Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
 </h3>
 
 <p>
     Deputy Speaker, Kogi State House of Assembly
-    and Member Representing Ibaji State Constituency.
+    and Member Representing Ibaji Local Government
+    Constituency.
 </p>
 
 </div>
@@ -869,21 +889,11 @@ empowerment, and inclusive public service.
     Quick Links
 </h4>
 
-<a href="index.html">
-    Home
-</a>
-
-<a href="about.html">
-    About
-</a>
-
-<a href="office.html">
-    Office
-</a>
-
-<a href="legislative.html">
-    Legislative Activities
-</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="biography.html">Biography</a>
+<a href="office.html">Office</a>
+<a href="legislative.html">Legislative Activities</a>
 
 </div>
 
@@ -894,32 +904,20 @@ empowerment, and inclusive public service.
     Explore
 </h4>
 
-<a href="constituency.html">
-    Constituency
-</a>
-
-<a href="news.html">
-    News & Updates
-</a>
-
-<a href="gallery.html">
-    Media Gallery
-</a>
-
-<a href="contact.html">
-    Contact
-</a>
+<a href="constituency.html">Constituency</a>
+<a href="news.html">News & Updates</a>
+<a href="gallery.html">Media Gallery</a>
+<a href="contact.html">Contact</a>
 
 </div>
-
 
 </div>
 
 
 <div class="copyright">
 
-© 2026 Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba.
-All Rights Reserved.
+© 2026 Office of Rt. Hon. Comfort Nwuchiola
+Ojomah Egwaba. All Rights Reserved.
 
 </div>
 
@@ -927,6 +925,8 @@ All Rights Reserved.
 
 </footer>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
@@ -940,7 +940,7 @@ function toggleMenu() {
 
 
 document
-    .querySelectorAll("nav a")
+    .querySelectorAll("#navigation a")
     .forEach(function(link) {
 
         link.addEventListener(
@@ -956,8 +956,31 @@ document
 
     });
 
-</script>
 
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const navigation =
+            document.getElementById("navigation");
+
+        const menu =
+            document.querySelector(".mobile-menu");
+
+        if (
+            navigation.classList.contains("show") &&
+            !navigation.contains(event.target) &&
+            !menu.contains(event.target)
+        ) {
+
+            navigation.classList.remove("show");
+
+        }
+
+    }
+);
+
+</script>
 
 </body>
 
