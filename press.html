@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Press & Media | Office of the Deputy Speaker</title>
+
+<meta name="description"
+content="Official press releases, news, statements, speeches and media updates from the Office of the Deputy Speaker, Kogi State House of Assembly.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7faf7;
+    color: #173b2b;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: #003d27;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f2bd24;
+}
+
+.nav-contact {
+    background: #f2bd24;
+    color: #082d20 !important;
+    padding: 10px 17px;
+    border-radius: 5px;
+}
+
+.mobile-menu {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.page-hero {
+    background:
+        linear-gradient(
+            rgba(0,61,39,.94),
+            rgba(0,61,39,.94)
+        );
+
+    padding: 85px 0;
+    color: white;
+    text-align: center;
+}
+
+.page-hero .label {
+    color: #f2bd24;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.page-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 65px);
+    margin: 10px 0;
+}
+
+.page-hero p {
+    color: #d7e7de;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* CONTENT */
+
+.press {
+    padding: 80px 0;
+}
+
+.press-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.press-top h2 {
+    font-family: "Playfair Display", serif;
+    color: #003d27;
+    font-size: 38px;
+}
+
+.press-top p {
+    color: #718078;
+}
+
+
+/* FILTER */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #d4e1d9;
+    background: white;
+    color: #365348;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #003d27;
+    color: white;
+    border-color: #003d27;
+}
+
+
+/* NEWS GRID */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 28px rgba(0,0,0,.06);
+
+    transition: .3s;
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.10);
+}
+
+.news-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-category {
+    color: #087c4e;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.news-content h3 {
+    font-family: "Playfair Display", serif;
+    color: #003d27;
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+.news-date {
+    color: #89968f;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.news-excerpt {
+    color: #687970;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #f2bd24;
+    color: #082d20;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.read-more:hover {
+    background: #003d27;
+    color: white;
+}
+
+
+/* EMPTY */
+
+.empty {
+    text-align: center;
+    padding: 70px 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+.empty i {
+    font-size: 45px;
+    color: #087c4e;
+    margin-bottom: 15px;
+}
+
+.empty h3 {
+    font-family: "Playfair Display", serif;
+    color: #003d27;
+    font-size: 25px;
+}
+
+.empty p {
+    color: #75837c;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #002d20;
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-brand h3 {
+    font-family: "Playfair Display", serif;
+    margin-bottom: 10px;
+}
+
+.footer-brand p,
+.footer-column a {
+    color: #bdcec6;
+    font-size: 13px;
+}
+
+.footer-column h4 {
+    color: #f2bd24;
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.footer-column a:hover {
+    color: #f2bd24;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.15);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #8ea49a;
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+    nav {
+        display: none;
+
+        position: absolute;
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: #003d27;
+
+        padding: 25px 7%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(max-width:600px) {
+
+    .press {
+        padding: 60px 0;
+    }
+
+    .press-top {
+        display: block;
+    }
+
+    .press-top h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .filters {
+        margin-top: 20px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="nav-container">
+
+<a href="index.html" class="logo">
+
+<img src="images/kogi-logo.png"
+alt="Kogi State House of Assembly Logo">
+
+<div class="logo-text">
+KOGI STATE HOUSE<br>
+OF ASSEMBLY
+</div>
+
+</a>
+
+
+<nav id="navigation">
+
+<a href="index.html">Home</a>
+
+<a href="index.html#about">About</a>
+
+<a href="index.html#office">Office</a>
+
+<a href="index.html#constituency">
+Constituency
+</a>
+
+<a href="press.html" class="active">
+Press / Media
+</a>
+
+<a href="index.html#contact"
+class="nav-contact">
+Contact
+</a>
+
+</nav>
+
+
+<div class="mobile-menu"
+onclick="toggleMenu()">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="label">
+Official Information
+</div>
+
+<h1>
+Press & Media
+</h1>
+
+<p>
+News, press releases, statements, speeches,
+legislative activities and official updates
+from the Office of the Deputy Speaker.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="press">
+
+<div class="container">
+
+
+<div class="press-top">
+
+<div>
+
+<h2>
+Latest News & Updates
+</h2>
+
+<p>
+Official publications from the Office.
+</p>
+
+</div>
+
+
+<div class="filters">
+
+<button class="filter-btn active"
+onclick="filterNews('all', this)">
+All
+</button>
+
+<button class="filter-btn"
+onclick="filterNews('News', this)">
+News
+</button>
+
+<button class="filter-btn"
+onclick="filterNews('Press Release', this)">
+Press Releases
+</button>
+
+<button class="filter-btn"
+onclick="filterNews('Statement', this)">
+Statements
+</button>
+
+<button class="filter-btn"
+onclick="filterNews('Constituency', this)">
+Constituency
+</button>
+
+</div>
+
+</div>
+
+
+
+<div
+class="news-grid"
+id="newsGrid">
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<h3>
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</h3>
+
+<p>
+Deputy Speaker, Kogi State House of Assembly
+and Member Representing Ibaji Local Government
+Constituency.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Quick Links
+</h4>
+
+<a href="index.html">Home</a>
+<a href="index.html#about">About</a>
+<a href="index.html#office">Office</a>
+<a href="press.html">Press / Media</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>
+Connect
+</h4>
+
+<a href="index.html#contact">
+Contact Office
+</a>
+
+<a href="https://wa.me/2348064963258"
+target="_blank"
+rel="noopener">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Office of Rt. Hon. Comfort Nwuchiola
+Ojomah Egwaba. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+const STORAGE_KEY = "deputySpeakerNews";
+
+let news =
+JSON.parse(
+localStorage.getItem(STORAGE_KEY)
+) || [];
+
+
+/* ONLY SHOW PUBLISHED STORIES */
+
+news =
+news.filter(
+article =>
+article.status === "published"
+);
+
+
+/* RENDER */
+
+function renderNews(category = "all") {
+
+const grid =
+document.getElementById("newsGrid");
+
+
+let filtered =
+category === "all"
+? news
+: news.filter(
+article =>
+article.category === category
+);
+
+
+if(filtered.length === 0) {
+
+grid.innerHTML = `
+
+<div class="empty"
+style="grid-column:1/-1;">
+
+<i class="fas fa-newspaper"></i>
+
+<h3>
+No Publications Yet
+</h3>
+
+<p>
+Official news and updates will appear here.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+grid.innerHTML = "";
+
+
+filtered.forEach(article => {
+
+const card =
+document.createElement("article");
+
+card.className =
+"news-card";
+
+
+const image =
+article.image ||
+"images/comfort-egwaba.jpg";
+
+
+card.innerHTML = `
+
+<img
+class="news-image"
+src="${image}"
+alt="${escapeHtml(article.title)}"
+>
+
+
+<div class="news-content">
+
+<div class="news-category">
+
+${escapeHtml(article.category)}
+
+</div>
+
+<h3>
+${escapeHtml(article.title)}
+</h3>
+
+<div class="news-date">
+
+<i class="far fa-calendar"></i>
+
+${escapeHtml(article.date)}
+
+</div>
+
+<p class="news-excerpt">
+
+${escapeHtml(article.excerpt)}
+
+</p>
+
+<a
+class="read-more"
+href="article.html?id=${article.id}">
+
+Read Full Story
+
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+`;
+
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+/* FILTER */
+
+function filterNews(category, button) {
+
+document
+.querySelectorAll(".filter-btn")
+.forEach(btn =>
+btn.classList.remove("active")
+);
+
+button.classList.add("active");
+
+renderNews(category);
+
+}
+
+
+/* MOBILE */
+
+function toggleMenu() {
+
+document
+.getElementById("navigation")
+.classList.toggle("show");
+
+}
+
+
+/* SECURITY */
+
+function escapeHtml(text) {
+
+const div =
+document.createElement("div");
+
+div.textContent =
+text || "";
+
+return div.innerHTML;
+
+}
+
+
+/* LOAD */
+
+renderNews();
+
+</script>
+
+</body>
+</html>
