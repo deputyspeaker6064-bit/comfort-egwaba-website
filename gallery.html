@@ -2,15 +2,25 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Media Gallery | Rt. Hon. Aliyu Umar Yusuf</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Media Gallery | Kogi State House of Assembly
+</title>
 
 <meta name="description"
-content="Official media gallery of Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly and Member Representing Lokoja II State Constituency.">
+content="Official media gallery featuring Rt. Hon. Aliyu Umar Yusuf and Rt. Hon. Comfort Nwuchiola Ojomah Egwaba, Kogi State House of Assembly.">
+
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
 
 *{
     box-sizing:border-box;
@@ -25,7 +35,10 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#003d27;
@@ -40,6 +53,7 @@ header{
     max-width:1200px;
     margin:auto;
     padding:15px 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -56,6 +70,7 @@ header{
 
 nav ul{
     list-style:none;
+
     display:flex;
     gap:18px;
 }
@@ -65,7 +80,6 @@ nav ul li a{
     text-decoration:none;
     font-size:14px;
     font-weight:bold;
-    transition:0.3s;
 }
 
 nav ul li a:hover{
@@ -78,20 +92,31 @@ nav ul li a:hover{
     cursor:pointer;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+
     min-height:420px;
+
     background:
-        linear-gradient(rgba(0,45,30,0.78),rgba(0,45,30,0.78)),
-        url("https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png")
-        center/cover no-repeat;
+    linear-gradient(
+        rgba(0,45,30,0.78),
+        rgba(0,45,30,0.78)
+    ),
+    url("https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png")
+    center/cover no-repeat;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     color:white;
+
     padding:50px 20px;
 }
 
@@ -117,7 +142,10 @@ nav ul li a:hover{
     margin:20px auto;
 }
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 .intro{
     max-width:1000px;
@@ -137,7 +165,10 @@ nav ul li a:hover{
     font-size:16px;
 }
 
-/* FILTERS */
+
+/* =========================
+   FILTERS
+========================= */
 
 .filters{
     text-align:center;
@@ -145,282 +176,429 @@ nav ul li a:hover{
 }
 
 .filter-btn{
+
     border:none;
+
     background:white;
+
     color:#003d27;
+
     border:1px solid #003d27;
+
     padding:10px 18px;
+
     margin:5px;
+
     border-radius:30px;
+
     cursor:pointer;
+
     font-weight:bold;
-    transition:0.3s;
 }
 
 .filter-btn:hover,
 .filter-btn.active{
+
     background:#003d27;
+
     color:white;
 }
 
-/* GALLERY */
+
+/* =========================
+   GALLERY
+========================= */
 
 .gallery-container{
+
     max-width:1200px;
+
     margin:30px auto 70px;
+
     padding:0 20px;
 }
 
 .gallery{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:22px;
 }
 
 .gallery-card{
+
     background:white;
+
     border-radius:12px;
+
     overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,0.10);
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,0.10);
+
     transition:0.3s;
 }
 
 .gallery-card:hover{
+
     transform:translateY(-5px);
-    box-shadow:0 8px 22px rgba(0,0,0,0.15);
+
+    box-shadow:
+    0 8px 22px rgba(0,0,0,0.15);
 }
 
 .gallery-image{
+
     width:100%;
+
     height:250px;
+
     object-fit:cover;
+
     display:block;
+
     cursor:pointer;
 }
 
+
+/* =========================
+   CAPTION
+========================= */
+
 .caption{
+
     padding:15px;
 }
 
 .caption h3{
+
     color:#003d27;
+
     font-size:16px;
+
     margin-bottom:7px;
 }
 
+.caption .name{
+
+    color:#333;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    margin-bottom:6px;
+}
+
 .caption p{
+
     color:#666;
+
     font-size:13px;
 }
 
-/* SHARE BUTTONS */
 
-.share-buttons{
-    display:flex;
-    gap:7px;
-    flex-wrap:wrap;
-    margin-top:12px;
-}
-
-.share-btn{
-    border:none;
-    padding:7px 10px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:11px;
-    font-weight:bold;
-}
-
-.whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-.facebook{
-    background:#1877F2;
-    color:white;
-}
-
-.copy{
-    background:#003d27;
-    color:white;
-}
-
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
 
 .lightbox{
+
     display:none;
+
     position:fixed;
+
     inset:0;
-    background:rgba(0,0,0,0.92);
+
+    background:
+    rgba(0,0,0,0.92);
+
     z-index:2000;
+
     align-items:center;
+
     justify-content:center;
+
     padding:30px;
 }
 
 .lightbox img{
+
     max-width:95%;
+
     max-height:90vh;
+
     border-radius:10px;
+
     object-fit:contain;
 }
 
 .close-lightbox{
+
     position:absolute;
+
     top:20px;
+
     right:30px;
+
     color:white;
+
     font-size:40px;
+
     cursor:pointer;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
+
     background:#003d27;
+
     color:white;
+
     padding:45px 20px 20px;
 }
 
 .footer-container{
+
     max-width:1100px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-columns:
+    2fr 1fr 1fr;
+
     gap:35px;
 }
 
 footer h3{
+
     color:#f2bd24;
+
     margin-bottom:15px;
 }
 
 footer p,
 footer a{
+
     color:#ddd;
+
     font-size:14px;
 }
 
 footer a{
+
     text-decoration:none;
 }
 
 footer ul{
+
     list-style:none;
 }
 
 footer li{
+
     margin-bottom:8px;
 }
 
 .copyright{
+
     text-align:center;
-    border-top:1px solid rgba(255,255,255,0.2);
+
+    border-top:
+    1px solid rgba(255,255,255,0.2);
+
     margin-top:30px;
+
     padding-top:20px;
+
     color:#ccc;
+
     font-size:13px;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
     .gallery{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
 }
 
+
 @media(max-width:700px){
 
     .menu-btn{
+
         display:block;
     }
 
     nav{
+
         display:none;
+
         position:absolute;
+
         top:65px;
+
         left:0;
+
         width:100%;
+
         background:#003d27;
     }
 
     nav.show{
+
         display:block;
     }
 
     nav ul{
+
         flex-direction:column;
+
         padding:20px;
+
         gap:0;
     }
 
     nav ul li{
-        border-bottom:1px solid rgba(255,255,255,0.15);
+
+        border-bottom:
+        1px solid
+        rgba(255,255,255,0.15);
     }
 
     nav ul li a{
+
         display:block;
+
         padding:12px;
     }
 
     .hero h1{
+
         font-size:30px;
     }
 
     .hero p{
+
         font-size:15px;
     }
 
     .gallery{
+
         grid-template-columns:1fr;
     }
 
     .gallery-image{
+
         height:280px;
     }
 
     .footer-container{
+
         grid-template-columns:1fr;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="header-container">
 
 <div class="logo">
-KA KOGI STATE <span>HOUSE OF ASSEMBLY</span>
+
+KA KOGI STATE
+<span>
+HOUSE OF ASSEMBLY
+</span>
+
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div class="menu-btn"
+onclick="toggleMenu()">
+
+☰
+
+</div>
+
 
 <nav id="navMenu">
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="biography.html">Biography</a></li>
-<li><a href="office.html">Office</a></li>
-<li><a href="legislative.html">Legislative Activities</a></li>
-<li><a href="constituency.html">Constituency</a></li>
-<li><a href="news.html">News</a></li>
-<li><a href="gallery.html">Media Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="about.html">About</a>
+</li>
+
+<li>
+<a href="biography.html">Biography</a>
+</li>
+
+<li>
+<a href="office.html">Office</a>
+</li>
+
+<li>
+<a href="legislative.html">
+Legislative Activities
+</a>
+</li>
+
+<li>
+<a href="constituency.html">
+Constituency
+</a>
+</li>
+
+<li>
+<a href="news.html">News</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Media Gallery
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
 
 </ul>
 
@@ -431,20 +609,29 @@ KA KOGI STATE <span>HOUSE OF ASSEMBLY</span>
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>Media Gallery</h1>
+<h1>
+Media Gallery
+</h1>
 
 <div class="gold-line"></div>
 
 <p>
-A collection of official engagements, legislative activities,
-community interactions and memorable moments of
-Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly.
+
+Official photographs documenting
+legislative activities, public engagements,
+community interactions and memorable
+moments of the leadership of the
+Kogi State House of Assembly.
+
 </p>
 
 </div>
@@ -452,64 +639,102 @@ Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly.
 </section>
 
 
-<!-- INTRO -->
+
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="intro">
 
-<h2>Official Gallery</h2>
+<h2>
+Official Appearances
+</h2>
 
 <p>
-Explore photographs documenting official duties, legislative activities,
-public engagements, community interactions and moments of service
-by Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly
-and Member Representing Lokoja II State Constituency.
+
+Explore photographs documenting official
+duties, legislative activities, public
+engagements and community interactions
+involving the leadership and members of
+the Kogi State House of Assembly.
+
 </p>
 
 </section>
 
 
-<!-- FILTERS -->
+
+<!-- =========================
+     FILTERS
+========================= -->
 
 <div class="filters">
 
-<button class="filter-btn active"
+<button
+class="filter-btn active"
 onclick="filterGallery('all',this)">
+
 All
+
 </button>
 
-<button class="filter-btn"
+
+<button
+class="filter-btn"
 onclick="filterGallery('official',this)">
+
 Official
+
 </button>
 
-<button class="filter-btn"
+
+<button
+class="filter-btn"
 onclick="filterGallery('legislative',this)">
+
 Legislative
+
 </button>
 
-<button class="filter-btn"
+
+<button
+class="filter-btn"
 onclick="filterGallery('constituency',this)">
+
 Constituency
+
 </button>
 
-<button class="filter-btn"
+
+<button
+class="filter-btn"
 onclick="filterGallery('community',this)">
+
 Community
+
 </button>
 
 </div>
 
 
-<!-- GALLERY -->
+
+<!-- =========================
+     GALLERY
+========================= -->
 
 <section class="gallery-container">
 
 <div class="gallery">
 
 
-<!-- 1 -->
 
-<div class="gallery-card" data-category="official">
+<!-- ==================================================
+     PICTURE 1
+     ALIYU UMAR YUSUF
+================================================== -->
+
+<div class="gallery-card"
+data-category="official">
 
 <img
 class="gallery-image"
@@ -520,621 +745,1040 @@ onclick="openLightbox(this.src)"
 
 <div class="caption">
 
-<h3>Official Appearance</h3>
+<h3>
+Official Appearance
+</h3>
+
+<div class="name">
+Rt. Hon. Aliyu Umar Yusuf
+</div>
 
 <p>
-Rt. Hon. Aliyu Umar Yusuf during an official engagement as Speaker of the Kogi State House of Assembly.
+Speaker of the Kogi State House of Assembly
+during an official engagement.
 </p>
 
-<div class="share-buttons">
-
-<button class="share-btn whatsapp"
-onclick="shareWhatsApp('Official Appearance',this)">
-WhatsApp
-</button>
-
-<button class="share-btn facebook"
-onclick="shareFacebook(this)">
-Facebook
-</button>
-
-<button class="share-btn copy"
-onclick="copyLink(this)">
-Copy Link
-</button>
-
 </div>
 
 </div>
-</div>
 
 
-<!-- 2 -->
 
-<div class="gallery-card" data-category="legislative">
+<!-- ==================================================
+     PICTURE 2
+================================================== -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="legislative">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png"
-alt="House Session"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>House Session</h3>
+<h3>
+Legislative Appearance
+</h3>
 
-<p>Appearance during a legislative sitting at the Kogi State House of Assembly.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a legislative sitting
+and official House proceedings.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 3 -->
 
-<div class="gallery-card" data-category="official">
+<!-- PICTURE 3 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png"
-alt="Award Ceremony"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Award Presentation</h3>
+<h3>
+Award Appearance
+</h3>
 
-<p>Appearance during an official award and recognition ceremony.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during an official award
+and recognition ceremony.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 4 -->
 
-<div class="gallery-card" data-category="official">
+<!-- PICTURE 4 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png"
-alt="With Governor"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>With the Governor</h3>
+<h3>
+Official Government Engagement
+</h3>
 
-<p>Official appearance alongside the Governor of Kogi State.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during an official government
+engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 5 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 5 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png"
-alt="Addressing Women"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Engagement With Women</h3>
+<h3>
+Women Engagement
+</h3>
 
-<p>Appearance while addressing women during a public engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance while addressing women
+during a public engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 6 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 6 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png"
-alt="Interaction With Women"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Women Interaction</h3>
+<h3>
+Community Interaction
+</h3>
 
-<p>Appearance during an interaction with women and community members.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during interaction with women
+and community members.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 7 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 7 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
-alt="Miss Kogi Culture Ambassador"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Miss Kogi Culture Ambassador</h3>
+<h3>
+Miss Kogi Culture Ambassador
+</h3>
 
-<p>Appearance while presenting a gift at the Miss Kogi Culture Ambassador event.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance while presenting a gift at the
+Miss Kogi Culture Ambassador event.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 8 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 8 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/CsVXr0VD/IMG-20260905-WA0093.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during a community engagement programme.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community engagement
+programme.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 9 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 9 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/Lh0Fg3Tv/IMG-20260905-WA0051.jpg"
-alt="Community Activity"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Activity</h3>
+<h3>
+Community Activity
+</h3>
 
-<p>Appearance during a community-based activity.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community activity.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 10 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 10 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/ymTRt9KL/IMG-20260905-WA0119.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during interaction with members of the community.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during interaction with
+members of the community.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 11 -->
 
-<div class="gallery-card" data-category="official">
+<!-- PICTURE 11 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/HT9dP6g5/IMG-20260905-WA0070.jpg"
-alt="Public Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Public Engagement</h3>
+<h3>
+Public Engagement
+</h3>
 
-<p>Official appearance during a public engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during an official public
+engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 12 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 12 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/GQD6T13p/IMG-20260905-WA0083.jpg"
-alt="Community Event"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Event</h3>
+<h3>
+Community Event
+</h3>
 
-<p>Appearance at a community event.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance at a community event.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 13 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 13 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/S79xwFVR/IMG-20260905-WA0075.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during community interaction and engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during community interaction
+and engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 14 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 14 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/PGVhPBjx/IMG-20260905-WA0056.jpg"
-alt="Community Activity"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Activity</h3>
+<h3>
+Community Activity
+</h3>
 
-<p>Appearance during a community development activity.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community
+development activity.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 15 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 15 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/SXhMS96j/IMG-20260905-WA0063.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during engagement with community members.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during engagement with
+community members.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 16 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 16 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/673xHXYB/IMG-20260905-WA0105.jpg"
-alt="Community Event"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Event</h3>
+<h3>
+Community Event
+</h3>
 
-<p>Appearance at a community event and public gathering.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance at a community event
+and public gathering.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 17 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 17 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/ynMP0Nc2/IMG-20260905-WA0049.jpg"
-alt="Community Interaction"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Interaction</h3>
+<h3>
+Community Interaction
+</h3>
 
-<p>Appearance during interaction with members of the community.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during interaction with
+members of the community.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 18 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 18 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/rf2SwHpy/IMG-20260905-WA0102.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during a community engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community
+engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 19 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 19 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/S4LDLZxC/IMG-20260905-WA0095.jpg"
-alt="Community Programme"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Programme</h3>
+<h3>
+Community Programme
+</h3>
 
-<p>Appearance during a community programme.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community programme.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 20 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 20 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/m5wQYLxY/IMG-20260905-WA0064.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during an official community engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during an official community
+engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 21 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 21 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/9HMxMGpy/IMG-20260905-WA0087.jpg"
-alt="Community Event"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Event</h3>
+<h3>
+Community Event
+</h3>
 
-<p>Appearance at a community event.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance at a community event.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 22 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 22 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/9kn2MYX2/IMG-20260905-WA0055.jpg"
-alt="Community Activity"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Activity</h3>
+<h3>
+Community Activity
+</h3>
 
-<p>Appearance during a community activity.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community activity.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 23 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 23 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/mrckktG7/IMG-20260905-WA0062.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during community interaction.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during community interaction.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- 24 -->
 
-<div class="gallery-card" data-category="community">
+<!-- PICTURE 24 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/1GMM6rgd/IMG-20260905-WA0106.jpg"
-alt="Community Event"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Event</h3>
+<h3>
+Community Event
+</h3>
 
-<p>Appearance during a community event.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a community event.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 25 -->
 
-<div class="gallery-card" data-category="official">
+<!-- ==================================================
+     NEW PICTURE 25
+================================================== -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/6J7z48Bp/IMG-20260907-WA0021.jpg"
-alt="Official Appearance"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Official Appearance</h3>
+<h3>
+Official Appearance
+</h3>
 
-<p>Rt. Hon. Aliyu Umar Yusuf during an official public engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Official appearance during a public engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 26 -->
 
-<div class="gallery-card" data-category="official">
+<!-- NEW PICTURE 26 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/v4qM1C0B/IMG-20260907-WA0022.jpg"
-alt="Official Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Official Engagement</h3>
+<h3>
+Official Engagement
+</h3>
 
-<p>Appearance during an official engagement with stakeholders.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Official appearance during an engagement
+with stakeholders.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 27 -->
 
-<div class="gallery-card" data-category="community">
+<!-- NEW PICTURE 27 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/Z6KtR6Pg/IMG-20260907-WA0018.jpg"
-alt="Community Appearance"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Appearance</h3>
+<h3>
+Community Appearance
+</h3>
 
-<p>Appearance during interaction with members of the community.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during interaction with
+members of the community.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 28 -->
 
-<div class="gallery-card" data-category="official">
+<!-- NEW PICTURE 28 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/pjkcXv9q/IMG-20260907-WA0016.jpg"
-alt="Official Function"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Official Function</h3>
+<h3>
+Official Function
+</h3>
 
-<p>Appearance during an official function and public engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during an official function
+and public engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 29 -->
 
-<div class="gallery-card" data-category="community">
+<!-- NEW PICTURE 29 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/gb7MqGsx/IMG-20260905-WA0089.jpg"
-alt="Community Engagement"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Engagement</h3>
+<h3>
+Community Engagement
+</h3>
 
-<p>Appearance during a community engagement and interaction.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during community engagement
+and interaction.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 30 -->
 
-<div class="gallery-card" data-category="official">
+<!-- NEW PICTURE 30 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/Wv9pPK7L/IMG-20260907-WA0020.jpg"
-alt="Official Appearance"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Official Appearance</h3>
+<h3>
+Official Appearance
+</h3>
 
-<p>Rt. Hon. Aliyu Umar Yusuf during an official public appearance.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Official appearance during a public
+engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 31 -->
 
-<div class="gallery-card" data-category="official">
+<!-- NEW PICTURE 31 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="official">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/kgVYqRw1/IMG-20260906-WA0212.jpg"
-alt="Leadership Appearance"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Leadership Appearance</h3>
+<h3>
+Leadership Appearance
+</h3>
 
-<p>Appearance during a leadership and official engagement.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during a leadership and
+official engagement.
+</p>
 
 </div>
+
 </div>
 
 
-<!-- NEW 32 -->
 
-<div class="gallery-card" data-category="community">
+<!-- NEW PICTURE 32 -->
 
-<img class="gallery-image"
+<div class="gallery-card"
+data-category="community">
+
+<img
+class="gallery-image"
 src="https://i.ibb.co/hFgnZKLK/IMG-20260907-WA0013.jpg"
-alt="Community Appearance"
-onclick="openLightbox(this.src)">
+alt="Rt. Hon. Comfort Nwuchiola Ojomah Egwaba"
+onclick="openLightbox(this.src)"
+>
 
 <div class="caption">
 
-<h3>Community Appearance</h3>
+<h3>
+Community Appearance
+</h3>
 
-<p>Appearance during engagement with members of the public.</p>
+<div class="name">
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+</div>
+
+<p>
+Appearance during engagement with
+members of the public.
+</p>
 
 </div>
+
 </div>
 
 
@@ -1143,40 +1787,64 @@ onclick="openLightbox(this.src)">
 </section>
 
 
-<!-- LIGHTBOX -->
 
-<div class="lightbox"
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div
+class="lightbox"
 id="lightbox"
-onclick="closeLightbox(event)">
+onclick="closeLightbox(event)"
+>
 
-<span class="close-lightbox"
-onclick="closeLightbox()">
+<span
+class="close-lightbox"
+onclick="closeLightbox()"
+>
 &times;
 </span>
 
-<img id="lightbox-img" src="" alt="Gallery Image">
+<img
+id="lightbox-img"
+src=""
+alt="Gallery Image"
+>
 
 </div>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="footer-container">
 
+
 <div>
 
-<h3>Rt. Hon. Aliyu Umar Yusuf</h3>
+<h3>
+Kogi State House of Assembly
+</h3>
 
 <p>
-Speaker, Kogi State House of Assembly
-and Member Representing Lokoja II State Constituency.
+
+Official media gallery documenting
+public engagements, legislative
+activities and community appearances.
+
 </p>
 
 <p style="margin-top:12px;">
-This official media gallery documents public engagements,
-legislative activities and community interactions.
+
+Featuring the Speaker,
+Rt. Hon. Aliyu Umar Yusuf,
+and Deputy Speaker,
+Rt. Hon. Comfort Nwuchiola Ojomah Egwaba.
+
 </p>
 
 </div>
@@ -1184,15 +1852,41 @@ legislative activities and community interactions.
 
 <div>
 
-<h3>Quick Links</h3>
+<h3>
+Quick Links
+</h3>
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="biography.html">Biography</a></li>
-<li><a href="news.html">News</a></li>
-<li><a href="gallery.html">Gallery</a></li>
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a href="biography.html">
+Biography
+</a>
+</li>
+
+<li>
+<a href="news.html">
+News
+</a>
+</li>
+
+<li>
+<a href="gallery.html">
+Gallery
+</a>
+</li>
 
 </ul>
 
@@ -1201,25 +1895,47 @@ legislative activities and community interactions.
 
 <div>
 
-<h3>Explore</h3>
+<h3>
+Explore
+</h3>
 
 <ul>
 
-<li><a href="legislative.html">Legislative Activities</a></li>
-<li><a href="constituency.html">Constituency</a></li>
-<li><a href="office.html">Office</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li>
+<a href="legislative.html">
+Legislative Activities
+</a>
+</li>
+
+<li>
+<a href="constituency.html">
+Constituency
+</a>
+</li>
+
+<li>
+<a href="office.html">
+Office
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
 
 </ul>
 
 </div>
+
 
 </div>
 
 
 <div class="copyright">
 
-© 2026 Office of Rt. Hon. Aliyu Umar Yusuf.
+© 2026 Kogi State House of Assembly.
 All Rights Reserved.
 
 </div>
@@ -1227,9 +1943,13 @@ All Rights Reserved.
 </footer>
 
 
+
 <script>
 
-/* MOBILE MENU */
+
+/* =========================
+   MOBILE MENU
+========================= */
 
 function toggleMenu(){
 
@@ -1241,15 +1961,17 @@ function toggleMenu(){
 }
 
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
 
 function openLightbox(imageSrc){
 
     const lightbox =
-        document.getElementById("lightbox");
+    document.getElementById("lightbox");
 
     const image =
-        document.getElementById("lightbox-img");
+    document.getElementById("lightbox-img");
 
     image.src = imageSrc;
 
@@ -1263,7 +1985,9 @@ function closeLightbox(event){
     if(
         !event ||
         event.target.id === "lightbox" ||
-        event.target.classList.contains("close-lightbox")
+        event.target.classList.contains(
+            "close-lightbox"
+        )
     ){
 
         document
@@ -1275,9 +1999,13 @@ function closeLightbox(event){
 }
 
 
-/* ESCAPE KEY */
+/* =========================
+   ESCAPE KEY
+========================= */
 
-document.addEventListener("keydown",function(event){
+document.addEventListener(
+"keydown",
+function(event){
 
     if(event.key === "Escape"){
 
@@ -1290,39 +2018,59 @@ document.addEventListener("keydown",function(event){
 });
 
 
-/* FILTER */
+/* =========================
+   FILTER
+========================= */
 
-function filterGallery(category,button){
+function filterGallery(
+    category,
+    button
+){
 
     const cards =
-        document.querySelectorAll(".gallery-card");
+    document.querySelectorAll(
+        ".gallery-card"
+    );
 
     const buttons =
-        document.querySelectorAll(".filter-btn");
+    document.querySelectorAll(
+        ".filter-btn"
+    );
 
 
-    buttons.forEach(function(btn){
+    buttons.forEach(
+    function(btn){
 
-        btn.classList.remove("active");
+        btn.classList.remove(
+            "active"
+        );
 
     });
 
 
-    button.classList.add("active");
+    button.classList.add(
+        "active"
+    );
 
 
-    cards.forEach(function(card){
+    cards.forEach(
+    function(card){
 
         if(
             category === "all" ||
-            card.dataset.category === category
+            card.dataset.category ===
+            category
         ){
 
-            card.style.display = "block";
+            card.style.display =
+            "block";
 
-        }else{
+        }
 
-            card.style.display = "none";
+        else{
+
+            card.style.display =
+            "none";
 
         }
 
@@ -1330,92 +2078,9 @@ function filterGallery(category,button){
 
 }
 
-
-/* WHATSAPP */
-
-function shareWhatsApp(title,element){
-
-    const image =
-        element.closest(".gallery-card")
-        .querySelector(".gallery-image")
-        .src;
-
-    const text =
-        title +
-        "\n\nView this official gallery appearance:\n" +
-        image;
-
-    window.open(
-        "https://wa.me/?text=" +
-        encodeURIComponent(text),
-        "_blank"
-    );
-
-}
-
-
-/* FACEBOOK */
-
-function shareFacebook(element){
-
-    const image =
-        element.closest(".gallery-card")
-        .querySelector(".gallery-image")
-        .src;
-
-    window.open(
-        "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(image),
-        "_blank"
-    );
-
-}
-
-
-/* COPY LINK */
-
-function copyLink(element){
-
-    const image =
-        element.closest(".gallery-card")
-        .querySelector(".gallery-image")
-        .src;
-
-    if(
-        navigator.clipboard &&
-        window.isSecureContext
-    ){
-
-        navigator.clipboard
-        .writeText(image)
-        .then(function(){
-
-            alert("Image link copied!");
-
-        });
-
-    }else{
-
-        const temp =
-            document.createElement("textarea");
-
-        temp.value = image;
-
-        document.body.appendChild(temp);
-
-        temp.select();
-
-        document.execCommand("copy");
-
-        document.body.removeChild(temp);
-
-        alert("Image link copied!");
-
-    }
-
-}
-
 </script>
 
+
 </body>
+
 </html>
