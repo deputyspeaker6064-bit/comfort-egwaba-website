@@ -1,998 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Contact | Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+    </title>
 
     <meta name="description"
           content="Contact the Office of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba, Deputy Speaker of the Kogi State House of Assembly and Member Representing Ibaji Local Government Constituency.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
-
     <style>
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
-            font-family: "DM Sans", sans-serif;
-            background: #f7fbf6;
-            color: #173b2b;
-            line-height: 1.7;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8f5;
+            color: #183b2a;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         /* =========================
            HEADER
-        ========================= */
+        ========================== */
 
         header {
-            background: #003d27;
-            padding: 15px 5%;
+            background: #063d2a;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,.18);
         }
 
-        .logo {
+        .logo-area {
             display: flex;
             align-items: center;
             gap: 12px;
-            color: white;
-            text-decoration: none;
         }
 
-        .logo img {
-            width: 50px;
-            height: 50px;
+        .logo-area img {
+            width: 55px;
+            height: 55px;
             object-fit: contain;
         }
 
-        .logo-text {
-            font-size: 17px;
-            font-weight: 700;
-            line-height: 1.15;
+        .logo-text h2 {
+            font-size: 16px;
+            letter-spacing: 1px;
         }
 
-        .logo-text small {
-            display: block;
-            font-size: 9px;
-            color: #dce9e1;
-            margin-top: 4px;
-            letter-spacing: 1px;
+        .logo-text span {
+            font-size: 11px;
+            color: #d9b65d;
         }
 
         nav {
             display: flex;
-            align-items: center;
             gap: 22px;
+            align-items: center;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
             font-size: 14px;
-            font-weight: 600;
-            transition: .3s;
-            white-space: nowrap;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover,
         nav a.active {
-            color: #f2bd24;
+            color: #d9b65d;
         }
-
-        .contact-btn {
-            background: #f2bd24;
-            color: #102b20 !important;
-            padding: 11px 18px;
-            border-radius: 5px;
-        }
-
-        .contact-btn:hover {
-            background: #ffffff;
-            color: #003d27 !important;
-        }
-
-        /* =========================
-           MOBILE MENU
-        ========================= */
 
         .menu-btn {
             display: none;
-            background: transparent;
-            color: white;
-            border: 1px solid rgba(255,255,255,.5);
-            padding: 8px 12px;
-            font-size: 22px;
+            font-size: 28px;
             cursor: pointer;
-            border-radius: 4px;
         }
 
         /* =========================
            HERO
-        ========================= */
+        ========================== */
 
         .hero {
+            min-height: 330px;
+
             background:
                 linear-gradient(
-                    rgba(0,61,39,.91),
-                    rgba(0,61,39,.91)
+                    rgba(0, 61, 42, 0.82),
+                    rgba(0, 61, 42, 0.82)
                 ),
-                url("images/kogi-assembly.jpg") center/cover;
+                url("images/kogi-assembly.jpg");
 
-            padding: 100px 6%;
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
             color: white;
+            padding: 50px 20px;
         }
 
         .hero-content {
             max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .hero span {
-            color: #f2bd24;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 700;
-            font-size: 13px;
         }
 
         .hero h1 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(42px, 6vw, 68px);
-            line-height: 1.1;
-            margin: 12px 0 20px;
+            font-size: 45px;
+            margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 18px;
-            color: #e0ebe5;
-            max-width: 700px;
-            margin: auto;
+            color: #f4e3a9;
         }
 
         /* =========================
            CONTACT SECTION
-        ========================= */
+        ========================== */
 
         .contact-section {
             max-width: 1150px;
-            margin: auto;
-            padding: 80px 6%;
+            margin: 70px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #063d2a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .contact-grid {
             display: grid;
-            grid-template-columns: 38% 62%;
-            gap: 50px;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 35px;
         }
 
         /* =========================
            CONTACT INFORMATION
-        ========================= */
+        ========================== */
 
-        .contact-info h2,
-        .contact-form h2 {
-            font-family: "Playfair Display", serif;
-            color: #003d27;
-            font-size: 35px;
-            margin-bottom: 15px;
+        .contact-info {
+            background: #063d2a;
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
-        .gold-line {
-            width: 65px;
-            height: 4px;
-            background: #f2bd24;
-            margin-bottom: 25px;
-        }
-
-        .contact-info > p {
-            color: #5e7168;
-            margin-bottom: 30px;
-        }
-
-        .info-box {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-            padding: 18px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.06);
-            transition: .3s;
-        }
-
-        .info-box:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,.10);
-        }
-
-        .info-icon {
+        .contact-info h3 {
+            color: #d9b65d;
             font-size: 25px;
-            min-width: 35px;
+            margin-bottom: 20px;
         }
 
-        .info-box h3 {
-            color: #003d27;
-            margin-bottom: 3px;
+        .info-item {
+            margin-bottom: 25px;
         }
 
-        .info-box p {
-            color: #65776e;
-            font-size: 14px;
+        .info-item strong {
+            display: block;
+            color: #d9b65d;
+            margin-bottom: 5px;
         }
 
-        .info-box a {
-            color: #0c8051;
-            text-decoration: none;
-            font-weight: 600;
+        .info-item a {
+            color: white;
             word-break: break-word;
         }
 
-        .info-box a:hover {
-            color: #003d27;
-            text-decoration: underline;
+        .info-item a:hover {
+            color: #d9b65d;
+        }
+
+        .quick-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .quick-buttons a {
+            padding: 12px 18px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .email-btn {
+            background: #d9b65d;
+            color: #063d2a !important;
+        }
+
+        .call-btn {
+            border: 1px solid #d9b65d;
+            color: white !important;
+        }
+
+        .call-btn:hover {
+            background: #d9b65d;
+            color: #063d2a !important;
         }
 
         /* =========================
-           CONTACT FORM
-        ========================= */
+           FORM
+        ========================== */
 
         .contact-form {
             background: white;
             padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 10px 35px rgba(0,0,0,.08);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
-        label {
+        .contact-form h3 {
+            color: #063d2a;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .form-intro {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
             display: block;
-            font-weight: 700;
-            margin: 18px 0 7px;
-            color: #173b2b;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #183b2a;
         }
 
-        input,
-        textarea,
-        select {
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 14px;
-            border: 1px solid #d0d8d3;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 15px;
+            padding: 13px 14px;
+            border: 1px solid #d8dfda;
+            border-radius: 7px;
             outline: none;
-            background: #fff;
-            transition: .3s;
+            font-size: 15px;
+            font-family: inherit;
+            transition: 0.3s;
         }
 
-        input:focus,
-        textarea:focus,
-        select:focus {
-            border-color: #0c8051;
-            box-shadow: 0 0 0 3px rgba(12,128,81,.08);
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #063d2a;
+            box-shadow: 0 0 0 3px rgba(6,61,42,0.08);
         }
 
-        textarea {
-            min-height: 170px;
+        .form-group textarea {
+            min-height: 150px;
             resize: vertical;
         }
 
         .submit-btn {
             width: 100%;
-            margin-top: 25px;
-            padding: 15px;
             border: none;
-            border-radius: 5px;
-            background: #f2bd24;
-            color: #082d20;
-            font-weight: 700;
+            padding: 15px;
+            background: #063d2a;
+            color: white;
+            border-radius: 7px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            transition: .3s;
+            transition: 0.3s;
         }
 
         .submit-btn:hover {
-            background: #003d27;
-            color: white;
+            background: #09583e;
         }
 
-        .success {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            background: #e7f7e9;
-            color: #176b2f;
-            font-weight: 600;
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .form-note {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #777;
             text-align: center;
         }
 
         /* =========================
-           QUICK CONTACT BUTTONS
-        ========================= */
+           SUCCESS MESSAGE
+        ========================== */
 
-        .quick-contact {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
+        .success-message {
+            display: none;
+            background: #e7f7ed;
+            color: #176b3b;
+            border: 1px solid #9bd2ae;
+            padding: 15px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
         }
 
-        .quick-contact a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 14px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 700;
-            background: #edf7f0;
-            color: #08784c;
-            transition: .3s;
+        .error-message {
+            display: none;
+            background: #fff0f0;
+            color: #a12626;
+            border: 1px solid #e3aaaa;
+            padding: 15px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
         }
 
-        .quick-contact a:hover {
-            background: #003d27;
-            color: white;
+        /* =========================
+           OFFICE CARD
+        ========================== */
+
+        .office-section {
+            max-width: 1150px;
+            margin: 0 auto 70px;
+            padding: 0 20px;
+        }
+
+        .office-card {
+            background: #e7f1eb;
+            border-left: 5px solid #d9b65d;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .office-card h3 {
+            color: #063d2a;
+            margin-bottom: 10px;
         }
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
-            background: #002d20;
+            background: #03291d;
             color: white;
-            padding: 45px 6% 25px;
+            padding: 45px 20px 20px;
         }
 
-        .footer-content {
-            max-width: 1200px;
+        .footer-container {
+            max-width: 1150px;
             margin: auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
+
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 35px;
         }
 
-        .footer-brand {
-            max-width: 550px;
+        footer h3 {
+            color: #d9b65d;
+            margin-bottom: 15px;
         }
 
-        .footer-brand h3 {
-            font-family: "Playfair Display", serif;
-            font-size: 23px;
-            margin-bottom: 8px;
-        }
-
-        .footer-brand p {
-            color: #b9ccc2;
-        }
-
-        .footer-contact {
-            margin-top: 15px;
-        }
-
-        .footer-contact a {
-            display: block;
-            color: #d8e6df;
-            text-decoration: none;
-            margin-bottom: 7px;
-            font-size: 13px;
-        }
-
-        .footer-contact a:hover {
-            color: #f2bd24;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 22px;
-            flex-wrap: wrap;
-            align-content: flex-start;
+        footer p {
+            color: #d6dfda;
+            font-size: 14px;
         }
 
         .footer-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 13px;
+            display: block;
+            margin-bottom: 8px;
+            color: #d6dfda;
+            font-size: 14px;
         }
 
         .footer-links a:hover {
-            color: #f2bd24;
+            color: #d9b65d;
         }
 
         .copyright {
-            max-width: 1200px;
+            max-width: 1150px;
             margin: 35px auto 0;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,.15);
-            color: #a9bdb3;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
             font-size: 13px;
+            color: #aaa;
         }
 
         /* =========================
            MOBILE
-        ========================= */
+        ========================== */
 
-        @media (max-width: 950px) {
-
-            .menu-btn {
-                display: block;
-            }
+        @media (max-width: 850px) {
 
             nav {
                 display: none;
                 position: absolute;
-                top: 80px;
+                top: 82px;
                 left: 0;
-                right: 0;
-                background: #003d27;
-                padding: 20px 5%;
+                width: 100%;
+                background: #063d2a;
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 0;
-                box-shadow: 0 10px 25px rgba(0,0,0,.25);
+                padding: 20px;
+                gap: 18px;
             }
 
             nav.show {
                 display: flex;
             }
 
-            nav a {
-                width: 100%;
-                padding: 13px 5px;
-                border-bottom: 1px solid rgba(255,255,255,.1);
-            }
-
-            .contact-btn {
-                text-align: center;
-                margin-top: 10px;
-                border-bottom: none;
-            }
-
-            .contact-section {
-                grid-template-columns: 1fr;
-                padding-top: 55px;
-            }
-
-            .contact-info {
-                max-width: 650px;
-                margin: auto;
-            }
-
-            .contact-form {
-                max-width: 700px;
-                margin: auto;
-            }
-
-            .footer-content {
-                flex-direction: column;
-            }
-
-            .footer-links {
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            header {
-                padding: 12px 5%;
-            }
-
-            .logo img {
-                width: 43px;
-                height: 43px;
-            }
-
-            .logo-text {
-                font-size: 12px;
-            }
-
-            .logo-text small {
-                font-size: 7px;
-            }
-
-            .hero {
-                padding: 75px 6%;
+            .menu-btn {
+                display: block;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 32px;
             }
 
             .hero p {
-                font-size: 15px;
+                font-size: 16px;
             }
 
-            .contact-section {
-                padding: 55px 5%;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
 
-            .contact-info h2,
-            .contact-form h2 {
-                font-size: 30px;
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .header-container {
+                padding: 12px 15px;
             }
 
+            .logo-text h2 {
+                font-size: 12px;
+            }
+
+            .logo-text span {
+                font-size: 8px;
+            }
+
+            .logo-area img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .hero {
+                min-height: 280px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .contact-info,
             .contact-form {
-                padding: 25px 20px;
+                padding: 25px;
             }
 
-            .info-box {
-                padding: 15px;
+            .section-title h2 {
+                font-size: 28px;
             }
 
-            .footer-content {
-                gap: 30px;
-            }
         }
 
     </style>
 
 </head>
 
+
 <body>
 
 
 <!-- =========================
      HEADER
-========================= -->
+========================== -->
 
 <header>
 
-    <a href="index.html" class="logo">
+    <div class="header-container">
 
-        <img
-            src="images/kogi-logo.png"
-            alt="Kogi State House of Assembly"
-        >
+        <a href="index.html"
+           class="logo-area">
 
-        <div class="logo-text">
+            <img src="images/kogi-logo.png"
+                 alt="Kogi State House of Assembly Logo">
 
-            KOGI STATE HOUSE<br>
-            OF ASSEMBLY
+            <div class="logo-text">
 
-            <small>
-                OFFICIAL WEBSITE
-            </small>
+                <h2>
+                    KOGI STATE HOUSE OF ASSEMBLY
+                </h2>
 
-        </div>
-
-    </a>
-
-
-    <button
-        class="menu-btn"
-        onclick="toggleMenu()"
-        aria-label="Open navigation menu"
-    >
-        ☰
-    </button>
-
-
-    <nav id="mainNav">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            Biography
-        </a>
-
-        <a href="office.html">
-            Office
-        </a>
-
-        <a href="legislative.html">
-            Legislative Activities
-        </a>
-
-        <a href="constituency.html">
-            Constituency
-        </a>
-
-        <a href="news.html">
-            News
-        </a>
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-        <a
-            href="contact.html"
-            class="active contact-btn"
-        >
-            Contact
-        </a>
-
-    </nav>
-
-</header>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <span>
-            Get In Touch
-        </span>
-
-        <h1>
-            Contact the Office
-        </h1>
-
-        <p>
-            We welcome your questions, suggestions, enquiries
-            and messages from citizens and stakeholders.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT SECTION
-========================= -->
-
-<section class="contact-section">
-
-
-    <!-- CONTACT INFORMATION -->
-
-    <div class="contact-info">
-
-        <h2>
-            Contact Information
-        </h2>
-
-        <div class="gold-line"></div>
-
-        <p>
-            Please use the contact form to send a message to the
-            office. You can also use the official contact
-            information below.
-        </p>
-
-
-        <!-- OFFICE -->
-
-        <div class="info-box">
-
-            <div class="info-icon">
-                📍
-            </div>
-
-            <div>
-
-                <h3>
-                    Office
-                </h3>
-
-                <p>
-                    Kogi State House of Assembly,<br>
-                    Lokoja, Kogi State,<br>
-                    Nigeria.
-                </p>
+                <span>
+                    OFFICE OF THE DEPUTY SPEAKER
+                </span>
 
             </div>
+
+        </a>
+
+
+        <div class="menu-btn"
+             onclick="toggleMenu()">
+
+            ☰
 
         </div>
 
 
-        <!-- EMAIL -->
-
-        <div class="info-box">
-
-            <div class="info-icon">
-                ✉️
-            </div>
-
-            <div>
-
-                <h3>
-                    Email
-                </h3>
-
-                <p>
-
-                    <a
-                        href="mailto:comfortojomanwuchiolaegwaba@gmail.com"
-                    >
-                        comfortojomanwuchiolaegwaba@gmail.com
-                    </a>
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- TELEPHONE -->
-
-        <div class="info-box">
-
-            <div class="info-icon">
-                📞
-            </div>
-
-            <div>
-
-                <h3>
-                    Telephone
-                </h3>
-
-                <p>
-
-                    <a
-                        href="tel:+2348064963258"
-                    >
-                        +234 806 496 3258
-                    </a>
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- OFFICE HOURS -->
-
-        <div class="info-box">
-
-            <div class="info-icon">
-                🕐
-            </div>
-
-            <div>
-
-                <h3>
-                    Office Hours
-                </h3>
-
-                <p>
-                    Monday – Friday<br>
-                    8:00 AM – 4:00 PM
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- QUICK CONTACT -->
-
-        <div class="quick-contact">
-
-            <a
-                href="mailto:comfortojomanwuchiolaegwaba@gmail.com"
-            >
-                ✉️ Send Email
-            </a>
-
-            <a
-                href="tel:+2348064963258"
-            >
-                📞 Call Office
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- =========================
-         CONTACT FORM
-    ========================= -->
-
-    <div class="contact-form">
-
-        <h2>
-            Send a Message
-        </h2>
-
-        <div class="gold-line"></div>
-
-
-        <form id="contactForm">
-
-
-            <!-- NAME -->
-
-            <label for="name">
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your full name"
-                required
-            >
-
-
-            <!-- EMAIL -->
-
-            <label for="email">
-                Email Address
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
-                required
-            >
-
-
-            <!-- PHONE -->
-
-            <label for="phone">
-                Phone Number
-            </label>
-
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
-            >
-
-
-            <!-- SUBJECT -->
-
-            <label for="subject">
-                Subject
-            </label>
-
-            <select
-                id="subject"
-                name="subject"
-                required
-            >
-
-                <option value="">
-                    Select a subject
-                </option>
-
-                <option value="General Enquiry">
-                    General Enquiry
-                </option>
-
-                <option value="Constituency Matter">
-                    Constituency Matter
-                </option>
-
-                <option value="Legislative Matter">
-                    Legislative Matter
-                </option>
-
-                <option value="Invitation">
-                    Invitation
-                </option>
-
-                <option value="Other">
-                    Other
-                </option>
-
-            </select>
-
-
-            <!-- MESSAGE -->
-
-            <label for="message">
-                Message
-            </label>
-
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message here..."
-                required
-            ></textarea>
-
-
-            <button
-                type="submit"
-                class="submit-btn"
-            >
-                Send Message
-            </button>
-
-        </form>
-
-
-        <div
-            class="success"
-            id="successMessage"
-        >
-            Thank you. Your message has been received successfully.
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <div class="footer-content">
-
-
-        <div class="footer-brand">
-
-            <h3>
-                Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
-            </h3>
-
-            <p>
-                Deputy Speaker, Kogi State House of Assembly
-                and Member Representing Ibaji Local Government
-                Constituency.
-            </p>
-
-
-            <div class="footer-contact">
-
-                <a
-                    href="mailto:comfortojomanwuchiolaegwaba@gmail.com"
-                >
-                    ✉️
-                    comfortojomanwuchiolaegwaba@gmail.com
-                </a>
-
-                <a
-                    href="tel:+2348064963258"
-                >
-                    📞
-                    +234 806 496 3258
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-links">
+        <nav id="mainNav">
 
             <a href="index.html">
                 Home
             </a>
 
-            <a href="about.html">
+            <a href="biography.html">
                 Biography
             </a>
 
@@ -1016,13 +584,476 @@
                 Gallery
             </a>
 
-            <a href="contact.html">
+            <a href="contact.html"
+               class="active">
                 Contact
             </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Contact the Office
+        </h1>
+
+        <p>
+            Connect with the Office of Rt. Hon.
+            Comfort Nwuchiola Ojomah Egwaba
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT SECTION
+========================== -->
+
+<section class="contact-section">
+
+
+    <div class="section-title">
+
+        <h2>
+            Get in Touch
+        </h2>
+
+        <p>
+            For official enquiries, constituency matters,
+            legislative concerns and other correspondence,
+            kindly contact the office.
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-grid">
+
+
+        <!-- =========================
+             CONTACT INFORMATION
+        ========================== -->
+
+        <div class="contact-info">
+
+            <h3>
+                Office Information
+            </h3>
+
+
+            <div class="info-item">
+
+                <strong>
+                    Office
+                </strong>
+
+                <span>
+                    Kogi State House of Assembly,
+                    Lokoja, Kogi State, Nigeria.
+                </span>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    Email
+                </strong>
+
+                <a href="mailto:comfortojomanwuchiolaegwaba@gmail.com">
+
+                    comfortojomanwuchiolaegwaba@gmail.com
+
+                </a>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    Telephone
+                </strong>
+
+                <a href="tel:+2348064963258">
+
+                    +234 806 496 3258
+
+                </a>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <strong>
+                    Office Hours
+                </strong>
+
+                <span>
+                    Monday – Friday<br>
+                    8:00 AM – 4:00 PM
+                </span>
+
+            </div>
+
+
+            <div class="quick-buttons">
+
+                <a
+                    class="email-btn"
+                    href="mailto:comfortojomanwuchiolaegwaba@gmail.com">
+
+                    ✉ Send Email
+
+                </a>
+
+
+                <a
+                    class="call-btn"
+                    href="tel:+2348064963258">
+
+                    ☎ Call Office
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             CONTACT FORM
+        ========================== -->
+
+        <div class="contact-form">
+
+            <h3>
+                Send a Message
+            </h3>
+
+            <p class="form-intro">
+
+                Fill in the form below and your message
+                will be sent to the office.
+
+            </p>
+
+
+            <div
+                id="successMessage"
+                class="success-message">
+
+                ✓ Your message has been sent successfully.
+                Thank you for contacting the office.
+
+            </div>
+
+
+            <div
+                id="errorMessage"
+                class="error-message">
+
+                ✕ There was a problem sending your message.
+                Please try again.
+
+            </div>
+
+
+            <!--
+                YOUR REAL FORMSPREE ENDPOINT
+            -->
+
+            <form
+                id="contactForm"
+                action="https://formspree.io/f/xdeowbge"
+                method="POST">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What is your message about?"
+                        required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                </div>
+
+
+                <!--
+                    Allows the office to reply directly
+                    to the visitor's email.
+                -->
+
+                <input
+                    type="hidden"
+                    name="_replyto"
+                    id="_replyto">
+
+
+                <!--
+                    Email subject
+                -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Message from Official Website">
+
+
+                <!--
+                    Anti-spam honeypot
+                -->
+
+                <input
+                    type="text"
+                    name="_gotcha"
+                    tabindex="-1"
+                    autocomplete="off"
+                    style="display:none;">
+
+
+                <button
+                    type="submit"
+                    id="submitButton"
+                    class="submit-btn">
+
+                    Send Message
+
+                </button>
+
+
+                <p class="form-note">
+
+                    Your message is securely processed
+                    through Formspree.
+
+                </p>
+
+            </form>
 
         </div>
 
     </div>
+
+</section>
+
+
+
+<!-- =========================
+     OFFICE ADDRESS
+========================== -->
+
+<section class="office-section">
+
+    <div class="office-card">
+
+        <h3>
+            Official Office Address
+        </h3>
+
+        <p>
+
+            Office of Rt. Hon. Comfort Nwuchiola Ojomah Egwaba,
+            Deputy Speaker, Kogi State House of Assembly,
+            Kogi State House of Assembly Complex,
+            Lokoja, Kogi State, Nigeria.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+
+        <div>
+
+            <h3>
+                Rt. Hon. Comfort Nwuchiola Ojomah Egwaba
+            </h3>
+
+            <p>
+
+                Deputy Speaker,
+                Kogi State House of Assembly and
+                Member Representing Ibaji Local Government Constituency.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="biography.html">
+                Biography
+            </a>
+
+            <a href="office.html">
+                Office
+            </a>
+
+            <a href="legislative.html">
+                Legislative Activities
+            </a>
+
+            <a href="constituency.html">
+                Constituency
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                ✉
+                comfortojomanwuchiolaegwaba@gmail.com
+            </p>
+
+            <br>
+
+            <p>
+                ☎
+                +234 806 496 3258
+            </p>
+
+            <br>
+
+            <p>
+                Kogi State House of Assembly,
+                Lokoja, Kogi State, Nigeria.
+            </p>
+
+        </div>
+
+    </div>
+
 
 
     <div class="copyright">
@@ -1035,16 +1066,14 @@
 </footer>
 
 
+
 <!-- =========================
      JAVASCRIPT
-========================= -->
+========================== -->
 
 <script>
 
-
-    /* =========================
-       MOBILE MENU
-    ========================= */
+    /* MOBILE MENU */
 
     function toggleMenu() {
 
@@ -1056,134 +1085,109 @@
     }
 
 
-    /* CLOSE MOBILE MENU
-       WHEN A LINK IS CLICKED
-    */
-
-    document
-        .querySelectorAll("#mainNav a")
-        .forEach(function(link) {
-
-            link.addEventListener(
-                "click",
-                function() {
-
-                    document
-                        .getElementById("mainNav")
-                        .classList
-                        .remove("show");
-
-                }
-            );
-
-        });
-
-
-    /* =========================
-       CONTACT FORM
-    ========================= */
+    /* CONTACT FORM */
 
     const contactForm =
         document.getElementById("contactForm");
 
+    const emailInput =
+        document.getElementById("email");
+
+    const replyTo =
+        document.getElementById("_replyto");
+
+    const submitButton =
+        document.getElementById("submitButton");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+    const errorMessage =
+        document.getElementById("errorMessage");
+
 
     contactForm.addEventListener(
         "submit",
-        function(event) {
+        async function(event) {
 
             event.preventDefault();
 
 
-            const message = {
+            /* Hide previous messages */
 
-                id: Date.now(),
+            successMessage.style.display = "none";
 
-                name:
-                    document
-                        .getElementById("name")
-                        .value
-                        .trim(),
-
-                email:
-                    document
-                        .getElementById("email")
-                        .value
-                        .trim(),
-
-                phone:
-                    document
-                        .getElementById("phone")
-                        .value
-                        .trim(),
-
-                subject:
-                    document
-                        .getElementById("subject")
-                        .value,
-
-                message:
-                    document
-                        .getElementById("message")
-                        .value
-                        .trim(),
-
-                date:
-                    new Date()
-                        .toLocaleString()
-
-            };
+            errorMessage.style.display = "none";
 
 
-            /* GET EXISTING MESSAGES */
+            /* Put visitor email into reply-to */
 
-            let messages =
-                JSON.parse(
-                    localStorage.getItem(
-                        "contactMessages"
-                    ) || "[]"
-                );
+            replyTo.value =
+                emailInput.value;
 
 
-            /* ADD NEW MESSAGE */
+            /* Disable button while sending */
 
-            messages.unshift(message);
+            submitButton.disabled = true;
 
-
-            /* SAVE MESSAGE */
-
-            localStorage.setItem(
-                "contactMessages",
-                JSON.stringify(messages)
-            );
+            submitButton.textContent =
+                "Sending Message...";
 
 
-            /* RESET FORM */
+            try {
 
-            contactForm.reset();
+                const response =
+                    await fetch(
+                        contactForm.action,
+                        {
+                            method: "POST",
+
+                            body:
+                                new FormData(contactForm),
+
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            }
+                        }
+                    );
 
 
-            /* SHOW SUCCESS MESSAGE */
+                if (response.ok) {
 
-            const success =
-                document.getElementById(
-                    "successMessage"
-                );
+                    successMessage.style.display =
+                        "block";
+
+                    contactForm.reset();
+
+                    window.scrollTo({
+                        top:
+                            contactForm.offsetTop - 150,
+                        behavior:
+                            "smooth"
+                    });
+
+                } else {
+
+                    errorMessage.style.display =
+                        "block";
+
+                }
+
+            } catch (error) {
+
+                errorMessage.style.display =
+                    "block";
+
+            }
 
 
-            success.style.display = "block";
+            /* Restore button */
 
+            submitButton.disabled = false;
 
-            /* HIDE AFTER 5 SECONDS */
-
-            setTimeout(
-                function() {
-
-                    success.style.display =
-                        "none";
-
-                },
-                5000
-            );
+            submitButton.textContent =
+                "Send Message";
 
         }
     );
@@ -1192,4 +1196,5 @@
 
 
 </body>
+
 </html>
