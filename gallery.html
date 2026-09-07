@@ -2,2122 +2,1248 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Media Gallery | Rt. Hon. Aliyu Umar Yusuf
-    </title>
-
-    <meta name="description"
-          content="Official media gallery of Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly and Member Representing Lokoja II State Constituency.">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7f6;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: #003d27;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 1.3;
-        }
-
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #f2bd24;
-            color: #003d27;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 18px;
-            align-items: center;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #f2bd24;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 390px;
-
-            background:
-                linear-gradient(
-                    rgba(0,61,39,0.82),
-                    rgba(0,61,39,0.82)
-                ),
-                url("https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png");
-
-            background-size: cover;
-            background-position: center;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-            color: white;
-            padding: 50px 20px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #f2bd24;
-        }
-
-        .gold-line {
-            width: 90px;
-            height: 4px;
-            background: #f2bd24;
-            margin: 0 auto 20px;
-            border-radius: 5px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 760px;
-            margin: auto;
-        }
-
-
-        /* =========================
-           INTRODUCTION
-        ========================= */
-
-        .intro {
-            max-width: 1000px;
-            margin: 60px auto 35px;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .intro h2 {
-            color: #003d27;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .intro p {
-            color: #555;
-            font-size: 16px;
-        }
-
-
-        /* =========================
-           FILTERS
-        ========================= */
-
-        .filters {
-            text-align: center;
-            margin: 25px auto 40px;
-            padding: 0 15px;
-        }
-
-        .filter-btn {
-            border: none;
-            background: #003d27;
-            color: white;
-            padding: 11px 18px;
-            margin: 5px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #f2bd24;
-            color: #003d27;
-        }
-
-
-        /* =========================
-           GALLERY
-        ========================= */
-
-        .gallery-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px 70px;
-
-            display: grid;
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .gallery-card {
-            background: white;
-            border-radius: 14px;
-            overflow: hidden;
-
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.08);
-
-            transition: 0.3s;
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .gallery-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .gallery-card img:hover {
-            opacity: 0.92;
-        }
-
-        .gallery-info {
-            padding: 18px;
-        }
-
-        .gallery-category {
-            display: inline-block;
-
-            background: #e8f3ee;
-            color: #003d27;
-
-            padding: 5px 10px;
-            border-radius: 15px;
-
-            font-size: 12px;
-            font-weight: bold;
-
-            margin-bottom: 10px;
-        }
-
-        .gallery-info h3 {
-            color: #003d27;
-            font-size: 17px;
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================
-           SHARE BUTTONS
-        ========================= */
-
-        .share-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 7px;
-        }
-
-        .share-buttons button {
-            border: none;
-            padding: 8px 10px;
-            border-radius: 6px;
-            cursor: pointer;
-
-            background: #003d27;
-            color: white;
-
-            font-size: 11px;
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-        .share-buttons button:hover {
-            background: #f2bd24;
-            color: #003d27;
-        }
-
-
-        /* =========================
-           LIGHTBOX
-        ========================= */
-
-        .lightbox {
-            display: none;
-
-            position: fixed;
-            inset: 0;
-
-            background:
-                rgba(0,0,0,0.93);
-
-            z-index: 2000;
-
-            align-items: center;
-            justify-content: center;
-
-            padding: 25px;
-        }
-
-        .lightbox img {
-            max-width: 95%;
-            max-height: 90vh;
-
-            border-radius: 8px;
-
-            object-fit: contain;
-        }
-
-        .close-lightbox {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-
-            color: white;
-            font-size: 45px;
-
-            cursor: pointer;
-            z-index: 2100;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #003d27;
-            color: white;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: auto;
-
-            padding: 55px 20px;
-
-            display: grid;
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 40px;
-        }
-
-        .footer-box h3 {
-            color: #f2bd24;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        .footer-box p {
-            color: #ddd;
-            font-size: 14px;
-        }
-
-        .footer-box ul {
-            list-style: none;
-        }
-
-        .footer-box ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-box ul li a {
-            color: #ddd;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer-box ul li a:hover {
-            color: #f2bd24;
-        }
-
-        .copyright {
-            text-align: center;
-
-            border-top:
-                1px solid rgba(255,255,255,0.15);
-
-            padding: 20px;
-
-            color: #ccc;
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           TABLET
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            nav {
-                display: none;
-
-                position: absolute;
-                top: 78px;
-                left: 0;
-                width: 100%;
-
-                background: #003d27;
-
-                padding: 20px;
-            }
-
-            nav.show {
-                display: block;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .gallery-container {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .footer-container {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 650px) {
-
-            .header-container {
-                padding: 12px 15px;
-            }
-
-            .logo {
-                font-size: 12px;
-            }
-
-            .logo-icon {
-                width: 42px;
-                height: 42px;
-                font-size: 14px;
-            }
-
-            nav {
-                top: 66px;
-            }
-
-            .hero {
-                min-height: 320px;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .intro h2 {
-                font-size: 27px;
-            }
-
-            .gallery-container {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-card img {
-                height: 300px;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-
-            .share-buttons button {
-                font-size: 10px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Media Gallery | Rt. Hon. Aliyu Umar Yusuf</title>
+
+<meta name="description"
+content="Official media gallery of Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly and Member Representing Lokoja II State Constituency.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7f6;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#003d27;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,0.2);
+}
+
+.header-container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#f2bd24;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:18px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#f2bd24;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:420px;
+    background:
+        linear-gradient(rgba(0,45,30,0.78),rgba(0,45,30,0.78)),
+        url("https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png")
+        center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:750px;
+    margin:auto;
+}
+
+.gold-line{
+    width:80px;
+    height:4px;
+    background:#f2bd24;
+    margin:20px auto;
+}
+
+/* INTRO */
+
+.intro{
+    max-width:1000px;
+    margin:45px auto 25px;
+    padding:0 20px;
+    text-align:center;
+}
+
+.intro h2{
+    color:#003d27;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.intro p{
+    color:#555;
+    font-size:16px;
+}
+
+/* FILTERS */
+
+.filters{
+    text-align:center;
+    margin:30px 15px;
+}
+
+.filter-btn{
+    border:none;
+    background:white;
+    color:#003d27;
+    border:1px solid #003d27;
+    padding:10px 18px;
+    margin:5px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#003d27;
+    color:white;
+}
+
+/* GALLERY */
+
+.gallery-container{
+    max-width:1200px;
+    margin:30px auto 70px;
+    padding:0 20px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.10);
+    transition:0.3s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 22px rgba(0,0,0,0.15);
+}
+
+.gallery-image{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+    cursor:pointer;
+}
+
+.caption{
+    padding:15px;
+}
+
+.caption h3{
+    color:#003d27;
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.caption p{
+    color:#666;
+    font-size:13px;
+}
+
+/* SHARE BUTTONS */
+
+.share-buttons{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:12px;
+}
+
+.share-btn{
+    border:none;
+    padding:7px 10px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.facebook{
+    background:#1877F2;
+    color:white;
+}
+
+.copy{
+    background:#003d27;
+    color:white;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.92);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    border-radius:10px;
+    object-fit:contain;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#003d27;
+    color:white;
+    padding:45px 20px 20px;
+}
+
+.footer-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:35px;
+}
+
+footer h3{
+    color:#f2bd24;
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#ddd;
+    font-size:14px;
+}
+
+footer a{
+    text-decoration:none;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:8px;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.2);
+    margin-top:30px;
+    padding-top:20px;
+    color:#ccc;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:65px;
+        left:0;
+        width:100%;
+        background:#003d27;
+    }
+
+    nav.show{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+        gap:0;
+    }
+
+    nav ul li{
+        border-bottom:1px solid rgba(255,255,255,0.15);
+    }
+
+    nav ul li a{
+        display:block;
+        padding:12px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-image{
+        height:280px;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
-    <div class="header-container">
+<div class="header-container">
 
-        <div class="logo">
+<div class="logo">
+KA KOGI STATE <span>HOUSE OF ASSEMBLY</span>
+</div>
 
-            <div class="logo-icon">
-                KA
-            </div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-            <div>
-                KOGI STATE HOUSE<br>
-                OF ASSEMBLY
-            </div>
+<nav id="navMenu">
 
-        </div>
+<ul>
 
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="biography.html">Biography</a></li>
+<li><a href="office.html">Office</a></li>
+<li><a href="legislative.html">Legislative Activities</a></li>
+<li><a href="constituency.html">Constituency</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="gallery.html">Media Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-        <div class="menu-toggle"
-             onclick="toggleMenu()">
+</ul>
 
-            ☰
+</nav>
 
-        </div>
-
-
-        <nav id="navigation">
-
-            <ul>
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="biography.html">
-                        Biography
-                    </a>
-                </li>
-
-                <li>
-                    <a href="office.html">
-                        Office
-                    </a>
-                </li>
-
-                <li>
-                    <a href="legislative.html">
-                        Legislative Activities
-                    </a>
-                </li>
-
-                <li>
-                    <a href="constituency.html">
-                        Constituency
-                    </a>
-                </li>
-
-                <li>
-                    <a href="news.html">
-                        News
-                    </a>
-                </li>
-
-                <li>
-                    <a href="gallery.html">
-                        Media Gallery
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </div>
+</div>
 
 </header>
 
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>
-            Media <span>Gallery</span>
-        </h1>
+<h1>Media Gallery</h1>
 
-        <div class="gold-line"></div>
+<div class="gold-line"></div>
 
-        <p>
-            A collection of official engagements,
-            legislative activities, community interactions
-            and memorable moments of Rt. Hon. Aliyu Umar Yusuf,
-            Speaker of the Kogi State House of Assembly.
-        </p>
+<p>
+A collection of official engagements, legislative activities,
+community interactions and memorable moments of
+Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly.
+</p>
 
-    </div>
+</div>
 
 </section>
 
 
-
-<!-- =========================
-     INTRO
-========================= -->
+<!-- INTRO -->
 
 <section class="intro">
 
-    <h2>
-        Official Media Gallery
-    </h2>
+<h2>Official Gallery</h2>
 
-    <p>
-        Explore photographs documenting the official duties,
-        legislative activities, public engagements and
-        service of Rt. Hon. Aliyu Umar Yusuf,
-        Speaker of the Kogi State House of Assembly
-        and Member Representing Lokoja II State Constituency.
-    </p>
+<p>
+Explore photographs documenting official duties, legislative activities,
+public engagements, community interactions and moments of service
+by Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly
+and Member Representing Lokoja II State Constituency.
+</p>
 
 </section>
 
 
-
-<!-- =========================
-     FILTERS
-========================= -->
+<!-- FILTERS -->
 
 <div class="filters">
 
-    <button class="filter-btn active"
-            onclick="filterGallery('all', this)">
-        All
-    </button>
+<button class="filter-btn active"
+onclick="filterGallery('all',this)">
+All
+</button>
 
-    <button class="filter-btn"
-            onclick="filterGallery('official', this)">
-        Official
-    </button>
+<button class="filter-btn"
+onclick="filterGallery('official',this)">
+Official
+</button>
 
-    <button class="filter-btn"
-            onclick="filterGallery('legislative', this)">
-        Legislative
-    </button>
+<button class="filter-btn"
+onclick="filterGallery('legislative',this)">
+Legislative
+</button>
 
-    <button class="filter-btn"
-            onclick="filterGallery('constituency', this)">
-        Constituency
-    </button>
+<button class="filter-btn"
+onclick="filterGallery('constituency',this)">
+Constituency
+</button>
 
-    <button class="filter-btn"
-            onclick="filterGallery('community', this)">
-        Community
-    </button>
+<button class="filter-btn"
+onclick="filterGallery('community',this)">
+Community
+</button>
 
 </div>
 
 
+<!-- GALLERY -->
 
-<!-- =========================
-     GALLERY
-========================= -->
+<section class="gallery-container">
 
-<section class="gallery-container"
-         id="gallery">
+<div class="gallery">
 
 
-    <!-- ==================================================
-         PHOTO 1 - ALIYU UMAR YUSUF
-    ================================================== -->
+<!-- 1 -->
 
-    <div class="gallery-card"
-         data-category="official">
+<div class="gallery-card" data-category="official">
 
-        <img
-            src="https://i.ibb.co/DfXVPB8y/IMG-20260906-WA0214.jpg"
-            alt="Rt. Hon. Aliyu Umar Yusuf, Speaker of the Kogi State House of Assembly"
-            onclick="openLightbox(this.src)"
-        >
+<img
+class="gallery-image"
+src="https://i.ibb.co/DfXVPB8y/IMG-20260906-WA0214.jpg"
+alt="Rt. Hon. Aliyu Umar Yusuf"
+onclick="openLightbox(this.src)"
+>
 
-        <div class="gallery-info">
+<div class="caption">
 
-            <span class="gallery-category">
-                Official
-            </span>
+<h3>Official Appearance</h3>
 
-            <h3>
-                Rt. Hon. Aliyu Umar Yusuf –
-                Speaker, Kogi State House of Assembly
-            </h3>
+<p>
+Rt. Hon. Aliyu Umar Yusuf during an official engagement as Speaker of the Kogi State House of Assembly.
+</p>
 
-            <div class="share-buttons">
+<div class="share-buttons">
 
-                <button
-                    onclick="shareWhatsApp(
-                        'Rt. Hon. Aliyu Umar Yusuf – Speaker, Kogi State House of Assembly',
-                        'https://i.ibb.co/DfXVPB8y/IMG-20260906-WA0214.jpg'
-                    )">
-                    WhatsApp
-                </button>
+<button class="share-btn whatsapp"
+onclick="shareWhatsApp('Official Appearance',this)">
+WhatsApp
+</button>
 
-                <button
-                    onclick="shareFacebook(
-                        'https://i.ibb.co/DfXVPB8y/IMG-20260906-WA0214.jpg'
-                    )">
-                    Facebook
-                </button>
+<button class="share-btn facebook"
+onclick="shareFacebook(this)">
+Facebook
+</button>
 
-                <button
-                    onclick="copyLink(
-                        'https://i.ibb.co/DfXVPB8y/IMG-20260906-WA0214.jpg'
-                    )">
-                    Copy Link
-                </button>
+<button class="share-btn copy"
+onclick="copyLink(this)">
+Copy Link
+</button>
 
-            </div>
+</div>
 
-        </div>
+</div>
+</div>
 
-    </div>
 
+<!-- 2 -->
 
+<div class="gallery-card" data-category="legislative">
 
-    <!-- ==================================================
-         PHOTO 2
-    ================================================== -->
+<img class="gallery-image"
+src="https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png"
+alt="House Session"
+onclick="openLightbox(this.src)">
 
-    <div class="gallery-card"
-         data-category="legislative">
+<div class="caption">
 
-        <img
-            src="https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png"
-            alt="House Session"
-            onclick="openLightbox(this.src)"
-        >
+<h3>House Session</h3>
 
-        <div class="gallery-info">
+<p>Appearance during a legislative sitting at the Kogi State House of Assembly.</p>
 
-            <span class="gallery-category">
-                Legislative
-            </span>
+</div>
+</div>
 
-            <h3>
-                House Session
-            </h3>
 
-            <div class="share-buttons">
+<!-- 3 -->
 
-                <button onclick="shareWhatsApp(
-                    'House Session',
-                    'https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png'
-                )">
-                    WhatsApp
-                </button>
+<div class="gallery-card" data-category="official">
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png'
-                )">
-                    Facebook
-                </button>
+<img class="gallery-image"
+src="https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png"
+alt="Award Ceremony"
+onclick="openLightbox(this.src)">
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/zTHc9TwT/file-000000007cd0820a8adc6bcc030e10ae.png'
-                )">
-                    Copy Link
-                </button>
+<div class="caption">
 
-            </div>
+<h3>Award Presentation</h3>
 
-        </div>
+<p>Appearance during an official award and recognition ceremony.</p>
 
-    </div>
+</div>
+</div>
 
 
+<!-- 4 -->
 
-    <!-- ==================================================
-         PHOTO 3
-    ================================================== -->
+<div class="gallery-card" data-category="official">
 
-    <div class="gallery-card"
-         data-category="official">
+<img class="gallery-image"
+src="https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png"
+alt="With Governor"
+onclick="openLightbox(this.src)">
 
-        <img
-            src="https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png"
-            alt="Award"
-            onclick="openLightbox(this.src)"
-        >
+<div class="caption">
 
-        <div class="gallery-info">
+<h3>With the Governor</h3>
 
-            <span class="gallery-category">
-                Official
-            </span>
+<p>Official appearance alongside the Governor of Kogi State.</p>
 
-            <h3>
-                Award
-            </h3>
+</div>
+</div>
 
-            <div class="share-buttons">
 
-                <button onclick="shareWhatsApp(
-                    'Award',
-                    'https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png'
-                )">
-                    WhatsApp
-                </button>
+<!-- 5 -->
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png'
-                )">
-                    Facebook
-                </button>
+<div class="gallery-card" data-category="community">
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/xS7p9pvS/file-00000000bafc82438ddeb3457fc0eeff.png'
-                )">
-                    Copy Link
-                </button>
+<img class="gallery-image"
+src="https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png"
+alt="Addressing Women"
+onclick="openLightbox(this.src)">
 
-            </div>
+<div class="caption">
 
-        </div>
+<h3>Engagement With Women</h3>
 
-    </div>
+<p>Appearance while addressing women during a public engagement.</p>
 
+</div>
+</div>
 
 
-    <!-- ==================================================
-         PHOTO 4
-    ================================================== -->
+<!-- 6 -->
 
-    <div class="gallery-card"
-         data-category="official">
+<div class="gallery-card" data-category="community">
 
-        <img
-            src="https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png"
-            alt="With the Governor of Kogi State"
-            onclick="openLightbox(this.src)"
-        >
+<img class="gallery-image"
+src="https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png"
+alt="Interaction With Women"
+onclick="openLightbox(this.src)">
 
-        <div class="gallery-info">
+<div class="caption">
 
-            <span class="gallery-category">
-                Official
-            </span>
+<h3>Women Interaction</h3>
 
-            <h3>
-                With the Governor of Kogi State
-            </h3>
+<p>Appearance during an interaction with women and community members.</p>
 
-            <div class="share-buttons">
+</div>
+</div>
 
-                <button onclick="shareWhatsApp(
-                    'With the Governor of Kogi State',
-                    'https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png'
-                )">
-                    WhatsApp
-                </button>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png'
-                )">
-                    Facebook
-                </button>
+<!-- 7 -->
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/67SrWrNq/file-0000000068f08243b9401f4d0e034323.png'
-                )">
-                    Copy Link
-                </button>
+<div class="gallery-card" data-category="community">
 
-            </div>
+<img class="gallery-image"
+src="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
+alt="Miss Kogi Culture Ambassador"
+onclick="openLightbox(this.src)">
 
-        </div>
+<div class="caption">
 
-    </div>
+<h3>Miss Kogi Culture Ambassador</h3>
 
+<p>Appearance while presenting a gift at the Miss Kogi Culture Ambassador event.</p>
 
+</div>
+</div>
 
-    <!-- ==================================================
-         PHOTO 5
-    ================================================== -->
 
-    <div class="gallery-card"
-         data-category="community">
+<!-- 8 -->
 
-        <img
-            src="https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png"
-            alt="Addressing Women"
-            onclick="openLightbox(this.src)"
-        >
+<div class="gallery-card" data-category="community">
 
-        <div class="gallery-info">
+<img class="gallery-image"
+src="https://i.ibb.co/CsVXr0VD/IMG-20260905-WA0093.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<div class="caption">
 
-            <h3>
-                Addressing Women
-            </h3>
+<h3>Community Engagement</h3>
 
-            <div class="share-buttons">
+<p>Appearance during a community engagement programme.</p>
 
-                <button onclick="shareWhatsApp(
-                    'Addressing Women',
-                    'https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png'
-                )">
-                    WhatsApp
-                </button>
+</div>
+</div>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png'
-                )">
-                    Facebook
-                </button>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/rK8MB017/file-00000000585482109e042f1eb8e3d5f3.png'
-                )">
-                    Copy Link
-                </button>
+<!-- 9 -->
 
-            </div>
+<div class="gallery-card" data-category="community">
 
-        </div>
+<img class="gallery-image"
+src="https://i.ibb.co/Lh0Fg3Tv/IMG-20260905-WA0051.jpg"
+alt="Community Activity"
+onclick="openLightbox(this.src)">
 
-    </div>
+<div class="caption">
 
+<h3>Community Activity</h3>
 
+<p>Appearance during a community-based activity.</p>
 
-    <!-- ==================================================
-         PHOTO 6
-    ================================================== -->
+</div>
+</div>
 
-    <div class="gallery-card"
-         data-category="community">
 
-        <img
-            src="https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png"
-            alt="Interaction with Her Fellow Women"
-            onclick="openLightbox(this.src)"
-        >
+<!-- 10 -->
 
-        <div class="gallery-info">
+<div class="gallery-card" data-category="community">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<img class="gallery-image"
+src="https://i.ibb.co/ymTRt9KL/IMG-20260905-WA0119.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-            <h3>
-                Interaction with Her Fellow Women
-            </h3>
+<div class="caption">
 
-            <div class="share-buttons">
+<h3>Community Engagement</h3>
 
-                <button onclick="shareWhatsApp(
-                    'Interaction with Her Fellow Women',
-                    'https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png'
-                )">
-                    WhatsApp
-                </button>
+<p>Appearance during interaction with members of the community.</p>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png'
-                )">
-                    Facebook
-                </button>
+</div>
+</div>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png'
-                )">
-                    Copy Link
-                </button>
 
-            </div>
+<!-- 11 -->
 
-        </div>
+<div class="gallery-card" data-category="official">
 
-    </div>
+<img class="gallery-image"
+src="https://i.ibb.co/HT9dP6g5/IMG-20260905-WA0070.jpg"
+alt="Public Engagement"
+onclick="openLightbox(this.src)">
 
+<div class="caption">
 
+<h3>Public Engagement</h3>
 
-    <!-- ==================================================
-         PHOTO 7
-    ================================================== -->
+<p>Official appearance during a public engagement.</p>
 
-    <div class="gallery-card"
-         data-category="community">
+</div>
+</div>
 
-        <img
-            src="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
-            alt="Presenting a Gift at Miss Kogi Culture Ambassador"
-            onclick="openLightbox(this.src)"
-        >
 
-        <div class="gallery-info">
+<!-- 12 -->
 
-            <span class="gallery-category">
-                Community
-            </span>
+<div class="gallery-card" data-category="community">
 
-            <h3>
-                Presenting a Gift at Miss Kogi Culture Ambassador
-            </h3>
+<img class="gallery-image"
+src="https://i.ibb.co/GQD6T13p/IMG-20260905-WA0083.jpg"
+alt="Community Event"
+onclick="openLightbox(this.src)">
 
-            <div class="share-buttons">
+<div class="caption">
 
-                <button onclick="shareWhatsApp(
-                    'Presenting a Gift at Miss Kogi Culture Ambassador',
-                    'https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg'
-                )">
-                    WhatsApp
-                </button>
+<h3>Community Event</h3>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg'
-                )">
-                    Facebook
-                </button>
+<p>Appearance at a community event.</p>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg'
-                )">
-                    Copy Link
-                </button>
+</div>
+</div>
 
-            </div>
 
-        </div>
+<!-- 13 -->
 
-    </div>
+<div class="gallery-card" data-category="community">
 
+<img class="gallery-image"
+src="https://i.ibb.co/S79xwFVR/IMG-20260905-WA0075.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
+<div class="caption">
 
-    <!-- ==================================================
-         PHOTO 8
-    ================================================== -->
+<h3>Community Engagement</h3>
 
-    <div class="gallery-card"
-         data-category="community">
+<p>Appearance during community interaction and engagement.</p>
 
-        <img
-            src="https://i.ibb.co/CsVXr0VD/IMG-20260905-WA0093.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
+</div>
+</div>
 
-        <div class="gallery-info">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<!-- 14 -->
 
-            <h3>
-                Community Engagement
-            </h3>
+<div class="gallery-card" data-category="community">
 
-            <div class="share-buttons">
+<img class="gallery-image"
+src="https://i.ibb.co/PGVhPBjx/IMG-20260905-WA0056.jpg"
+alt="Community Activity"
+onclick="openLightbox(this.src)">
 
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/CsVXr0VD/IMG-20260905-WA0093.jpg'
-                )">
-                    WhatsApp
-                </button>
+<div class="caption">
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/CsVXr0VD/IMG-20260905-WA0093.jpg'
-                )">
-                    Facebook
-                </button>
+<h3>Community Activity</h3>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/CsVXr0VD/IMG-20260905-WA0093.jpg'
-                )">
-                    Copy Link
-                </button>
+<p>Appearance during a community development activity.</p>
 
-            </div>
+</div>
+</div>
 
-        </div>
 
-    </div>
+<!-- 15 -->
 
+<div class="gallery-card" data-category="community">
 
+<img class="gallery-image"
+src="https://i.ibb.co/SXhMS96j/IMG-20260905-WA0063.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-    <!-- PHOTO 9 -->
+<div class="caption">
 
-    <div class="gallery-card"
-         data-category="community">
+<h3>Community Engagement</h3>
 
-        <img
-            src="https://i.ibb.co/Lh0Fg3Tv/IMG-20260905-WA0051.jpg"
-            alt="Community Activity"
-            onclick="openLightbox(this.src)"
-        >
+<p>Appearance during engagement with community members.</p>
 
-        <div class="gallery-info">
+</div>
+</div>
 
-            <span class="gallery-category">
-                Community
-            </span>
 
-            <h3>
-                Community Activity
-            </h3>
+<!-- 16 -->
 
-            <div class="share-buttons">
+<div class="gallery-card" data-category="community">
 
-                <button onclick="shareWhatsApp(
-                    'Community Activity',
-                    'https://i.ibb.co/Lh0Fg3Tv/IMG-20260905-WA0051.jpg'
-                )">
-                    WhatsApp
-                </button>
+<img class="gallery-image"
+src="https://i.ibb.co/673xHXYB/IMG-20260905-WA0105.jpg"
+alt="Community Event"
+onclick="openLightbox(this.src)">
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/Lh0Fg3Tv/IMG-20260905-WA0051.jpg'
-                )">
-                    Facebook
-                </button>
+<div class="caption">
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/Lh0Fg3Tv/IMG-20260905-WA0051.jpg'
-                )">
-                    Copy Link
-                </button>
+<h3>Community Event</h3>
 
-            </div>
+<p>Appearance at a community event and public gathering.</p>
 
-        </div>
+</div>
+</div>
 
-    </div>
 
+<!-- 17 -->
 
+<div class="gallery-card" data-category="community">
 
-    <!-- PHOTO 10 -->
+<img class="gallery-image"
+src="https://i.ibb.co/ynMP0Nc2/IMG-20260905-WA0049.jpg"
+alt="Community Interaction"
+onclick="openLightbox(this.src)">
 
-    <div class="gallery-card"
-         data-category="community">
+<div class="caption">
 
-        <img
-            src="https://i.ibb.co/ymTRt9KL/IMG-20260905-WA0119.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
+<h3>Community Interaction</h3>
 
-        <div class="gallery-info">
+<p>Appearance during interaction with members of the community.</p>
 
-            <span class="gallery-category">
-                Community
-            </span>
+</div>
+</div>
 
-            <h3>
-                Community Engagement
-            </h3>
 
-            <div class="share-buttons">
+<!-- 18 -->
 
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/ymTRt9KL/IMG-20260905-WA0119.jpg'
-                )">
-                    WhatsApp
-                </button>
+<div class="gallery-card" data-category="community">
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/ymTRt9KL/IMG-20260905-WA0119.jpg'
-                )">
-                    Facebook
-                </button>
+<img class="gallery-image"
+src="https://i.ibb.co/rf2SwHpy/IMG-20260905-WA0102.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/ymTRt9KL/IMG-20260905-WA0119.jpg'
-                )">
-                    Copy Link
-                </button>
+<div class="caption">
 
-            </div>
+<h3>Community Engagement</h3>
 
-        </div>
+<p>Appearance during a community engagement.</p>
 
-    </div>
+</div>
+</div>
 
 
+<!-- 19 -->
 
-    <!-- PHOTO 11 -->
+<div class="gallery-card" data-category="community">
 
-    <div class="gallery-card"
-         data-category="community">
+<img class="gallery-image"
+src="https://i.ibb.co/S4LDLZxC/IMG-20260905-WA0095.jpg"
+alt="Community Programme"
+onclick="openLightbox(this.src)">
 
-        <img
-            src="https://i.ibb.co/HT9dP6g5/IMG-20260905-WA0070.jpg"
-            alt="Public Engagement"
-            onclick="openLightbox(this.src)"
-        >
+<div class="caption">
 
-        <div class="gallery-info">
+<h3>Community Programme</h3>
 
-            <span class="gallery-category">
-                Community
-            </span>
+<p>Appearance during a community programme.</p>
 
-            <h3>
-                Public Engagement
-            </h3>
+</div>
+</div>
 
-            <div class="share-buttons">
 
-                <button onclick="shareWhatsApp(
-                    'Public Engagement',
-                    'https://i.ibb.co/HT9dP6g5/IMG-20260905-WA0070.jpg'
-                )">
-                    WhatsApp
-                </button>
+<!-- 20 -->
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/HT9dP6g5/IMG-20260905-WA0070.jpg'
-                )">
-                    Facebook
-                </button>
+<div class="gallery-card" data-category="community">
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/HT9dP6g5/IMG-20260905-WA0070.jpg'
-                )">
-                    Copy Link
-                </button>
+<img class="gallery-image"
+src="https://i.ibb.co/m5wQYLxY/IMG-20260905-WA0064.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-            </div>
+<div class="caption">
 
-        </div>
+<h3>Community Engagement</h3>
 
-    </div>
+<p>Appearance during an official community engagement.</p>
 
+</div>
+</div>
 
 
-    <!-- PHOTO 12 -->
+<!-- 21 -->
 
-    <div class="gallery-card"
-         data-category="community">
+<div class="gallery-card" data-category="community">
 
-        <img
-            src="https://i.ibb.co/GQD6T13p/IMG-20260905-WA0083.jpg"
-            alt="Community Event"
-            onclick="openLightbox(this.src)"
-        >
+<img class="gallery-image"
+src="https://i.ibb.co/9HMxMGpy/IMG-20260905-WA0087.jpg"
+alt="Community Event"
+onclick="openLightbox(this.src)">
 
-        <div class="gallery-info">
+<div class="caption">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<h3>Community Event</h3>
 
-            <h3>
-                Community Event
-            </h3>
+<p>Appearance at a community event.</p>
 
-            <div class="share-buttons">
+</div>
+</div>
 
-                <button onclick="shareWhatsApp(
-                    'Community Event',
-                    'https://i.ibb.co/GQD6T13p/IMG-20260905-WA0083.jpg'
-                )">
-                    WhatsApp
-                </button>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/GQD6T13p/IMG-20260905-WA0083.jpg'
-                )">
-                    Facebook
-                </button>
+<!-- 22 -->
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/GQD6T13p/IMG-20260905-WA0083.jpg'
-                )">
-                    Copy Link
-                </button>
+<div class="gallery-card" data-category="community">
 
-            </div>
+<img class="gallery-image"
+src="https://i.ibb.co/9kn2MYX2/IMG-20260905-WA0055.jpg"
+alt="Community Activity"
+onclick="openLightbox(this.src)">
 
-        </div>
+<div class="caption">
 
-    </div>
+<h3>Community Activity</h3>
 
+<p>Appearance during a community activity.</p>
 
+</div>
+</div>
 
-    <!-- PHOTO 13 -->
 
-    <div class="gallery-card"
-         data-category="community">
+<!-- 23 -->
 
-        <img
-            src="https://i.ibb.co/S79xwFVR/IMG-20260905-WA0075.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
+<div class="gallery-card" data-category="community">
 
-        <div class="gallery-info">
+<img class="gallery-image"
+src="https://i.ibb.co/mrckktG7/IMG-20260905-WA0062.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<div class="caption">
 
-            <h3>
-                Community Engagement
-            </h3>
+<h3>Community Engagement</h3>
 
-            <div class="share-buttons">
+<p>Appearance during community interaction.</p>
 
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/S79xwFVR/IMG-20260905-WA0075.jpg'
-                )">
-                    WhatsApp
-                </button>
+</div>
+</div>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/S79xwFVR/IMG-20260905-WA0075.jpg'
-                )">
-                    Facebook
-                </button>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/S79xwFVR/IMG-20260905-WA0075.jpg'
-                )">
-                    Copy Link
-                </button>
+<!-- 24 -->
 
-            </div>
+<div class="gallery-card" data-category="community">
 
-        </div>
+<img class="gallery-image"
+src="https://i.ibb.co/1GMM6rgd/IMG-20260905-WA0106.jpg"
+alt="Community Event"
+onclick="openLightbox(this.src)">
 
-    </div>
+<div class="caption">
 
+<h3>Community Event</h3>
 
+<p>Appearance during a community event.</p>
 
-    <!-- PHOTO 14 -->
+</div>
+</div>
 
-    <div class="gallery-card"
-         data-category="community">
 
-        <img
-            src="https://i.ibb.co/PGVhPBjx/IMG-20260905-WA0056.jpg"
-            alt="Community Activity"
-            onclick="openLightbox(this.src)"
-        >
+<!-- NEW 25 -->
 
-        <div class="gallery-info">
+<div class="gallery-card" data-category="official">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<img class="gallery-image"
+src="https://i.ibb.co/6J7z48Bp/IMG-20260907-WA0021.jpg"
+alt="Official Appearance"
+onclick="openLightbox(this.src)">
 
-            <h3>
-                Community Activity
-            </h3>
+<div class="caption">
 
-            <div class="share-buttons">
+<h3>Official Appearance</h3>
 
-                <button onclick="shareWhatsApp(
-                    'Community Activity',
-                    'https://i.ibb.co/PGVhPBjx/IMG-20260905-WA0056.jpg'
-                )">
-                    WhatsApp
-                </button>
+<p>Rt. Hon. Aliyu Umar Yusuf during an official public engagement.</p>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/PGVhPBjx/IMG-20260905-WA0056.jpg'
-                )">
-                    Facebook
-                </button>
+</div>
+</div>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/PGVhPBjx/IMG-20260905-WA0056.jpg'
-                )">
-                    Copy Link
-                </button>
 
-            </div>
+<!-- NEW 26 -->
 
-        </div>
+<div class="gallery-card" data-category="official">
 
-    </div>
+<img class="gallery-image"
+src="https://i.ibb.co/v4qM1C0B/IMG-20260907-WA0022.jpg"
+alt="Official Engagement"
+onclick="openLightbox(this.src)">
 
+<div class="caption">
 
+<h3>Official Engagement</h3>
 
-    <!-- PHOTO 15 -->
+<p>Appearance during an official engagement with stakeholders.</p>
 
-    <div class="gallery-card"
-         data-category="community">
+</div>
+</div>
 
-        <img
-            src="https://i.ibb.co/SXhMS96j/IMG-20260905-WA0063.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
 
-        <div class="gallery-info">
+<!-- NEW 27 -->
 
-            <span class="gallery-category">
-                Community
-            </span>
+<div class="gallery-card" data-category="community">
 
-            <h3>
-                Community Engagement
-            </h3>
+<img class="gallery-image"
+src="https://i.ibb.co/Z6KtR6Pg/IMG-20260907-WA0018.jpg"
+alt="Community Appearance"
+onclick="openLightbox(this.src)">
 
-            <div class="share-buttons">
+<div class="caption">
 
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/SXhMS96j/IMG-20260905-WA0063.jpg'
-                )">
-                    WhatsApp
-                </button>
+<h3>Community Appearance</h3>
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/SXhMS96j/IMG-20260905-WA0063.jpg'
-                )">
-                    Facebook
-                </button>
+<p>Appearance during interaction with members of the community.</p>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/SXhMS96j/IMG-20260905-WA0063.jpg'
-                )">
-                    Copy Link
-                </button>
+</div>
+</div>
 
-            </div>
 
-        </div>
+<!-- NEW 28 -->
 
-    </div>
+<div class="gallery-card" data-category="official">
 
+<img class="gallery-image"
+src="https://i.ibb.co/pjkcXv9q/IMG-20260907-WA0016.jpg"
+alt="Official Function"
+onclick="openLightbox(this.src)">
 
+<div class="caption">
 
-    <!-- PHOTO 16 -->
+<h3>Official Function</h3>
 
-    <div class="gallery-card"
-         data-category="community">
+<p>Appearance during an official function and public engagement.</p>
 
-        <img
-            src="https://i.ibb.co/673xHXYB/IMG-20260905-WA0105.jpg"
-            alt="Community Event"
-            onclick="openLightbox(this.src)"
-        >
+</div>
+</div>
 
-        <div class="gallery-info">
 
-            <span class="gallery-category">
-                Community
-            </span>
+<!-- NEW 29 -->
 
-            <h3>
-                Community Event
-            </h3>
+<div class="gallery-card" data-category="community">
 
-            <div class="share-buttons">
+<img class="gallery-image"
+src="https://i.ibb.co/gb7MqGsx/IMG-20260905-WA0089.jpg"
+alt="Community Engagement"
+onclick="openLightbox(this.src)">
 
-                <button onclick="shareWhatsApp(
-                    'Community Event',
-                    'https://i.ibb.co/673xHXYB/IMG-20260905-WA0105.jpg'
-                )">
-                    WhatsApp
-                </button>
+<div class="caption">
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/673xHXYB/IMG-20260905-WA0105.jpg'
-                )">
-                    Facebook
-                </button>
+<h3>Community Engagement</h3>
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/673xHXYB/IMG-20260905-WA0105.jpg'
-                )">
-                    Copy Link
-                </button>
+<p>Appearance during a community engagement and interaction.</p>
 
-            </div>
+</div>
+</div>
 
-        </div>
 
-    </div>
+<!-- NEW 30 -->
 
+<div class="gallery-card" data-category="official">
 
+<img class="gallery-image"
+src="https://i.ibb.co/Wv9pPK7L/IMG-20260907-WA0020.jpg"
+alt="Official Appearance"
+onclick="openLightbox(this.src)">
 
-    <!-- PHOTO 17 -->
+<div class="caption">
 
-    <div class="gallery-card"
-         data-category="community">
+<h3>Official Appearance</h3>
 
-        <img
-            src="https://i.ibb.co/ynMP0Nc2/IMG-20260905-WA0049.jpg"
-            alt="Community Interaction"
-            onclick="openLightbox(this.src)"
-        >
+<p>Rt. Hon. Aliyu Umar Yusuf during an official public appearance.</p>
 
-        <div class="gallery-info">
+</div>
+</div>
 
-            <span class="gallery-category">
-                Community
-            </span>
 
-            <h3>
-                Community Interaction
-            </h3>
+<!-- NEW 31 -->
 
-            <div class="share-buttons">
+<div class="gallery-card" data-category="official">
 
-                <button onclick="shareWhatsApp(
-                    'Community Interaction',
-                    'https://i.ibb.co/ynMP0Nc2/IMG-20260905-WA0049.jpg'
-                )">
-                    WhatsApp
-                </button>
+<img class="gallery-image"
+src="https://i.ibb.co/kgVYqRw1/IMG-20260906-WA0212.jpg"
+alt="Leadership Appearance"
+onclick="openLightbox(this.src)">
 
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/ynMP0Nc2/IMG-20260905-WA0049.jpg'
-                )">
-                    Facebook
-                </button>
+<div class="caption">
 
-                <button onclick="copyLink(
-                    'https://i.ibb.co/ynMP0Nc2/IMG-20260905-WA0049.jpg'
-                )">
-                    Copy Link
-                </button>
+<h3>Leadership Appearance</h3>
 
-            </div>
+<p>Appearance during a leadership and official engagement.</p>
 
-        </div>
+</div>
+</div>
 
-    </div>
 
+<!-- NEW 32 -->
 
+<div class="gallery-card" data-category="community">
 
-    <!-- PHOTO 18 -->
+<img class="gallery-image"
+src="https://i.ibb.co/hFgnZKLK/IMG-20260907-WA0013.jpg"
+alt="Community Appearance"
+onclick="openLightbox(this.src)">
 
-    <div class="gallery-card"
-         data-category="community">
+<div class="caption">
 
-        <img
-            src="https://i.ibb.co/rf2SwHpy/IMG-20260905-WA0102.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
+<h3>Community Appearance</h3>
 
-        <div class="gallery-info">
+<p>Appearance during engagement with members of the public.</p>
 
-            <span class="gallery-category">
-                Community
-            </span>
+</div>
+</div>
 
-            <h3>
-                Community Engagement
-            </h3>
 
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/rf2SwHpy/IMG-20260905-WA0102.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/rf2SwHpy/IMG-20260905-WA0102.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/rf2SwHpy/IMG-20260905-WA0102.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PHOTO 19 -->
-
-    <div class="gallery-card"
-         data-category="community">
-
-        <img
-            src="https://i.ibb.co/S4LDLZxC/IMG-20260905-WA0095.jpg"
-            alt="Community Programme"
-            onclick="openLightbox(this.src)"
-        >
-
-        <div class="gallery-info">
-
-            <span class="gallery-category">
-                Community
-            </span>
-
-            <h3>
-                Community Programme
-            </h3>
-
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Programme',
-                    'https://i.ibb.co/S4LDLZxC/IMG-20260905-WA0095.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/S4LDLZxC/IMG-20260905-WA0095.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/S4LDLZxC/IMG-20260905-WA0095.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PHOTO 20 -->
-
-    <div class="gallery-card"
-         data-category="community">
-
-        <img
-            src="https://i.ibb.co/m5wQYLxY/IMG-20260905-WA0064.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
-
-        <div class="gallery-info">
-
-            <span class="gallery-category">
-                Community
-            </span>
-
-            <h3>
-                Community Engagement
-            </h3>
-
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/m5wQYLxY/IMG-20260905-WA0064.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/m5wQYLxY/IMG-20260905-WA0064.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/m5wQYLxY/IMG-20260905-WA0064.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PHOTO 21 -->
-
-    <div class="gallery-card"
-         data-category="community">
-
-        <img
-            src="https://i.ibb.co/9HMxMGpy/IMG-20260905-WA0087.jpg"
-            alt="Community Event"
-            onclick="openLightbox(this.src)"
-        >
-
-        <div class="gallery-info">
-
-            <span class="gallery-category">
-                Community
-            </span>
-
-            <h3>
-                Community Event
-            </h3>
-
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Event',
-                    'https://i.ibb.co/9HMxMGpy/IMG-20260905-WA0087.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/9HMxMGpy/IMG-20260905-WA0087.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/9HMxMGpy/IMG-20260905-WA0087.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PHOTO 22 -->
-
-    <div class="gallery-card"
-         data-category="community">
-
-        <img
-            src="https://i.ibb.co/9kn2MYX2/IMG-20260905-WA0055.jpg"
-            alt="Community Activity"
-            onclick="openLightbox(this.src)"
-        >
-
-        <div class="gallery-info">
-
-            <span class="gallery-category">
-                Community
-            </span>
-
-            <h3>
-                Community Activity
-            </h3>
-
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Activity',
-                    'https://i.ibb.co/9kn2MYX2/IMG-20260905-WA0055.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/9kn2MYX2/IMG-20260905-WA0055.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/9kn2MYX2/IMG-20260905-WA0055.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PHOTO 23 -->
-
-    <div class="gallery-card"
-         data-category="community">
-
-        <img
-            src="https://i.ibb.co/mrckktG7/IMG-20260905-WA0062.jpg"
-            alt="Community Engagement"
-            onclick="openLightbox(this.src)"
-        >
-
-        <div class="gallery-info">
-
-            <span class="gallery-category">
-                Community
-            </span>
-
-            <h3>
-                Community Engagement
-            </h3>
-
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Engagement',
-                    'https://i.ibb.co/mrckktG7/IMG-20260905-WA0062.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/mrckktG7/IMG-20260905-WA0062.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/mrckktG7/IMG-20260905-WA0062.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- PHOTO 24 -->
-
-    <div class="gallery-card"
-         data-category="community">
-
-        <img
-            src="https://i.ibb.co/1GMM6rgd/IMG-20260905-WA0106.jpg"
-            alt="Community Event"
-            onclick="openLightbox(this.src)"
-        >
-
-        <div class="gallery-info">
-
-            <span class="gallery-category">
-                Community
-            </span>
-
-            <h3>
-                Community Event
-            </h3>
-
-            <div class="share-buttons">
-
-                <button onclick="shareWhatsApp(
-                    'Community Event',
-                    'https://i.ibb.co/1GMM6rgd/IMG-20260905-WA0106.jpg'
-                )">
-                    WhatsApp
-                </button>
-
-                <button onclick="shareFacebook(
-                    'https://i.ibb.co/1GMM6rgd/IMG-20260905-WA0106.jpg'
-                )">
-                    Facebook
-                </button>
-
-                <button onclick="copyLink(
-                    'https://i.ibb.co/1GMM6rgd/IMG-20260905-WA0106.jpg'
-                )">
-                    Copy Link
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
 
 </section>
 
 
-
-<!-- =========================
-     LIGHTBOX
-========================= -->
+<!-- LIGHTBOX -->
 
 <div class="lightbox"
-     id="lightbox"
-     onclick="closeLightbox(event)">
+id="lightbox"
+onclick="closeLightbox(event)">
 
-    <span class="close-lightbox"
-          onclick="closeLightbox()">
+<span class="close-lightbox"
+onclick="closeLightbox()">
+&times;
+</span>
 
-        &times;
-
-    </span>
-
-    <img
-        id="lightbox-img"
-        src=""
-        alt="Gallery Image"
-    >
+<img id="lightbox-img" src="" alt="Gallery Image">
 
 </div>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    <div class="footer-container">
+<div class="footer-container">
+
+<div>
+
+<h3>Rt. Hon. Aliyu Umar Yusuf</h3>
+
+<p>
+Speaker, Kogi State House of Assembly
+and Member Representing Lokoja II State Constituency.
+</p>
+
+<p style="margin-top:12px;">
+This official media gallery documents public engagements,
+legislative activities and community interactions.
+</p>
+
+</div>
 
 
-        <div class="footer-box">
+<div>
 
-            <h3>
-                Rt. Hon. Aliyu Umar Yusuf
-            </h3>
+<h3>Quick Links</h3>
 
-            <p>
-                Speaker, Kogi State House of Assembly
-                and Member Representing Lokoja II
-                State Constituency.
-            </p>
+<ul>
 
-        </div>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="biography.html">Biography</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="gallery.html">Gallery</a></li>
 
+</ul>
 
-
-        <div class="footer-box">
-
-            <h3>
-                Quick Links
-            </h3>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="biography.html">
-                        Biography
-                    </a>
-                </li>
-
-                <li>
-                    <a href="legislative.html">
-                        Legislative Activities
-                    </a>
-                </li>
-
-                <li>
-                    <a href="constituency.html">
-                        Constituency
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
+</div>
 
 
+<div>
 
-        <div class="footer-box">
+<h3>Explore</h3>
 
-            <h3>
-                Explore
-            </h3>
+<ul>
 
-            <ul>
+<li><a href="legislative.html">Legislative Activities</a></li>
+<li><a href="constituency.html">Constituency</a></li>
+<li><a href="office.html">Office</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-                <li>
-                    <a href="news.html">
-                        News
-                    </a>
-                </li>
+</ul>
 
-                <li>
-                    <a href="gallery.html">
-                        Media Gallery
-                    </a>
-                </li>
+</div>
 
-                <li>
-                    <a href="office.html">
-                        Office
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="copyright">
 
+© 2026 Office of Rt. Hon. Aliyu Umar Yusuf.
+All Rights Reserved.
 
-    <div class="copyright">
-
-        © 2026 Office of Rt. Hon. Aliyu Umar Yusuf.
-        All Rights Reserved.
-
-    </div>
+</div>
 
 </footer>
 
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
+/* MOBILE MENU */
 
-/* =========================
-   MOBILE MENU
-========================= */
+function toggleMenu(){
 
-function toggleMenu() {
-
-    const navigation =
-        document.getElementById("navigation");
-
-    navigation.classList.toggle("show");
+    document
+    .getElementById("navMenu")
+    .classList
+    .toggle("show");
 
 }
 
 
+/* LIGHTBOX */
 
-/* =========================
-   LIGHTBOX
-========================= */
-
-function openLightbox(imageSrc) {
+function openLightbox(imageSrc){
 
     const lightbox =
         document.getElementById("lightbox");
@@ -2129,183 +1255,53 @@ function openLightbox(imageSrc) {
 
     lightbox.style.display = "flex";
 
-    document.body.style.overflow = "hidden";
-
 }
 
 
+function closeLightbox(event){
 
-function closeLightbox(event) {
-
-    const lightbox =
-        document.getElementById("lightbox");
-
-    if (
+    if(
         !event ||
-        event.target === lightbox
-    ) {
+        event.target.id === "lightbox" ||
+        event.target.classList.contains("close-lightbox")
+    ){
 
-        lightbox.style.display = "none";
-
-        document.body.style.overflow = "auto";
-
-    }
-
-}
-
-
-
-/* =========================
-   ESCAPE KEY
-========================= */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Escape") {
-
-            closeLightbox();
-
-        }
-
-    }
-);
-
-
-
-/* =========================
-   WHATSAPP SHARE
-========================= */
-
-function shareWhatsApp(title, link) {
-
-    const message =
-        title + "\n\n" + link;
-
-    const whatsappURL =
-        "https://wa.me/?text=" +
-        encodeURIComponent(message);
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
-}
-
-
-
-/* =========================
-   FACEBOOK SHARE
-========================= */
-
-function shareFacebook(link) {
-
-    const facebookURL =
-        "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(link);
-
-    window.open(
-        facebookURL,
-        "_blank",
-        "width=600,height=500"
-    );
-
-}
-
-
-
-/* =========================
-   COPY LINK
-========================= */
-
-function copyLink(link) {
-
-    if (
-        navigator.clipboard &&
-        window.isSecureContext
-    ) {
-
-        navigator.clipboard.writeText(link)
-            .then(function() {
-
-                alert(
-                    "Image link copied successfully!"
-                );
-
-            })
-            .catch(function() {
-
-                fallbackCopy(link);
-
-            });
-
-    } else {
-
-        fallbackCopy(link);
+        document
+        .getElementById("lightbox")
+        .style.display = "none";
 
     }
 
 }
 
 
+/* ESCAPE KEY */
 
-function fallbackCopy(link) {
+document.addEventListener("keydown",function(event){
 
-    const textarea =
-        document.createElement("textarea");
+    if(event.key === "Escape"){
 
-    textarea.value = link;
-
-    textarea.style.position = "fixed";
-    textarea.style.opacity = "0";
-
-    document.body.appendChild(textarea);
-
-    textarea.focus();
-    textarea.select();
-
-    try {
-
-        document.execCommand("copy");
-
-        alert(
-            "Image link copied successfully!"
-        );
-
-    } catch (error) {
-
-        alert(
-            "Unable to copy link. Please copy it manually."
-        );
+        document
+        .getElementById("lightbox")
+        .style.display = "none";
 
     }
 
-    document.body.removeChild(textarea);
-
-}
+});
 
 
+/* FILTER */
 
-/* =========================
-   GALLERY FILTER
-========================= */
-
-function filterGallery(category, button) {
+function filterGallery(category,button){
 
     const cards =
-        document.querySelectorAll(
-            ".gallery-card"
-        );
+        document.querySelectorAll(".gallery-card");
 
     const buttons =
-        document.querySelectorAll(
-            ".filter-btn"
-        );
+        document.querySelectorAll(".filter-btn");
 
 
-    buttons.forEach(function(btn) {
+    buttons.forEach(function(btn){
 
         btn.classList.remove("active");
 
@@ -2315,22 +1311,16 @@ function filterGallery(category, button) {
     button.classList.add("active");
 
 
-    cards.forEach(function(card) {
+    cards.forEach(function(card){
 
-        const cardCategory =
-            card.getAttribute(
-                "data-category"
-            );
-
-
-        if (
+        if(
             category === "all" ||
-            cardCategory === category
-        ) {
+            card.dataset.category === category
+        ){
 
             card.style.display = "block";
 
-        } else {
+        }else{
 
             card.style.display = "none";
 
@@ -2341,9 +1331,91 @@ function filterGallery(category, button) {
 }
 
 
+/* WHATSAPP */
+
+function shareWhatsApp(title,element){
+
+    const image =
+        element.closest(".gallery-card")
+        .querySelector(".gallery-image")
+        .src;
+
+    const text =
+        title +
+        "\n\nView this official gallery appearance:\n" +
+        image;
+
+    window.open(
+        "https://wa.me/?text=" +
+        encodeURIComponent(text),
+        "_blank"
+    );
+
+}
+
+
+/* FACEBOOK */
+
+function shareFacebook(element){
+
+    const image =
+        element.closest(".gallery-card")
+        .querySelector(".gallery-image")
+        .src;
+
+    window.open(
+        "https://www.facebook.com/sharer/sharer.php?u=" +
+        encodeURIComponent(image),
+        "_blank"
+    );
+
+}
+
+
+/* COPY LINK */
+
+function copyLink(element){
+
+    const image =
+        element.closest(".gallery-card")
+        .querySelector(".gallery-image")
+        .src;
+
+    if(
+        navigator.clipboard &&
+        window.isSecureContext
+    ){
+
+        navigator.clipboard
+        .writeText(image)
+        .then(function(){
+
+            alert("Image link copied!");
+
+        });
+
+    }else{
+
+        const temp =
+            document.createElement("textarea");
+
+        temp.value = image;
+
+        document.body.appendChild(temp);
+
+        temp.select();
+
+        document.execCommand("copy");
+
+        document.body.removeChild(temp);
+
+        alert("Image link copied!");
+
+    }
+
+}
+
 </script>
 
-
 </body>
-
 </html>
