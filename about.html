@@ -1,619 +1,222 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About | Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</title><meta name="description" content="About the office and public service of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba, Deputy Speaker of the Kogi State House of Assembly."><style>
-*{box-sizing:border-box;}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</title>
 
-html{scroll-behavior:smooth;}
-
-body{
+<style>
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:Arial,sans-serif;
-    background:#f5f8f5;
-    color:#173b2b;
+}
+body{
+    background:#f8f9fb;
+    color:#222;
     line-height:1.7;
 }
-
-a{text-decoration:none;}
-
 header{
-    background:#003d27;
-    color:white;
-    padding:16px 5%;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+    background:#00563F;
+    color:#fff;
+    padding:18px;
 }
-
-.nav-container{
-    max-width:1300px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
+header h1{
+    font-size:24px;
 }
-
-.logo{
-    color:white;
-    font-weight:bold;
-    font-size:14px;
-    line-height:1.25;
-}
-
 nav{
-    display:flex;
-    align-items:center;
-    gap:18px;
+    background:#033d2d;
+    padding:12px;
 }
-
 nav a{
-    color:white;
-    font-size:13px;
-    font-weight:bold;
-    white-space:nowrap;
-    padding:8px 0;
+    color:#fff;
+    text-decoration:none;
+    margin-right:15px;
+    font-size:14px;
 }
-
-nav a:hover,
-nav a.active{
-    color:#f2bd24;
-}
-
-.contact-btn{
-    background:#f2bd24;
-    color:#003d27!important;
-    padding:10px 16px!important;
-    border-radius:5px;
-}
-
-.menu-button{
-    display:none;
-    width:44px;
-    height:44px;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-    border-radius:6px;
-}
-
-.menu-button:hover{
-    background:rgba(255,255,255,.1);
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* HERO */
-
 .hero{
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,61,39,.98),
-            rgba(0,61,39,.84)
-        );
+    background:#0b6d53;
     color:white;
-    padding:85px 0;
+    text-align:center;
+    padding:50px 20px;
 }
-
-.hero-content{
-    max-width:850px;
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+    padding:40px 0;
 }
-
-.label{
-    color:#f2bd24;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:13px;
-    font-weight:bold;
+h2{
+    color:#00563F;
+    margin-bottom:15px;
 }
-
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(40px,6vw,66px);
-    line-height:1.1;
-    margin:12px 0 18px;
+h3{
+    color:#00563F;
+    margin:20px 0 10px;
 }
-
-.hero h1 span{
-    color:#f2bd24;
+p{
+    margin-bottom:15px;
 }
-
-.hero p{
-    color:#dcebe3;
-    max-width:750px;
-    font-size:17px;
+.focus-box{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-left:5px solid #00563F;
+    border-radius:10px;
 }
-
-/* ABOUT */
-
-.about-section{
-    padding:80px 0;
+.value-box{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
-
-.about-grid{
+.gallery-title{
+    text-align:center;
+    margin:30px 0 20px;
+}
+.gallery-grid{
     display:grid;
-    grid-template-columns:1fr 1.2fr;
-    gap:55px;
-    align-items:center;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:15px;
 }
-
-.about-image{
+.gallery-grid img{
     width:100%;
-    max-height:600px;
+    height:220px;
     object-fit:cover;
     border-radius:12px;
-    box-shadow:0 12px 35px rgba(0,0,0,.12);
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+    transition:.3s;
 }
-
-.about-content .label{
-    color:#087c4e;
+.gallery-grid img:hover{
+    transform:scale(1.05);
 }
-
-.about-content h2{
-    font-family:Georgia,serif;
-    color:#003d27;
-    font-size:42px;
-    line-height:1.2;
-    margin:10px 0 20px;
-}
-
-.about-content p{
-    color:#53675e;
-    margin-bottom:18px;
-}
-
-/* HIGHLIGHTS */
-
-.highlights{
-    padding:75px 0;
-    background:white;
-}
-
-.section-heading{
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 45px;
-}
-
-.section-heading .label{
-    color:#087c4e;
-}
-
-.section-heading h2{
-    font-family:Georgia,serif;
-    color:#003d27;
-    font-size:40px;
-    margin:8px 0 12px;
-}
-
-.section-heading p{
-    color:#687970;
-}
-
-.highlight-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.highlight-card{
-    background:#f5f8f5;
-    padding:30px 25px;
-    border-radius:10px;
-    border-top:4px solid #f2bd24;
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
-}
-
-.highlight-card h3{
-    font-family:Georgia,serif;
-    color:#003d27;
-    font-size:23px;
-    margin-top:0;
-}
-
-.highlight-card p{
-    color:#687970;
-}
-
-/* VALUES */
-
-.values{
-    padding:80px 0;
-}
-
-.values-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.value-card{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 7px 25px rgba(0,0,0,.06);
-}
-
-.value-number{
-    color:#f2bd24;
-    font-size:28px;
-    font-weight:bold;
-}
-
-.value-card h3{
-    font-family:Georgia,serif;
-    color:#003d27;
-}
-
-.value-card p{
-    color:#687970;
-}
-
-/* CTA */
-
-.cta{
-    background:#f2bd24;
-    padding:65px 0;
-}
-
-.cta-box{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-}
-
-.cta h2{
-    font-family:Georgia,serif;
-    color:#003d27;
-    font-size:38px;
-    margin:0 0 8px;
-}
-
-.cta p{
-    color:#355344;
-}
-
-.cta-button{
-    background:#003d27;
-    color:white;
-    padding:13px 22px;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-/* FOOTER */
-
 footer{
-    background:#002d20;
-    color:white;
-    padding:50px 0 25px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
-    gap:45px;
-}
-
-.footer-brand h3{
-    font-family:Georgia,serif;
-}
-
-.footer-brand p,
-.footer-column a{
-    color:#b9ccc2;
-}
-
-.footer-column h4{
-    color:#f2bd24;
-}
-
-.footer-column a{
-    display:block;
-    margin-bottom:8px;
-    font-size:14px;
-}
-
-.footer-column a:hover{
-    color:#f2bd24;
-}
-
-.copyright{
-    border-top:1px solid rgba(255,255,255,.15);
-    margin-top:40px;
-    padding-top:18px;
+    background:#00563F;
+    color:#fff;
     text-align:center;
-    color:#91a89d;
-    font-size:13px;
+    padding:25px;
+    margin-top:40px;
 }
+</style>
+</head>
 
-/* MOBILE */
+<body>
 
-@media(max-width:1100px){
+<header>
+<h1>Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</h1>
+<p>Deputy Speaker, Kogi State House of Assembly</p>
+</header>
 
-    .menu-button{
-        display:flex;
-    }
-
-    nav{
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#003d27;
-        padding:12px 5% 20px;
-        flex-direction:column;
-        align-items:stretch;
-        gap:3px;
-        box-shadow:0 8px 20px rgba(0,0,0,.2);
-        border-top:1px solid rgba(255,255,255,.12);
-        max-height:calc(100vh - 70px);
-        overflow-y:auto;
-    }
-
-    nav.show{
-        display:flex;
-    }
-
-    nav a{
-        width:100%;
-        min-height:50px;
-        display:flex;
-        align-items:center;
-        padding:13px 16px;
-        font-size:15px;
-        border-bottom:1px solid rgba(255,255,255,.1);
-        border-radius:5px;
-    }
-
-    nav a:hover{
-        background:rgba(255,255,255,.08);
-    }
-
-    nav a.active{
-        background:rgba(242,189,36,.12);
-        color:#f2bd24;
-    }
-
-    nav a:last-child{
-        margin-top:10px;
-        border-bottom:none;
-        justify-content:center;
-    }
-
-    .contact-btn{
-        background:#f2bd24!important;
-        color:#003d27!important;
-        justify-content:center;
-    }
-}
-
-@media(max-width:900px){
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .highlight-grid,
-    .values-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .about-image{
-        max-height:550px;
-    }
-}
-
-@media(max-width:600px){
-
-    header{
-        padding:12px 5%;
-    }
-
-    .logo{
-        font-size:12px;
-    }
-
-    .hero{
-        padding:60px 0;
-    }
-
-    .about-section,
-    .values{
-        padding:60px 0;
-    }
-
-    .highlights{
-        padding:60px 0;
-    }
-
-    .about-content h2,
-    .section-heading h2{
-        font-size:34px;
-    }
-
-    .highlight-grid,
-    .values-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cta-box{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-}
-</style></head><body><header><div class="nav-container"><a href="index.html" class="logo">
-KOGI STATE HOUSE<br>
-OF ASSEMBLY
-</a><nav id="mainNav"><a href="index.html">Home</a>
-
-<a href="about.html" class="active">About</a>
-
-<a href="biography.html">Biography</a>
-
-<a href="office.html">Office</a>
-
-<a href="legislative.html">Legislative Activities</a>
-
-<a href="constituency.html">Constituency</a>
-
-<a href="news.html">News</a>
-
-<a href="gallery.html">Media Gallery</a>
-
-<a href="contact.html" class="contact-btn">Contact</a>
-
-</nav><div class="menu-button" onclick="toggleMenu()" aria-label="Open menu">
-☰
-</div></div></header><section class="hero"><div class="container"><div class="hero-content"><div class="label">About The Office</div><h1>
-Serving With <span>Purpose</span>
-</h1><p>
-Learn more about the office, its public service responsibilities,
-commitment to the people and vision for a stronger and more
-prosperous constituency.
-</p></div></div></section><section class="about-section"><div class="container"><div class="about-grid"><div><img
-class="about-image"
-src="https://i.ibb.co/67FTZqrK/file-00000000f52882108163d8832d7c62db.png"
-alt="Rt. Hon. Comfort Ojoma Nwuchiola Egwaba"
-
-«»
-
-</div><div class="about-content"><div class="label">About</div><h2>A Commitment To Public Service</h2><p>
-The Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba is
-dedicated to effective representation, responsible leadership
-and meaningful engagement with the people of Ibaji Local
-Government Constituency.
-</p><p>
-As Deputy Speaker of the Kogi State House of Assembly and
-Member representing Ibaji Local Government Constituency,
-the office serves as a bridge between the people and the
-legislative institution.
-</p><p>
-The office is committed to listening to the needs of
-constituents, supporting initiatives that improve lives and
-promoting development through effective representation and
-legislative engagement.
-</p><p>
-Through regular constituency interaction, legislative
-activities and community engagement, the office continues to
-work toward a more inclusive and prosperous future for the
-people.
-</p></div></div></div></section><section class="highlights"><div class="container"><div class="section-heading"><div class="label">Our Focus</div><h2>Areas Of Commitment</h2><p>
-The office focuses on representation, development and
-meaningful engagement with constituents.
-</p></div><div class="highlight-grid"><div class="highlight-card">
-<h3>Effective Representation</h3>
-<p>
-Promoting the interests and concerns of the people of Ibaji
-through responsible legislative and constituency representation.
-</p>
-</div><div class="highlight-card">
-<h3>Community Development</h3>
-<p>
-Supporting initiatives and engagements that contribute to
-social and economic development within the constituency.
-</p>
-</div><div class="highlight-card">
-<h3>People-Centred Leadership</h3>
-<p>
-Maintaining communication with constituents and encouraging
-participation in matters affecting the community.
-</p>
-</div></div></div></section><section class="values"><div class="container"><div class="section-heading"><div class="label">Our Values</div><h2>Principles That Guide The Office</h2></div><div class="values-grid"><div class="value-card">
-<div class="value-number">01</div>
-<h3>Integrity</h3>
-<p>
-Upholding honesty, accountability and responsible public service.
-</p>
-</div><div class="value-card">
-<div class="value-number">02</div>
-<h3>Service</h3>
-<p>
-Putting the needs and aspirations of the people at the centre
-of public representation.
-</p>
-</div><div class="value-card">
-<div class="value-number">03</div>
-<h3>Progress</h3>
-<p>
-Supporting constructive initiatives that can contribute to a
-better future for the constituency.
-</p>
-</div></div></div></section><section class="cta"><div class="container"><div class="cta-box"><div><h2>Stay Connected</h2><p>
-Follow the activities and latest updates from the office.
-</p></div><a href="contact.html" class="cta-button">
-Contact The Office
-</a></div></div></section><footer><div class="container"><div class="footer-grid"><div class="footer-brand"><h3>
-Rt. Hon. Comfort Ojoma Nwuchiola Egwaba
-</h3><p>
-Deputy Speaker, Kogi State House of Assembly and Member
-Representing Ibaji State Constituency.
-</p></div><div class="footer-column"><h4>Quick Links</h4><a href="index.html">Home</a>
+<nav>
+<a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="biography.html">Biography</a>
 <a href="office.html">Office</a>
 <a href="legislative.html">Legislative Activities</a>
-
-</div><div class="footer-column"><h4>Explore</h4><a href="constituency.html">Constituency</a>
+<a href="constituency.html">Constituency</a>
 <a href="news.html">News</a>
 <a href="gallery.html">Media Gallery</a>
 <a href="contact.html">Contact</a>
+</nav>
 
-</div></div><div class="copyright">
-© 2026 Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba.
-All Rights Reserved.
-</div></div></footer><script>
-function toggleMenu(){
+<section class="hero">
+<h2>Serving With Purpose</h2>
+<p>Learn more about the office, its public service responsibilities, commitment to the people and vision for a stronger Ibaji Constituency.</p>
+</section>
 
-    document
-    .getElementById("mainNav")
-    .classList.toggle("show");
+<div class="container">
 
-}
+<h2>A Commitment To Public Service</h2>
 
-document
-.querySelectorAll("#mainNav a")
-.forEach(function(link){
+<p>The Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba is dedicated to effective representation, responsible leadership and meaningful engagement with the people of Ibaji Local Government Constituency.</p>
 
-    link.addEventListener("click",function(){
+<p>As Deputy Speaker of the Kogi State House of Assembly and Member representing Ibaji State Constituency, the office serves as a bridge between the people and the legislative institution.</p>
 
-        document
-        .getElementById("mainNav")
-        .classList.remove("show");
+<p>The office is committed to listening to the needs of constituents, supporting initiatives that improve lives and promoting development through effective representation and legislative engagement.</p>
 
-    });
+<p>Through regular constituency interaction, legislative activities and community engagement, the office continues to work toward a more inclusive and prosperous future for the people.</p>
 
-});
+<h2 class="gallery-title">Community Projects & Activities</h2>
 
-document.addEventListener("click",function(event){
+<div class="gallery-grid">
 
-    const nav=document.getElementById("mainNav");
-    const menu=document.querySelector(".menu-button");
+<img src="IMAGE_LINK_1" alt="Community Project 1">
+<img src="IMAGE_LINK_2" alt="Community Project 2">
+<img src="IMAGE_LINK_3" alt="Community Project 3">
+<img src="IMAGE_LINK_4" alt="Community Project 4">
+<img src="IMAGE_LINK_5" alt="Community Project 5">
+<img src="IMAGE_LINK_6" alt="Community Project 6">
+<img src="IMAGE_LINK_7" alt="Community Project 7">
+<img src="IMAGE_LINK_8" alt="Community Project 8">
+<img src="IMAGE_LINK_9" alt="Community Project 9">
+<img src="IMAGE_LINK_10" alt="Community Project 10">
+<img src="IMAGE_LINK_11" alt="Community Project 11">
+<img src="IMAGE_LINK_12" alt="Community Project 12">
+<img src="IMAGE_LINK_13" alt="Community Project 13">
+<img src="IMAGE_LINK_14" alt="Community Project 14">
+<img src="IMAGE_LINK_15" alt="Community Project 15">
+<img src="IMAGE_LINK_16" alt="Community Project 16">
+<img src="IMAGE_LINK_17" alt="Community Project 17">
+<img src="IMAGE_LINK_18" alt="Community Project 18">
+<img src="IMAGE_LINK_19" alt="Community Project 19">
+<img src="IMAGE_LINK_20" alt="Community Project 20">
+<img src="IMAGE_LINK_21" alt="Community Project 21">
+<img src="IMAGE_LINK_22" alt="Community Project 22">
+<img src="IMAGE_LINK_23" alt="Community Project 23">
+<img src="IMAGE_LINK_24" alt="Community Project 24">
+<img src="IMAGE_LINK_25" alt="Community Project 25">
+<img src="IMAGE_LINK_26" alt="Community Project 26">
+<img src="IMAGE_LINK_27" alt="Community Project 27">
 
-    if(
-        nav.classList.contains("show") &&
-        !nav.contains(event.target) &&
-        !menu.contains(event.target)
-    ){
+</div>
 
-        nav.classList.remove("show");
+<h2 style="margin-top:50px;">Areas Of Commitment</h2>
 
-    }
+<div class="focus-box">
+<h3>Effective Representation</h3>
+<p>Promoting the interests and concerns of the people of Ibaji through responsible legislative and constituency representation.</p>
+</div>
 
-});
-</script></body>
+<div class="focus-box">
+<h3>Community Development</h3>
+<p>Supporting initiatives and engagements that contribute to social and economic development within the constituency.</p>
+</div>
+
+<div class="focus-box">
+<h3>People-Centred Leadership</h3>
+<p>Maintaining communication with constituents and encouraging participation in matters affecting the community.</p>
+</div>
+
+<h2>Principles That Guide The Office</h2>
+
+<div class="value-box">
+<h3>01. Integrity</h3>
+<p>Upholding honesty, accountability and responsible public service.</p>
+</div>
+
+<div class="value-box">
+<h3>02. Service</h3>
+<p>Putting the needs and aspirations of the people at the centre of public representation.</p>
+</div>
+
+<div class="value-box">
+<h3>03. Progress</h3>
+<p>Supporting constructive initiatives that contribute to a better future for the constituency.</p>
+</div>
+
+</div>
+
+<footer>
+<h3>Rt. Hon. Comfort Ojoma Nwuchiola Egwaba</h3>
+<p>Deputy Speaker, Kogi State House of Assembly</p>
+<p>Member Representing Ibaji State Constituency</p>
+
+<p style="margin-top:15px;">
+© 2026 Office of Rt. Hon. Comfort Ojoma Nwuchiola Egwaba. All Rights Reserved.
+</p>
+</footer>
+
+</body>
 </html>
